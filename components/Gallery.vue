@@ -107,15 +107,17 @@ export default {
         dataType: 'jsonp',
         success: (response) => {
           this.projects = response.data
-          const l = this.projects.length
-          // eslint-disable-next-line no-plusplus
-          for (let i = 0; i < l; i++) {
-            if (this.projects[i].carousel_media === undefined) {
-              this.projects[i].carousel_media = []
-              this.projects[i].carousel_media.push({})
-              this.projects[i].carousel_media[0].images = this.projects[
-                i
-              ].images
+          if (this.projects.length) {
+            const l = this.projects.length
+            // eslint-disable-next-line no-plusplus
+            for (let i = 0; i < l; i++) {
+              if (this.projects[i].carousel_media === undefined) {
+                this.projects[i].carousel_media = []
+                this.projects[i].carousel_media.push({})
+                this.projects[i].carousel_media[0].images = this.projects[
+                  i
+                ].images
+              }
             }
           }
         },

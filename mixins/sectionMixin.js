@@ -1,8 +1,8 @@
 import gsap from 'gsap'
-import { scrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 if (process.client) {
-  gsap.registerPlugin(scrollTrigger)
+  gsap.registerPlugin(ScrollTrigger)
 }
 
 export default {
@@ -24,13 +24,14 @@ export default {
   },
   mounted () {
     gsap.to('#app', {
-      // scrollTrigger: this.$el,
-      duration: 200,
+      scrollTrigger: {
+        trigger: this.$el,
+      },
       backgroundColor: this.backgroundColor,
       ease: 'linear',
     })
   },
-  methods: {
+  methods: {  
     changeBackgroundColor () {
       if (this.backgroundColor !== '') {
         this.$store.commit('setBackgroundColor', this.backgroundColor)

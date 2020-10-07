@@ -9,7 +9,7 @@ export default {
         document.querySelector('.logo-pr').style.width = '0px'
         document.querySelector('.logo-cess').style.width = '0px'   
         gsap.to(el, {
-          duration: 500,
+          duration: 0.5,
           // eslint-disable-next-line quote-props
           'opacity': 0.0,
           onComplete () {
@@ -22,7 +22,7 @@ export default {
         document.querySelector('.logo-pr').style.width = ''
         document.querySelector('.logo-cess').style.width = '' 
         gsap.to(el, {
-          duration: 500,
+          duration: 0.25,
           opacity: 1.0,
           onComplete () {
           // eslint-disable-next-line no-param-reassign
@@ -38,8 +38,9 @@ export default {
     if (scrollPos > clientHeight) {
       document.querySelector('.logo-pr').style.width = '0px'
       document.querySelector('.logo-cess').style.width = '0px'
-      gsap.to(el, 500, {
+      gsap.to(el, {
         opacity: 0.0,
+        duration: 0.5,
         onComplete () {
           // if (el.classList.hasClass('logo-crown'))
           // eslint-disable-next-line no-param-reassign
@@ -49,8 +50,9 @@ export default {
     } else
     if ((scrollPos < window.document.documentElement.clientHeight) &&
         (scrollPos > (clientHeight - 50))) {
-      gsap.to(el, 500, {
+      gsap.to(el, {
         opacity: 1.0,
+        duration: 0.5,
         onComplete () {
           // if (el.classList.hasClass('logo-crown'))
           // eslint-disable-next-line no-param-reassign

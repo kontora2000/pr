@@ -29,7 +29,6 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/scrollmagic', mode: 'client', },
     { src: '~/plugins/vHide', }
 
   ],
@@ -59,8 +58,6 @@ export default {
   build: {
     transpile: [
       'gsap'
-    ], 
-    extend (config, ctx) {
-    },
+    ],
   },
 }

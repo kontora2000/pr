@@ -15,7 +15,7 @@
 
 <script>
 // import { gsap, Power2 } from 'gsap'
-// import sectionMixin from '@/mixins/sectionMixin'
+import sectionMixin from '@/mixins/sectionMixin'
 
 // export default {
 //   name: 'TitleSection',
@@ -99,13 +99,22 @@
 // }
 export default {
   name: 'TitleSection',
+  mixins: [sectionMixin],
+  props: {
+    title: {
+      type: String,
+      default: 'Кухни',
+    },
+    img: {
+      type: String,
+      default: 'nill',
+    },
+  },
 }
 </script>
 
 <style>
-body {
-  overflow-x: hidden;
-}
+
 .section-title-scene {
     overflow: hidden;
 }

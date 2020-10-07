@@ -21,7 +21,10 @@
       <div class="scene-kitchen-counter main-scene-layer-2 main-scene-layer" />
       <div class="clouds-back main-scene-layer-1 main-scene-layer" />
     </section>
-    <main-section text-color="#ffffff" background-color="#fff1f5">
+    <main-section 
+      text-color="#ffffff" 
+      background-color="#fff1f5"
+    >
       <section class="we-create">
         <h1>
           <i class="we-create-cursive">Создаём</i>
@@ -44,8 +47,13 @@
         </h1>
       </section>
     </main-section>
-    <title-section image="/static/images/main-scene/kitchen.png" title="_img/kitchen-bg-sign.png" text-color="#000000" background-color="#FCDAE1" />
-    <gallery
+    <!-- <title-section 
+      image="/static/images/main-scene/kitchen.png"
+      title="_img/kitchen-bg-sign.png" 
+      text-color="#000000" 
+      background-color="#FCDAE1" 
+    /> -->
+    <!-- <gallery
       class="category-gallery-block"
       text-color="#000"
       background-col
@@ -66,7 +74,7 @@
           </div>
         </h2>
       </template>
-    </gallery>
+    </gallery> -->
     <call-babes-button />
     <dialog-mesurement />
     <footer />
