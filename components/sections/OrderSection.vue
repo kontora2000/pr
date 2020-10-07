@@ -7,3 +7,9 @@
     </form>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'OrderSection'
+}
+</script>

@@ -29,7 +29,9 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/scrollmagic', mode: 'client'}
+    { src: '~/plugins/scrollmagic', mode: 'client', },
+    { src: '~/plugins/vHide', }
+
   ],
   /*
   ** Nuxt.js dev-modules
@@ -55,9 +57,9 @@ export default {
   ** Build configuration
   */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
+    transpile: [
+      'gsap'
+    ], 
     extend (config, ctx) {
     },
   },

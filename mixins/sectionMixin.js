@@ -1,54 +1,59 @@
+import gsap from 'gsap'
+import { scrollTrigger } from 'gsap/dist/ScrollTrigger'
+
+if (process.client) {
+  gsap.registerPlugin(scrollTrigger)
+}
+
 export default {
-  data() {
+  data () {
     return {
       timeline: null,
       scene: null,
-    };
+    }
   },
   props: {
-    backgroundColor: String,
-    textColor: String,
+    backgroundColor: {
+      type: String, 
+      default: '#ffffff', 
+    },  
+    textColor: {
+      type: String, 
+      default: '#000000', 
+    },
   },
-  mounted() {
-    this.scene = this.$scrollmagic
-      .scene({
-        triggerElement: this.$el,
-        triggerHook: 0,
-        duration: this.$el.clientHeight,
-        reverse: true, 
-      })
-      .on('enter', () => {
-        this.changeBackgroundColor();
-        this.changeTextColor();
-        console.log('enter');
-      })
-      .addIndicators();
-    this.$scrollmagic.addScene(this.scene);
+  mounted () {
+    gsap.to('#app', {
+      // scrollTrigger: this.$el,
+      duration: 200,
+      backgroundColor: this.backgroundColor,
+      ease: 'linear',
+    })
   },
   methods: {
-    changeBackgroundColor() {
+    changeBackgroundColor () {
       if (this.backgroundColor !== '') {
-        this.$store.commit('changeBackground', this.backgroundColor);
+        this.$store.commit('setBackgroundColor', this.backgroundColor)
       }
     },
-    changeTextColor() {
+    changeTextColor () {
       if (this.textColor === '' || this.textColor === undefined) {
-        this.textColor = 0xffffff - parseInt(this.backgroundColor.replace('#', '0x'), 16);
-        if (this.textColor > 0x7fffff) this.textColor = '#ffffff';
-        else {
-          this.textColor = '#000000';
+        this.textColor = 0xFFFFFF - parseInt(this.backgroundColor.replace('#', '0x'), 16)
+        if (this.textColor > 0x7FFFFF) { this.textColor = '#ffffff' } else {
+          this.textColor = '#000000'
         }
-        const els = document.querySelectorAll('div,span,p,i,section,a,li');
+        const els = document.querySelectorAll('div,span,p,i,section,a,li')
         // eslint-disable-next-line no-plusplus
         for (let k = 0; k < els.length; k++) {
-          els[k].style.color = this.textColor;
+          els[k].style.color = this.textColor
           if (els[k].classList.contains('text-outlined')) {
-            els[k].style.WebkitTextStrokeColor = this.textColor;
+            els[k].style.WebkitTextStrokeColor = this.textColor
+            this.$store.commit('setBackgroundColor', this.textColor)
           }
         }
-        document.querySelector('.active').style.textColor = this.textColor;
-        document.querySelector('.active').style.borderColor = this.textColor;
+        document.querySelector('.active').style.textColor = this.textColor
+        document.querySelector('.active').style.borderColor = this.textColor
       }
     },
   },
-};
+}

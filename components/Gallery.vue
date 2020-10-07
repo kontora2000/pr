@@ -42,7 +42,7 @@
 </style>
 
 <script>
-import { TimelineLite } from 'gsap/TweenMax'
+import gsap from 'gsap'
 import $ from 'jquery'
 import sectionMixin from '../mixins/sectionMixin'
 
@@ -67,7 +67,7 @@ export default {
   },
   mounted () {
     this.updateData()
-    this.timeline = new TimelineLite()
+    this.timeline = gsap.timeline()
   },
   methods: {
     openProjectGallery (index) {

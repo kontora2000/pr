@@ -1,4 +1,4 @@
-import { TweenLite } from 'gsap/TweenMax'
+import gsap from 'gsap'
 
 export default {
   inserted (el) {
@@ -8,7 +8,8 @@ export default {
       if (scrollPos > clientHeight) {     
         document.querySelector('.logo-pr').style.width = '0px'
         document.querySelector('.logo-cess').style.width = '0px'   
-        TweenLite.to(el, 0.5, {
+        gsap.to(el, {
+          duration: 500,
           // eslint-disable-next-line quote-props
           'opacity': 0.0,
           onComplete () {
@@ -20,7 +21,8 @@ export default {
       if ((scrollPos < clientHeight)) {
         document.querySelector('.logo-pr').style.width = ''
         document.querySelector('.logo-cess').style.width = '' 
-        TweenLite.to(el, 0.5, {
+        gsap.to(el, {
+          duration: 500,
           opacity: 1.0,
           onComplete () {
           // eslint-disable-next-line no-param-reassign
@@ -36,7 +38,7 @@ export default {
     if (scrollPos > clientHeight) {
       document.querySelector('.logo-pr').style.width = '0px'
       document.querySelector('.logo-cess').style.width = '0px'
-      TweenLite.to(el, 500, {
+      gsap.to(el, 500, {
         opacity: 0.0,
         onComplete () {
           // if (el.classList.hasClass('logo-crown'))
@@ -47,7 +49,7 @@ export default {
     } else
     if ((scrollPos < window.document.documentElement.clientHeight) &&
         (scrollPos > (clientHeight - 50))) {
-      TweenLite.to(el, 500, {
+      gsap.to(el, 500, {
         opacity: 1.0,
         onComplete () {
           // if (el.classList.hasClass('logo-crown'))

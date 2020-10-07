@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :style="{background:background}">
+  <div id="app">
     <div class="logo-contacts-wrapper">
       <logo />
       <div class="logo-contacts-inner">
@@ -11,7 +11,6 @@
         <phone>+7&thinsp;861&thinsp;215-30-00</phone>
       </div>
     </div>
-    <sidebar />
     <consult-button>Проконсультировать</consult-button>
     <call-babes-button>Вызвать замерщика</call-babes-button>
     <section class="main-scene">
@@ -27,7 +26,7 @@
         <h1>
           <i class="we-create-cursive">Создаём</i>
           <br>
-          <a href="#category-kitchens" class="we-create-link">Шикарные кухни</a>
+          <a href="#category-kitchens" class="D">Шикарные кухни</a>
           <a
             href="#"
             class="we-create-link"
@@ -75,30 +74,42 @@
 </template>
 
 <script>
+//  import links
+import logo from '~/components/links/Logo.vue'
+import phone from '~/components/links/Phone.vue'
+
+
 //  import sections
 import titleSection from '~/components/sections/TitleSection.vue'
 import mainSection from '~/components/sections/MainSection.vue'
-
-// import sidebars
-import sidebar from '@/components/Sidebar.vue'
+import gallery from '~/components/Gallery.vue'
 
 // import buttons
 import callBabesButton from '@/components/buttons/CallBabesButton.vue'
 import consultButton from '@/components/buttons/ConsultButton.vue'
 
+// import dialogs
+import dialogMesurement from '@/components/dialogs/Dialog.vue'
+
 export default {
   components: {
+    logo,
+    phone,
     titleSection,
     mainSection,
-    sidebar,
+    gallery,
     consultButton,
     callBabesButton,
+    dialogMesurement,
   },
-  data () {
-    return {
-      background: '#fffff', 
-    }
-  }
+  computed: {
+    backgroundColor () {
+      return this.$store.getters['system/backgroundColor']
+    },
+    textColor () {
+      return this.$store.getters['system/textColor']
+    },
+  },
 }
 </script>
 
