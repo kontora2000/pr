@@ -66,8 +66,8 @@ export default {
     }
   },
   mounted () {
-    this.updateData()
-    this.timeline = gsap.timeline()
+    // this.updateData()
+    // this.timeline = gsap.timeline()
   },
   methods: {
     openProjectGallery (index) {

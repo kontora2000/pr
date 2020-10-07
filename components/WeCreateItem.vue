@@ -1,20 +1,25 @@
 <template>
-  <span class="we-create" @mouseenter="showImg" @mouseleave="hideImg">
+  <a class="we-create-link" @mouseenter="showImg" @mouseleave="hideImg">
     <slot />
-    <div v-show="showImage" ref="imgContainer" class="material-image">
-      <img ref="image" :src="currentImageSrc">
-    </div>
-  </span>
+    <img v-show="showImage" ref="image" class="we-create-preview-img" :src="currentImageSrc">
+  </a>
 </template>
 
 <script>
 import gsap from 'gsap'
 
 export default {
-  name: 'Material',
+  name: 'WeCreateItem',
   props: {
-    folder: String,
-    count: Number,
+    folder: {
+      type: String,
+      required: true,
+      default: 'kitchens',
+    },
+    count: {
+      type: Number,
+      default: 3,
+    },
   },
   data () {
     return {
@@ -30,14 +35,17 @@ export default {
   created () {
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < this.count; i++) {
-      this.images.push(`/mat/${this.folder}/${i + 1}.jpg`)
+      this.images.push(`/_img/wecreate/${this.folder}/${i + 1}.jpg`)
     }
   },
   mounted () {
     this.currentImage = 0
     this.currentImageSrc = this.images[this.currentImage]
+    this.$refs.image.style.minWidth = this.$el.offsetWidth + 'px'
+    this.$refs.image.style.maxWidth = this.$el.offsetWidth + 'px'
+
     const imageRef = this.$refs.image
-    this.timeLine = new gsap.timeline({
+    this.timeLine = gsap.timeline({
       delay: 1,
       repeat: -1,
       repeatDelay: 1,
@@ -61,8 +69,8 @@ export default {
   methods: {
     showImg () {
       this.showImage = true
-      gsap.to(this.$refs.imgContainer, 0.25, {
-        top: '50%',
+      gsap.to(this.$refs.image, 0.25, {
+        top: '-200%',
         onComplete: () => {
           this.timeLine.resume()
         },
@@ -71,10 +79,34 @@ export default {
     hideImg () {
       this.showImage = false
       this.timeLine.pause()
-      this.$refs.imgContainer.style.top = '75%'
+      this.$refs.image.style.top = '-75%'
       // TweenLite.to(this.divRef, 0.25, {top:'75%', onComplete:()=>{
       // }});
     },
   },
 }
 </script>
+
+<style>
+  .we-create-link {
+    position: relative;
+  }
+
+  .we-create-preview {
+    position: relative;
+   
+  }
+
+  .we-create-preview-img {
+    border-radius: 50%;
+    max-width: 15rem;
+    left: -50%;
+    top:-75%;
+    transform: translateX(50%);
+    position: absolute;
+  }
+
+  .we-create {
+    position: relative;
+  }
+</style>

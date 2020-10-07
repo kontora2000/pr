@@ -74,6 +74,7 @@
         </svg>
       </span>
     </a>
+    <span class="logo-subtitle">Студия мебели и дизайна</span>
   </div>
 </template>
 
