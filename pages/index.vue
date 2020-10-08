@@ -12,6 +12,8 @@
       <logo />
       <we-create />
     </main-section>
+    <title-section title="Замерим Хуймерим" />
+    <orderSection />
     <!-- <title-section /> -->
     <call-babes-button />
     <dialog-mesurement />
@@ -30,6 +32,8 @@ import socials from '~/components/links/Socials.vue'
 import titleSection from '~/components/sections/TitleSection.vue'
 import mainSection from '~/components/sections/MainSection.vue'
 import gallery from '~/components/Gallery.vue'
+import orderSection from '~/components/sections/OrderSection.vue'
+
 import weCreate from '~/components/WeCreate.vue'
 
 // import buttons
