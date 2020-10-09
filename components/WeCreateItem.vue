@@ -89,12 +89,18 @@ export default {
 
 <style>
   .we-create-link {
+    cursor: default; /* стереть, при релизе полного сайта */
+    display: inline-block;
+    font-family: var(--font-transgender);
+    font-size: 3.6rem;
+    letter-spacing: .02em;
+    line-height: 2.4rem;
+    margin: 0 1.5rem;
     position: relative;
   }
 
   .we-create-preview {
     position: relative;
-   
   }
 
   .we-create-preview-img {

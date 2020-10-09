@@ -1,21 +1,26 @@
 <template>
   <div id="app">
-    <div class="adress-socials-wrapper">
-      <adress v-hide class="address-block">
-        Краснодар, <br>Тургенева,&nbsp;123
-      </adress>
+    <div class="address-socials-wrapper">
+      <adress v-hide class="address-block">Краснодар,&nbsp;Тургенева,&nbsp;123</adress>
       <socials />
       <phone>+7&thinsp;861&thinsp;215-30-00</phone>
     </div>
-    <call-babes-button>Вызвать замерщика</call-babes-button>
-    <main-section text-color="#ffffff" background-color="#fff1f5">
+    <consult-button />
+    <call-babes-button />
+    <main-section text-color="#ffffff" background-color="transparent">
       <logo />
       <we-create />
     </main-section>
-    <title-section title="Замерим Хуймерим" />
-    <orderSection />
+
+    <free-section />
+
+    <realised-section />
+
+    <order-section />
+
+    <contacts-section />
+
     <!-- <title-section /> -->
-    <call-babes-button />
     <dialog-mesurement />
     <footer />
   </div>  
@@ -29,15 +34,19 @@ import adress from '~/components/links/Adress.vue'
 import socials from '~/components/links/Socials.vue'
 
 //  import sections
-import titleSection from '~/components/sections/TitleSection.vue'
-import mainSection from '~/components/sections/MainSection.vue'
-import gallery from '~/components/Gallery.vue'
-import orderSection from '~/components/sections/OrderSection.vue'
+import titleSection from '~/components/sections/Title.vue'
+import mainSection from '~/components/sections/Main.vue'
+import freeSection from '~/components/sections/Free.vue'
+import realisedSection from '~/components/sections/Realised.vue'
+import contactsSection from '~/components/sections/Contacts.vue'
+import orderSection from '~/components/sections/Order.vue'
 
+// import section parts
 import weCreate from '~/components/WeCreate.vue'
 
 // import buttons
 import callBabesButton from '@/components/buttons/CallBabesButton.vue'
+import consultButton from '@/components/buttons/ConsultButton.vue'
 
 // import dialogs
 import dialogMesurement from '@/components/dialogs/Dialog.vue'
@@ -50,9 +59,13 @@ export default {
     socials,
     weCreate,
     mainSection,
+    orderSection,
+    realisedSection,
+    freeSection,
+    contactsSection,
     titleSection,
-    gallery,
     callBabesButton,
+    consultButton,
     dialogMesurement,
   },
   computed: {
@@ -66,35 +79,7 @@ export default {
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style scoped>
+  
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>

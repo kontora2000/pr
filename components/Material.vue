@@ -78,3 +78,47 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+  .pseudolink {
+    cursor: default;
+    border-bottom: 1px dotted var(--Black32);
+    position: relative;
+    z-index: 5;
+  }
+  .pseudolink:hover {
+    color: var(--White100);
+    border-bottom-color: var(--White64) !important;
+    z-index: 6;
+  }
+
+  .material-image {
+    /*max-width: 600px;
+    max-height: 600px;*/
+    position: absolute;
+    top:75%;
+    left: 50%;
+      transform: translate(-50%, -50%);
+    background-origin: border-box;
+    z-index: -1000;
+    transition: width 0.2s;
+    padding: 0px;
+    margin:0px;
+    transition: width 0.5s ease;
+  }
+
+  /*.pseudolink:hover .show-onhover {
+    display: block;
+  }*/
+  .show-onhover {
+    display: none;
+    color: var(--White100);
+    min-width: 320px;
+    background: var(--Black100);
+    padding: 1.75rem .25rem .25rem;
+    position: absolute;
+    margin-top: -1.8rem;
+    margin-left: -.25rem;
+    z-index: -1;
+  }
+</style>

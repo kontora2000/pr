@@ -74,7 +74,7 @@
         </svg>
       </span>
     </a>
-    <span class="logo-subtitle">Студия мебели и дизайна</span>
+    <div class="logo-subtitle" v-hide>Студия мебели и&nbsp;дизайна</div>
   </div>
 </template>
 
@@ -93,3 +93,56 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+  .logo-wrapper {
+    display: block;
+    height: 2.5rem;
+    left: 50%;
+    margin: 2rem 0 0;
+    position: fixed;
+    text-align: center;
+    top: 32%;
+    transform: translate(-50%);
+    width: 34.4rem;
+    z-index: 1004;
+  }
+
+  .logo {
+    border-bottom: none;
+    cursor: pointer;
+    width: 12%;
+  }
+
+  .logo-pr,
+  .logo-crown,
+  .logo-cess {
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .logo-pr {
+    margin-right: -.075rem;
+    width: 4.765625rem;
+  }
+
+  .logo-crown {
+    width: 4.21875rem;
+  }
+
+  .logo-cess {
+    margin-left: -.075rem;
+    width: 9.53125rem;
+  }
+
+
+  .logo-subtitle {
+    cursor: default;
+    font-family: var(--font-transgender);
+    font-size: 1rem;
+    letter-spacing: .5em;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+  }
+</style>
