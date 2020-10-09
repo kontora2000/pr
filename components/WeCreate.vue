@@ -1,17 +1,13 @@
 <template>
-  <section class="we-create">
-    <h1>
-      <i class="we-create-cursive">Создаём</i>
-      <we-create-item folder="kitchens">Кухни</we-create-item>
-      <we-create-item folder="wardrobes">Шкафы&thinsp;и&thinsp;гардеробные</we-create-item>
-      <br>
-      <we-create-item folder="livingrooms">Мебель&thinsp;в&thinsp;гостинные</we-create-item>
-      <we-create-item folder="cabinets">Кабинеты</we-create-item>
-      <we-create-item folder="bathrooms">Ванные</we-create-item>
-      <br>
-      <we-create-item folder="hallways">Прихожие</we-create-item>
-    </h1>
-  </section>
+  <div class="we-create">
+    <i class="we-create-cursive">Создаём</i>
+    <we-create-item folder="kitchens">Кухни</we-create-item>
+    <we-create-item folder="wardrobes">Шкафы&thinsp;и&thinsp;гардеробные</we-create-item>
+    <we-create-item folder="livingrooms">Мебель&thinsp;в&thinsp;гостинные</we-create-item>
+    <we-create-item folder="cabinets">Кабинеты</we-create-item>
+    <we-create-item folder="bathrooms">Ванные</we-create-item>
+    <we-create-item folder="hallways">Прихожие</we-create-item>
+  </div>
 </template>
 
 <script>
@@ -57,3 +53,31 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+  .we-create {
+    line-height: 5rem;
+    text-align: center;
+    position: absolute;
+    bottom: 4rem;
+    z-index: 6;
+  }
+
+  @media (max-width: 460px) {
+    .we-create {
+      font-size: 2rem;
+      line-height: 3.4rem;
+      margin-left: .5rem;
+      margin-right: .5rem;
+      margin-top: 34vh;
+      text-align: center;
+      width: calc(100% - 1rem);
+    }
+
+    .we-create-link {
+      display: inline-block;
+      margin-left: .45rem;
+      margin-right: .45rem;
+    }
+  }
+</style>
