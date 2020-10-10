@@ -2,7 +2,6 @@
   <section class="freefreefree-section">
     Бесплатно замерим
     <div class="section-gradient-bottom freefreefree-section-gradient-bottom" />
-    <section class="freefreefree-section" />
   </section>
 </template>
 
