@@ -30,16 +30,16 @@
         <input id="checkbox-hallway" class="order-form-checkbox" name="hallway furniture" value="Мебель в прихожую" type="checkbox">
         <label for="checkbox-hallway">в&nbsp;прихожую</label>
       </div>
-      <div class="order-form-input-wrapper">
+      <div class="order-form-input-wrapper input-wrapper">
         <input class="order-form-input" type="text" name="address" required>
         <label class="floatting-label" data-placeholder="Адрес&nbsp;установки"></label>
       </div>
-      <div class="order-form-input-wrapper">
+      <div class="order-form-input-wrapper input-wrapper">
         <input class="order-form-input" type="text" name="phone" required>
         <label class="floatting-label" data-placeholder="Контактный&nbsp;телефон"></label>
       </div>
-      <div class="order-form-input-wrapper">
-        <input class="order-form-input" type="text" name="name">
+      <div class="order-form-input-wrapper input-wrapper">
+        <input class="order-form-input" type="text" name="name" required>
         <label class="floatting-label" data-placeholder="Ваше&nbsp;имя"></label>
       </div>
       <div class="order-section-form-button-send-wrapper">
@@ -125,13 +125,7 @@ export default {
     color: var(--White100);
   }
 
-
-
-
-
-  .order-form-input-wrapper {
-    margin-top: 4.4rem;
-  }
+  .order-form-input-wrapper {}
 
   .order-form-input {
     width: 100%;

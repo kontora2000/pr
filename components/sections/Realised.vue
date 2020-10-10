@@ -1,6 +1,11 @@
 <template>
   <section class="realised-section">
     <h1>Реализовали</h1>
+    <div class="realised-gallery-grid gallery-grid">
+      <picture class="gallery-photo-wrapper">
+        <img class="gallery-photo" src="" />
+      </picture>
+    </div>
     <div class="realised-section-link-instagram-wrapper">
       <div class="realised-section-link-instagram-comment">
         Больше контента у&nbsp;нас в&nbsp;инстаграме
@@ -12,7 +17,7 @@
 </template>
 
 <style scoped>
-    .realised-section {
+  .realised-section {
     background: var(--White100);
   }
   .realised-section>h1,

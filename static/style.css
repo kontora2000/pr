@@ -51,6 +51,64 @@
 
 
 
+/* CSS reset */
+
+html,
+body {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+big,
+cite,
+code,
+em,
+font,
+img,
+small,
+strike,
+sub,
+sup,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tr,
+th,
+td {
+    border: none;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+}
+
+blockquote::before,
+blockquote::after {
+    content: "";
+}
+
+
+
+/* Document Setup */
+
 html {
 	font-size: 62.5% !important;	/* 1rem = 10px */
 }
@@ -91,6 +149,11 @@ a:hover {
 	border-bottom: 1px dotted;
 }
 
+.input-wrapper {
+	margin-top: 4.4rem;
+	position: relative;
+}
+
 input[type=text],
 input[type=datetime],
 input[type=tel],
@@ -107,6 +170,63 @@ textarea {
 	padding: 2rem 0;
 	transition: all 0.35s ease-in-out; 
 	-webkit-appearance: none;
+}
+
+.input-wrapper input[type="text"] + label[data-placeholder],
+.input-wrapper input[type="datetime"] + label[data-placeholder],
+.input-wrapper input[type="tel"] + label[data-placeholder],
+.input-wrapper textarea {
+	pointer-events: none;
+}
+
+.input-wrapper input[type="text"] + label[data-placeholder]:after,
+.input-wrapper input[type="datetime"] + label[data-placeholder]:after,
+.input-wrapper input[type="tel"] + label[data-placeholder]:after,
+.input-wrapper textarea:after {
+	content: attr(data-placeholder);
+	cursor: text;
+	color: var(--Black36);
+	display: block;
+	font-weight: 500;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+	padding: 0;
+	position: absolute;
+	top: 3.2rem;
+	left: 0;
+	-webkit-transform: translate(0%, -50%);
+			transform: translate(0%, -50%);
+	-webkit-transition: all 0.175s ease-in-out;
+			transition: all 0.175s ease-in-out;
+}
+
+.input-wrapper input[type="text"]:hover,
+.input-wrapper input[type="datetime"]:hover,
+.input-wrapper input[type="tel"]:hover,
+.input-wrapper textarea:hover,
+.input-wrapper input[type="text"]:focus,
+.input-wrapper input[type="datetime"]:focus,
+.input-wrapper input[type="tel"]:focus,
+.input-wrapper textarea:focus {
+	border-bottom-color: var(--Black100);
+}
+.input-wrapper input[type="text"]:valid,
+.input-wrapper input[type="datetime"]:valid,
+.input-wrapper input[type="tel"]:valid,
+.input-wrapper textarea:valid {
+    border-bottom-color: var(--Black100);
+}
+.input-wrapper input[type="text"]:focus + label[data-placeholder]:after,
+.input-wrapper input[type="datetime"]:focus + label[data-placeholder]:after,
+.input-wrapper input[type="tel"]:focus + label[data-placeholder]:after,
+.input-wrapper textarea:focus + label[data-placeholder]:after,
+.input-wrapper input[type="text"]:valid + label[data-placeholder]:after,
+.input-wrapper input[type="datetime"]:valid + label[data-placeholder]:after,
+.input-wrapper input[type="tel"]:valid + label[data-placeholder]:after,
+.input-wrapper textarea:valid + label[data-placeholder]:after {
+    -webkit-transform: translate(-10%, -280%) scale(0.8, 0.8);
+            transform: translate(-10%, -280%) scale(0.8, 0.8);
+    color: var(--Black100);
 }
 
 .button,
@@ -293,7 +413,7 @@ ul {
 
 section {
 	min-height: 100vh;
-	padding: 4rem 0;
+	padding: 16rem 0;
 	position: relative;
 	width: 100vw;
 }
@@ -317,25 +437,6 @@ section {
 
 /* Footer */
 
-.copyrights-cont {
-	color: var(--White64);
-	text-align: center;
-	position: absolute;
-	bottom: 4rem;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 1;
-}
-
-.copyrights-cont a {
-	color: var(--White64);
-	border-bottom-color: var(--White36);
-}
-.copyrights-cont a:hover {
-	color: var(--White84);
-	border-bottom-color: var(--White84);
-}
-
 .license {
 	font-size: .9rem;
 	font-weight: 500;
@@ -345,7 +446,19 @@ section {
 }
 
 .by-kontora-wrapper {
-	margin-top: 2rem;
+	margin: 2rem auto 0;
+	width: 8.8rem;
+	height: 3.2rem;
+}
+
+.by-kontora-link {
+	width: inherit;
+	height: inherit;
+}
+
+.kontora-logo-svg {
+	width: inherit;
+	height: inherit;
 }
 
 
