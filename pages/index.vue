@@ -12,7 +12,11 @@
       <we-create />
     </main-section>
 
-    <free-section />
+    <free-section>
+      <marque-background>
+        Замерим Спроектируем Соберем Доставим
+      </marque-background>
+    </free-section>
 
     <realised-section />
 
@@ -23,7 +27,7 @@
     <!-- <title-section /> -->
     <dialog-mesurement />
     <footer />
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -43,6 +47,7 @@ import orderSection from '~/components/sections/Order.vue'
 
 // import section parts
 import weCreate from '~/components/WeCreate.vue'
+import marqueBackground from '~/components/MarqueeBackground.vue'
 
 // import buttons
 import callBabesButton from '@/components/buttons/CallBabesButton.vue'
@@ -67,6 +72,7 @@ export default {
     callBabesButton,
     consultButton,
     dialogMesurement,
+    marqueBackground,
   },
   computed: {
     backgroundColor () {
@@ -80,6 +86,6 @@ export default {
 </script>
 
 <style scoped>
-  
+
 
 </style>
