@@ -14,7 +14,7 @@
       <we-create />
     </main-section>
 
-    <free-section>
+    <free-section id="#free-section">
       <marque-background>
         <nobr>
           <span>Замерим</span>

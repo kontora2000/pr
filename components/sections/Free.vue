@@ -16,6 +16,7 @@ export default {
 <style scoped>
   .freefreefree-section {
     background: var(--Pink100);
+    min-height: 100vh;
   }
   .freefreefree-section-gradient-bottom {
     background: linear-gradient(180deg, rgba(255, 244, 247, 0) 0%, var(--White100) 100%);

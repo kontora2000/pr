@@ -1,6 +1,6 @@
 <template>
   <div class="marquee-background">
-    <row v-for="i in 4" :key="i">
+    <row v-for="i in 4" :key="i" :number="i-0">
       <slot />
     </row>
   </div>

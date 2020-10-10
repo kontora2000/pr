@@ -1,7 +1,7 @@
 <template>
   <div ref="row" class="marquee-background-row">
-    <div class="marquee-background-row-inner">
-      <span v-for="k in 2" :key="k" class="marquee-background-row-inner-el">
+    <div ref="inner" class="marquee-background-row-inner">
+      <span v-for="k in 8" :key="k" class="marquee-background-row-inner-el" ref="els">
         <slot />
       </span>
     </div>
@@ -9,6 +9,9 @@
 </template>
 
 <script>
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 export default {
   name: 'Row',
   props: {
@@ -31,11 +34,32 @@ export default {
     let offsetX
     let startX
     let originX
+    const w = this.$refs.inner.offsetWidth
     if (this.number % 2 === 0) {
       offsetX = -w * 2
       originX = '0% 0%'
-      startX = 0 - i * 200
+      startX = 0 - this.number * 500
+    } else {
+      startX = -w * 0.25 - this.number * 500
+      offsetX = w * 0.75
+      originX = '100% 0%'
     }
+    gsap.fromTo(this.$refs.els,
+      { x: startX, trasnformOrigin: originX, },
+      {
+        x: offsetX,
+        trasnformOrigin: originX,
+        duration: 30,
+        scrollTrigger: {
+          trigger: '#free-section',
+          scrub: 0.25,
+          start: '17% center',
+          // end: 'center top',
+          // markers:true
+        },
+      }
+
+    )
   },
 }
 </script>
@@ -59,7 +83,7 @@ export default {
     }
 
     .marquee-background-row-inner {
-      width: 400%;
+      width: 800%;
       position: relative;
       transform-origin: 0% 100%;
     }
