@@ -1,11 +1,10 @@
 <template>
-  <div class="marquee-background-row-wrapper">
-    <div ref="row" class="marquee-background-row">
-      <span v-for="k in 8" :key="k">
+  <div ref="row" class="marquee-background-row">
+    <div class="marquee-background-row-inner">
+      <span v-for="k in 2" :key="k" class="marquee-background-row-inner-el">
         <slot />
       </span>
     </div>
-    <span />
   </div>
 </template>
 
@@ -15,11 +14,11 @@ export default {
   props: {
     shift: {
       type: String,
-      default: '0vw',
+      default: '0%',
     },
-    title: {
-      type: String,
-      default: '',
+    number: {
+      type: Number,
+      default: 1,
     },
   },
   data () {
@@ -29,37 +28,56 @@ export default {
     }
   },
   mounted () {
-
+    let offsetX
+    let startX
+    let originX
+    if (this.number % 2 === 0) {
+      offsetX = -w * 2
+      originX = '0% 0%'
+      startX = 0 - i * 200
+    }
   },
 }
 </script>
 
 <style>
-    @keyframes marquee{
-        0% {left: 100%;}
-        100% {left: -100%;}
-        }
 
     .marquee-background-row {
-      animation: marquee 10s infinite;
       position: relative;
-      min-width: 100vw;
-      flex-direction: row;
+      left: 0px;
+      top: 0px;
+      max-height: 20vh;
       overflow: visible;
-      -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-      -khtml-user-select: none; /* Konqueror HTML */
-      -moz-user-select: none; /* Old versions of Firefox */
-      -ms-user-select: none; /* Internet Explorer/Edge */
+      position: relative;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
       user-select: none;
+      max-width: 100vw;
+      overflow: hidden;
     }
 
-    .marquee-background-row > span {
-      width: 100%;
-      font-size: 5vw;
+    .marquee-background-row-inner {
+      width: 400%;
+      position: relative;
+      transform-origin: 0% 100%;
+    }
+
+    .marquee-background-row-inner-el {
+      display: block;
+      float: left;
+      width: 50%;
       text-transform: lowercase;
       font-family: 'Transgender Grotesk';
       font-weight: 400;
       color: #FFF1F4;
+      font-size: 25vh;
+      line-height: 20vh;
+      max-height: 20vh;
     }
+
+     .marquee-background-row-inner-el > nobr {
+       overflow: hidden;
+     }
 </style>

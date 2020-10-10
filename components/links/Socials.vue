@@ -1,13 +1,13 @@
 <template>
   <div class="socials-wrapper">
     <div class="socials-item">
-      <a class="socials-item-link socials-item-link-instagram link-underline-solid" href="">Instagram</a>
+      <a class="socials-item-link socials-item-link-instagram link-underline-solid" href="https://instagram.com/princess_mebel" target="_blank">Instagram</a>
     </div>
     <div class="socials-item">
-      <a class="socials-item-link socials-item-link-telegram link-underline-solid" href="">Telegram</a>
+      <a class="socials-item-link socials-item-link-telegram link-underline-solid" href="https://t.me/princessfurniture" target="_blank">Telegram</a>
     </div>
     <div class="socials-item">
-      <a class="socials-item-link socials-item-link-whatsapp only-desktop link-underline-solid" href="">WhatsApp</a>
+      <a class="socials-item-link socials-item-link-whatsapp only-desktop link-underline-solid" href="https://wa.com/princess_mebel" target="_blank">WhatsApp</a>
     </div>
   </div>
 </template>
@@ -32,6 +32,7 @@ export default {
 
   .socials-item-link {
     font-size: 1.1rem;
+    font-weight: 500;
     line-height: 1.6rem;
     letter-spacing: .08em;
     text-transform: uppercase;

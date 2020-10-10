@@ -1,6 +1,6 @@
 <template>
-  <div class="marquee-background-wrapper">
-    <row v-for="i in 8" :key="i" :title="title">
+  <div class="marquee-background">
+    <row v-for="i in 4" :key="i">
       <slot />
     </row>
   </div>
@@ -14,21 +14,16 @@ export default {
   components: {
     row,
   },
-  props: {
-    title: {
-      type: String,
-      default: 'Замерим изготовим приготовим хуйготовим',
-    },
-  },
 }
 </script>
 
 <style scoped>
+
   .marquee-background {
-    position: absolute;
-    width: 100%;
     min-width: 100vw;
     height: auto;
     overflow: hidden;
+    position: absolute;
+
   }
 </style>

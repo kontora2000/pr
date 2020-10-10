@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <div class="address-socials-wrapper">
-      <adress v-hide class="address-block">Краснодар,&nbsp;Тургенева,&nbsp;123</adress>
+      <adress v-hide class="address-block">
+        Краснодар,&nbsp;Тургенева,&nbsp;123
+      </adress>
       <socials />
       <phone>+7&thinsp;861&thinsp;215-30-00</phone>
     </div>
@@ -14,7 +16,12 @@
 
     <free-section>
       <marque-background>
-        Замерим Спроектируем Соберем Доставим
+        <nobr>
+          <span>Замерим</span>
+          <span>Cпроектируем</span>
+          <span>Соберем</span>
+          <span>Доставим</span>
+        </nobr>
       </marque-background>
     </free-section>
 
@@ -86,6 +93,8 @@ export default {
 </script>
 
 <style scoped>
-
+  body, #app {
+    overflow-x:hidden !important;
+  }
 
 </style>
