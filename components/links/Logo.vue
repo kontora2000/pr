@@ -74,11 +74,15 @@ export default {
   .logo {
     border-bottom: none;
     cursor: pointer;
-    width: 12%;
+    display: block;
+    width: 100%;
+    transition: transform .125s ease-in-out;
 
     filter: drop-shadow(0 0 20px rgba(101, 0, 19, 0.08));
   }
-
+  .logo:hover {
+    transform: translateY(-.6rem);
+  }
   .logo-part-wrapper {
     display: inline-block;
     vertical-align: top;
@@ -113,7 +117,7 @@ export default {
   .logo-part-pr-svg>use,
   .logo-part-crown-svg>use,
   .logo-part-cess-svg>use {
-    fill: #F5EEF2;
+    fill: var(--PinkLight100);
   }
 
   .logo-subtitle {

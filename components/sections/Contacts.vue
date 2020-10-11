@@ -72,9 +72,8 @@
   .contacts-section-inner {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-column-gap: 8rem;
     font-family: var(--font-serif);
-    font-size: 3.6rem;
+    font-size: 3.2rem;
     margin: 10rem auto 20rem;
     max-width: 1248px;
     position: relative;
@@ -99,6 +98,10 @@
   .contacts-section-inner-socials-link:hover svg {
     opacity: .64;
     transform: scale(1.1);
+  }
+
+  .contacts-section-inner-address {
+    text-align: center;
   }
 
   .copyrights-cont {
