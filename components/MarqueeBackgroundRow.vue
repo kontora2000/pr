@@ -42,9 +42,9 @@ export default {
     if (this.number % 2 === 0) {
       offsetX = -w * 2
       originX = '0% 0%'
-      startX = 0 - this.number * 500
+      startX = 0 - this.number * 800
     } else {
-      startX = -w * 0.25 - this.number * 500
+      startX = -w * 0.25 - this.number * 800
       offsetX = w * 0.75
       originX = '100% 0%'
     }
@@ -56,9 +56,9 @@ export default {
         duration: 30,
         scrollTrigger: {
           trigger: '#free-section',
-          scrub: 0.25,
+          scrub: 0.75,
           start: '17% center',
-          // end: 'center top',
+          end: 'bottom center',
           // markers:true
         },
       }
@@ -103,6 +103,7 @@ export default {
       font-size: 25vh;
       line-height: 20vh;
       max-height: 20vh;
+      text-shadow: 1px 2px 3px #cccccc;
     }
 
      .marquee-background-row-inner-el > nobr {
