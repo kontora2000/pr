@@ -1,0 +1,111 @@
+<template>
+  <div ref="row" class="marquee-background-row">
+    <div ref="inner" class="marquee-background-row-inner">
+      <span v-for="k in 8" :key="k" class="marquee-background-row-inner-el" ref="els">
+        <slot />
+      </span>
+    </div>
+  </div>
+</template>
+
+<script>
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+if (process.client) {
+  gsap.registerPlugin(ScrollTrigger)
+}
+
+export default {
+  name: 'Row',
+  props: {
+    shift: {
+      type: String,
+      default: '0%',
+    },
+    number: {
+      type: Number,
+      default: 1,
+    },
+  },
+  data () {
+    return {
+      isAnimated: true,
+      timeline: null,
+    }
+  },
+  mounted () {
+    let offsetX
+    let startX
+    let originX
+    const w = this.$refs.inner.offsetWidth
+    if (this.number % 2 === 0) {
+      offsetX = -w * 2
+      originX = '0% 0%'
+      startX = 0 - this.number * 500
+    } else {
+      startX = -w * 0.25 - this.number * 500
+      offsetX = w * 0.75
+      originX = '100% 0%'
+    }
+    gsap.fromTo(this.$refs.els,
+      { x: startX, trasnformOrigin: originX, },
+      {
+        x: offsetX,
+        trasnformOrigin: originX,
+        duration: 30,
+        scrollTrigger: {
+          trigger: '#free-section',
+          scrub: 0.25,
+          start: '17% center',
+          // end: 'center top',
+          // markers:true
+        },
+      }
+
+    )
+  },
+}
+</script>
+
+<style>
+
+    .marquee-background-row {
+      position: relative;
+      left: 0px;
+      top: 0px;
+      max-height: 20vh;
+      overflow: visible;
+      position: relative;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      max-width: 100vw;
+      overflow: hidden;
+    }
+
+    .marquee-background-row-inner {
+      width: 800%;
+      position: relative;
+      transform-origin: 0% 100%;
+    }
+
+    .marquee-background-row-inner-el {
+      display: block;
+      float: left;
+      width: 50%;
+      text-transform: lowercase;
+      font-family: 'Transgender Grotesk';
+      font-weight: 400;
+      color: #FFF1F4;
+      font-size: 25vh;
+      line-height: 20vh;
+      max-height: 20vh;
+    }
+
+     .marquee-background-row-inner-el > nobr {
+       overflow: hidden;
+     }
+</style>

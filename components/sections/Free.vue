@@ -10,6 +10,7 @@
       </div>
     </div>
     <div class="section-gradient-bottom freefreefree-section-gradient-bottom" />
+    <slot />
   </section>
 </template>
 
@@ -23,6 +24,7 @@ export default {
   .freefreefree-section {
     background: var(--Pink100);
     padding-bottom: 0;
+    min-height: 100vh;
   }
   .freefreefree-section-gradient-bottom {
     background: linear-gradient(180deg, rgba(255, 244, 247, 0) 0%, var(--White100) 100%);

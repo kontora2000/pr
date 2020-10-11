@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <div class="address-socials-wrapper">
-      <adress v-hide class="address-block">Краснодар,&nbsp;Тургенева,&nbsp;123</adress>
+      <adress v-hide class="address-block">
+        Краснодар,&nbsp;Тургенева,&nbsp;123
+      </adress>
       <socials />
       <phone>+7&thinsp;861&thinsp;215-30-00</phone>
     </div>
@@ -12,7 +14,16 @@
       <we-create />
     </main-section>
 
-    <free-section />
+    <free-section id="#free-section">
+      <marque-background>
+        <nobr>
+          <span>Замерим</span>
+          <span>Cпроектируем</span>
+          <span>Соберем</span>
+          <span>Доставим</span>
+        </nobr>
+      </marque-background>
+    </free-section>
 
     <realised-section />
 
@@ -23,7 +34,7 @@
     <!-- <title-section /> -->
     <dialog-mesurement />
     <footer />
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -43,6 +54,7 @@ import orderSection from '~/components/sections/Order.vue'
 
 // import section parts
 import weCreate from '~/components/WeCreate.vue'
+import marqueBackground from '~/components/MarqueeBackground.vue'
 
 // import buttons
 import callBabesButton from '@/components/buttons/CallBabesButton.vue'
@@ -67,6 +79,7 @@ export default {
     callBabesButton,
     consultButton,
     dialogMesurement,
+    marqueBackground,
   },
   computed: {
     backgroundColor () {
@@ -80,6 +93,8 @@ export default {
 </script>
 
 <style scoped>
-  
+  body, #app {
+    overflow-x:hidden !important;
+  }
 
 </style>
