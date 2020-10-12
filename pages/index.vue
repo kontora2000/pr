@@ -23,6 +23,7 @@
           <span>Доставим</span>
         </nobr>
       </marque-background>
+      <arc />
     </free-section>
 
     <realised-section />
@@ -55,6 +56,7 @@ import orderSection from '~/components/sections/Order.vue'
 // import section parts
 import weCreate from '~/components/WeCreate.vue'
 import marqueBackground from '~/components/MarqueeBackground.vue'
+import arc from '~/components/Arc.vue'
 
 // import buttons
 import callBabesButton from '@/components/buttons/CallBabesButton.vue'
@@ -80,6 +82,7 @@ export default {
     consultButton,
     dialogMesurement,
     marqueBackground,
+    arc
   },
   computed: {
     backgroundColor () {
