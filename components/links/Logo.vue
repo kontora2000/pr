@@ -8,16 +8,16 @@
               <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur"></feGaussianBlur>
               <feOffset dy="1" dx="1"></feOffset>
               <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1.5" k3="1.5" result="shadowDiff"></feComposite>
-              
+
               <feFlood flood-color="#fff" flood-opacity=".64"></feFlood>
               <feComposite in2="shadowDiff" operator="in"></feComposite>
               <feComposite in2="SourceGraphic" operator="over" result="firstfilter"></feComposite>
-                  
-                  
+
+
               <feGaussianBlur in="firstfilter" stdDeviation=".5" result="blur2"></feGaussianBlur>
               <feOffset dy="-.5" dx="-.5"></feOffset>
               <feComposite in2="firstfilter" operator="arithmetic" k2="-1.5" k3="1.5" result="shadowDiff"></feComposite>
-              
+
               <feFlood flood-color="#850020" flood-opacity="0.2"></feFlood>
               <feComposite in2="shadowDiff" operator="in"></feComposite>
               <feComposite in2="firstfilter" operator="over"></feComposite>
