@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <div class="address-socials-wrapper">
-      <adress v-hide class="address-block">
-        Краснодар,&nbsp;Тургенева,&nbsp;123
-      </adress>
+      <adress v-hide class="address-block">Краснодар,&nbsp;Тургенева,&nbsp;123</adress>
       <socials />
       <phone>+7&thinsp;861&thinsp;215-30-00</phone>
     </div>

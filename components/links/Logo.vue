@@ -62,10 +62,10 @@ export default {
     display: block;
     height: 2.5rem;
     left: 50%;
-    margin: 2rem 0 0;
+    margin: 0;
     position: fixed;
     text-align: center;
-    top: 32%;
+    top: 20%;
     transform: translate(-50%);
     width: 34.4rem;
     z-index: 1004;
@@ -124,8 +124,9 @@ export default {
     cursor: default;
     font-family: var(--font-transgender);
     font-size: 1rem;
-    letter-spacing: .5em;
+    letter-spacing: .53em;
     line-height: 1.6rem;
+    margin-top: .2rem;
     text-transform: uppercase;
   }
 </style>

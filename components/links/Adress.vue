@@ -38,5 +38,9 @@ export default {
     fill: var(--Violet100);
   }
 
-  .address-block .hours>sup { }
+  .address-block .hours>sup {
+    font-size: 7px;
+    font-weight: 500;
+    margin-left: .5px;
+  }
 </style>

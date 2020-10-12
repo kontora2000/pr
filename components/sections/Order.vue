@@ -32,15 +32,15 @@
       </div>
       <div class="order-form-input-wrapper input-wrapper">
         <input class="order-form-input" type="text" name="address" required>
-        <label class="floatting-label" data-placeholder="Адрес&nbsp;установки"></label>
+        <label class="floatting-label" data-placeholder="Адрес установки"></label>
       </div>
       <div class="order-form-input-wrapper input-wrapper">
         <input class="order-form-input" type="text" name="phone" required>
-        <label class="floatting-label" data-placeholder="Контактный&nbsp;телефон"></label>
+        <label class="floatting-label" data-placeholder="Контактный телефон"></label>
       </div>
       <div class="order-form-input-wrapper input-wrapper">
         <input class="order-form-input" type="text" name="name" required>
-        <label class="floatting-label" data-placeholder="Ваше&nbsp;имя"></label>
+        <label class="floatting-label" data-placeholder="Ваше имя"></label>
       </div>
       <div class="order-section-form-button-send-wrapper">
         <div class="subtitle order-section-form-button-send-subtitle">В&nbsp;течении 15&nbsp;минут мы&nbsp;перезвоним по&nbsp;указанному номеру телефона, чтобы подтвердить заявку и&nbsp;договориться об&nbsp;удобном для&nbsp;замера времени</div>
@@ -63,6 +63,7 @@ export default {
   }
   .order-section>h1 {
     color: var(--White100);
+    text-align: center;
   }
   .order-section-gradient-bottom {
     background: linear-gradient(180deg, rgba(255, 252, 244, 0) 0%, #98CEFF 100%);

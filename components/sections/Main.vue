@@ -6,6 +6,7 @@
       <div class="scene-kitchen-chairs main-scene-layer-3 main-scene-layer" />
       <div class="scene-kitchen-lights main-scene-layer-3 main-scene-layer" />
       <div class="scene-kitchen-counter main-scene-layer-2 main-scene-layer" />
+      <div class="clouds-back main-scene-layer-1 main-scene-layer" />
     </div>
     <slot />
     <div class="section-gradient-bottom main-section-gradient-bottom"></div>
@@ -40,7 +41,7 @@ export default {
 
   .main-scene-layer {
     background-color: transparent;
-    background-position: 0 0;
+    background-position: 800% 0;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -55,11 +56,59 @@ export default {
   .main-scene-layer-4 {z-index: 4;}
   .main-scene-layer-5 {z-index: 5;}
 
+  .scene-kitchen-counter {
+    background-image: url('../../static/_img/main-scene/kitchen.png');
+    background-position-y: -30px;
+  }
+
+  .scene-kitchen-chairs {
+    background-image: url('../../static/_img/main-scene/chairs.png');
+    background-position-y: -30px;
+  }
+
+  .scene-kitchen-lights {
+    background-image: url('../../static/_img/main-scene/lights.png');
+    background-position-y: -20px;
+  }
+
+  .scene-table-chairs {
+    background-image: url('../../static/_img/main-scene/table-chairs.png');
+  }
+
+  .clouds-front {
+    background-image: url('../../static/_img/main-scene/clouds-front.png');
+    background-position-y: -100px;
+  }
+
   .clouds-back {
     background-image: url('../../static/_img/main-scene/clouds-back.png');
-    min-height: 120vh;
-    height: 120vh;
+    background-position-y: -100px;
+}
+
+  .main-scene-mask {
+    border-radius: 1000px 1000px 0 0;
+    height: calc(100vh - 3.6rem);
+    width: 53.6rem;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
   }
+
+  .main-scene-bg {
+    background: radial-gradient(102.59% 86.31% at 50% 84.48%, rgba(255, 156, 215, 0) 84.9%, rgba(20, 0, 255, 0.14) 98.51%), radial-gradient(154.91% 70.04% at 50% 45.04%, rgba(255, 193, 212, 0) 20.73%, rgba(96, 0, 219, 0.2) 59.69%), radial-gradient(172.76% 116.16% at 50% 100%, #FFF3F6 46.26%, #FFD8E2 100%);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -5;
+  }
+
+  .main-section-gradient-bottom {
+    background: linear-gradient(180deg, rgba(255, 244, 247, 0) 0%, var(--Pink100) 80%);
+  }
+
 
   .k1 {
     background-image: url('../../static/_img/animation/kitchen/k1.png') !important;
@@ -126,47 +175,4 @@ export default {
     z-index: 10;
   }
 
-  .scene-kitchen-counter {
-    background-image: url('../../static/_img/main-scene/kitchen.png');
-  }
-
-  .scene-kitchen-chairs {
-    background-image: url('../../static/_img/main-scene/chairs.png');
-  }
-
-  .scene-kitchen-lights {
-    background-image: url('../../static/_img/main-scene/lights.png');
-  }
-
-  .scene-table-chairs {
-    background-image: url('../../static/_img/main-scene/table-chairs.png');
-  }
-
-  .clouds-front {
-    background-image: url('../../static/_img/main-scene/clouds-front.png'); 
-  }
-
-  .main-scene-mask {
-    border-radius: 1000px 1000px 0 0;
-    height: calc(100vh - 3.6rem);
-    width: 53.6rem;
-    overflow: hidden;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-
-  .main-scene-bg {
-    background: var(--Pink100);
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: -5;
-  }
-
-  .main-section-gradient-bottom {
-    background: linear-gradient(180deg, rgba(255, 244, 247, 0) 0%, var(--Pink100) 80%);
-  }
 </style>

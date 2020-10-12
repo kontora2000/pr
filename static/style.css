@@ -193,7 +193,7 @@ textarea {
 	text-transform: uppercase;
 	padding: 0;
 	position: absolute;
-	top: 3.2rem;
+	top: 4rem;
 	left: 0;
 	-webkit-transform: translate(0%, -50%);
 			transform: translate(0%, -50%);
@@ -225,8 +225,8 @@ textarea {
 .input-wrapper input[type="datetime"]:valid + label[data-placeholder]:after,
 .input-wrapper input[type="tel"]:valid + label[data-placeholder]:after,
 .input-wrapper textarea:valid + label[data-placeholder]:after {
-    -webkit-transform: translate(-10%, -280%) scale(0.8, 0.8);
-            transform: translate(-10%, -280%) scale(0.8, 0.8);
+    -webkit-transform: translate(-10%, -340%) scale(0.8, 0.8);
+            transform: translate(-10%, -340%) scale(0.8, 0.8);
     color: var(--Black100);
 }
 

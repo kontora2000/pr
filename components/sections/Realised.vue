@@ -53,6 +53,10 @@
     color: var(--Gray100);
   }
 
+  .realised-section>h1 {
+    text-align: center;
+  }
+
   .realised-gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, calc((100% - 32.4rem) / 39));
@@ -62,7 +66,8 @@
   }
 
   .gallery-photo-wrapper {
-    grid-column: span 10;
+    grid-column: span 13;
+    width: 100%;
   }
 
   .gallery-photo {

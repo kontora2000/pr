@@ -28,6 +28,7 @@
 
       <div class="contacts-section-inner-address">
         <a class="contacts-section-inner-address-link link-underline-solid" href="#" target="_blank">Краснодар, Тургенева, дом&nbsp;123</a>
+        <div>Работаем с 10 до 18<sup>00</sup></div>
       </div>
 
       <div class="contacts-section-inner-tel-email">
