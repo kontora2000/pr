@@ -41,9 +41,9 @@
 	--Gray100: rgba(161, 178, 197, 1);
 	--Gray0: rgba(161, 178, 197, 0);
 
-	--Violet100: rgba(150, 103, 188, 1);
-	--Violet64: rgba(150, 103, 188, .64);
-	--Violet32: rgba(150, 103, 188, .32);
+	--Violet100: rgba(125, 96, 216, 1);
+	--Violet64: rgba(125, 96, 216, .64);
+	--Violet32: rgba(125, 96, 216, .32);
 
 	--font-default: 'Montserrat', sans-serif;
 	--font-serif: serif;
@@ -391,7 +391,7 @@ ul {
 }
 .address-socials-wrapper a:hover {
 	color: var(--Violet64);
-	border-bottom-color: var(--Violet64);
+	border-bottom-color: var(--Violet32);
 }
 
 .address-socials-wrapper {

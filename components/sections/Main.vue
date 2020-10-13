@@ -98,7 +98,7 @@ export default {
   }
 
   .main-scene-bg {
-    background: radial-gradient(102.59% 86.31% at 50% 84.48%, rgba(255, 156, 215, 0) 84.9%, rgba(20, 0, 255, 0.14) 98.51%), radial-gradient(154.91% 70.04% at 50% 45.04%, rgba(255, 193, 212, 0) 20.73%, rgba(96, 0, 219, 0.2) 59.69%), radial-gradient(172.76% 116.16% at 50% 100%, #FFF3F6 46.26%, #FFD8E2 100%);
+    background: radial-gradient(81.13% 85.17% at 50% 84.48%, rgba(255, 156, 215, 0) 77.73%, rgba(16, 0, 203, 0.49) 98.51%), radial-gradient(154.91% 70.04% at 50% 45.04%, rgba(255, 193, 212, 0) 20.73%, rgba(96, 0, 219, 0.16) 59.69%), radial-gradient(172.76% 116.16% at 50% 100%, #FFF3F6 46.26%, #FFD8E2 100%, #FFD8E2 100%);
     height: 100%;
     position: absolute;
     width: 100%;

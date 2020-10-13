@@ -97,5 +97,4 @@ export default {
   body, #app {
     overflow-x:hidden !important;
   }
-
 </style>

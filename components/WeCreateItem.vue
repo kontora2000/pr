@@ -98,6 +98,13 @@ export default {
     margin: 0 1.5rem;
     position: relative;
   }
+  .we-create-link:not(:last-child):not(:nth-child(3)):not(:nth-child(6))::after {
+    content: '✹';
+    display: inline-block;
+    font-size: 2.8rem;
+    margin-left: 1.6rem;
+    vertical-align: top;
+  }
 
   .we-create-preview {
     position: relative;
