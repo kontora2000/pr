@@ -7,7 +7,7 @@
     </div>
     <consult-button />
     <call-babes-button />
-    <main-section text-color="#ffffff" background-color="transparent">
+    <main-section text-color="#ffffff" background-color="transparent" color-class="some-cool-class">
       <logo />
       <we-create />
     </main-section>
@@ -31,7 +31,6 @@
 
     <!-- <title-section /> -->
     <dialog-mesurement />
-    <footer />
   </div>
 </template>
 

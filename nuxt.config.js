@@ -29,7 +29,6 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/vHide', }
 
   ],
   /*
@@ -44,7 +43,8 @@ export default {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/svg'
   ],
   /*
   ** Axios module configuration
