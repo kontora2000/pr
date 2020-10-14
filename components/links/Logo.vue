@@ -83,7 +83,7 @@ export default {
     margin: 0;
     position: fixed;
     text-align: center;
-    top: 20%;
+    top: 32%;
     transform: translate(-50%);
     width: 34.4rem;
     z-index: 1004;
@@ -94,18 +94,25 @@ export default {
     cursor: pointer;
     display: block;
     width: 100%;
-    transition: transform .125s ease-in-out;
+    transition: transform .125s ease-in-out, -webkit-filter .2s ease-in-out, filter .2s ease-in-out;
+    will-change: transform, filter, -webkit-filter;
 
-    filter: drop-shadow(0 0 20px rgba(101, 0, 19, 0.08));
+    filter: drop-shadow(0 0 20px rgba(101, 0, 19, .08));
   }
   .logo:hover {
     transform: translateY(-.6rem);
+    filter: drop-shadow(0 4px 22px rgba(101, 0, 19, .1));
   }
   .logo-part-wrapper {
     display: inline-block;
     vertical-align: top;
+    transition:  filter .2s ease-in-out, -webkit-filter .2s ease-in-out;
+    will-change: -webkit-filter, filter;
 
-    filter: drop-shadow(2px 8px 16px rgba(101, 0, 37, 0.24));
+    filter: drop-shadow(2px 8px 16px rgba(101, 0, 37, .24));
+  }
+  .logo:hover .logo-part-wrapper {
+    filter: drop-shadow(0 10px 18px rgba(101, 0, 37, .26));
   }
 
   .logo-part-wrapper-pr {
@@ -128,8 +135,13 @@ export default {
     height: 100%;
     max-height: 4.4rem;
     width: 100%;
+    transition: -webkit-filter .2s ease-in-out, filter .2s ease-in-out;
+    will-change: -webkit-filter, filter;
 
-    filter: drop-shadow(2px 4px 8px rgba(133, 1, 56, 0.2));
+    filter: drop-shadow(2px 4px 4px rgba(133, 1, 56, .2));
+  }
+  .logo:hover .logo-part-svg {
+    filter: drop-shadow(2px 6px 6px rgba(133, 1, 56, .2));
   }
 
   .logo-part-pr-svg>use,
@@ -139,6 +151,7 @@ export default {
   }
 
   .logo-subtitle {
+    color: #DCB2C0;
     cursor: default;
     font-family: var(--font-transgender);
     font-size: 1rem;

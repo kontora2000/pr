@@ -85,6 +85,9 @@ export default {
       max-width: 100vw;
       overflow: hidden;
     }
+    .marquee-background-row:not(:last-child) {
+      margin-bottom: 4rem;
+    }
 
     .marquee-background-row-inner {
       width: 800%;

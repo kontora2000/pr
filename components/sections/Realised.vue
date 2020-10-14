@@ -37,7 +37,7 @@
       <div class="realised-section-link-instagram-comment">
         Больше контента у&nbsp;нас в&nbsp;инстаграме
       </div>
-      <a class="button button-big realised-section-link-instagram" href="https://instagram.com/princess_mebel" target="_blank">@princess_mebel</a>
+      <a class="button button-big realised-section-link-instagram" href="https://instagram.com/princess_mebel" target="_blank"><span class="realised-section-link-instagram-icon-wrapper"><svg class="icon-svg icon-instagram-svg"><use xlink:href="~/static/sprite.svg#icon-instagram-thin"></use></svg></span>@princess_mebel</a>
     </div>
     <div class="section-gradient-bottom realised-section-gradient-bottom" />
   </section>
@@ -92,6 +92,20 @@
   .realised-section-link-instagram {
     background: linear-gradient(180deg, #CAD4DE 0%, #A1B2C5 100%);
     color: var(--White100);
+    padding: 1.4rem 1.9rem;
+    will-change: transform;
+  }
+
+  .realised-section-link-instagram-icon-wrapper {
+    display: inline-block;
+    width: 3.2rem;
+    height: 3.2rem;
+    vertical-align: middle;
+    margin-right: .8rem;
+  }
+
+  .realised-section-link-instagram-icon-wrapper .icon-instagram-svg>use{
+    fill: var(--White100);
   }
 
   .realised-section-gradient-bottom {
