@@ -67,7 +67,7 @@ export default {
 
 <style scoped>
   .contacts-section {
-    background: #98CEFF;
+    background: var(--BlueLight100);
     padding-bottom: 1rem;
   }
   .contacts-section-gradient-bottom {

@@ -47,9 +47,19 @@ export default {
     line-height: 1.6rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    text-shadow: 0px 0px 20px rgba(101, 0, 19, 0.72),
+    text-shadow: 0px 2px 8px rgba(101, 0, 19, 0.72),
                  2px 3px 4px rgba(133, 1, 40, 0.2),
                  1px 1px 2px rgba(101, 0, 19, 0.16);
+  }
+  .colors-section-realised.link-open-chat-wrapper .link-open-chat {
+    text-shadow: 0px 0px 8px var(--Gray64),
+                 2px 3px 4px var(--Gray88),
+                 1px 1px 4px var(--Gray100);
+  }
+  .colors-section-order.link-open-chat-wrapper .link-open-chat {
+    text-shadow: 0px 0px 8px var(--Beige64),
+                 2px 3px 4px var(--Beige88),
+                 1px 1px 4px var(--Beige100);
   }
 
   .icon-consult-wrapper {
@@ -59,6 +69,18 @@ export default {
   }
   .link-open-chat:hover .icon-consult-wrapper {
     filter: drop-shadow(0 10px 18px rgba(101, 0, 37, .28));
+  }
+  .colors-section-realised.link-open-chat-wrapper .icon-consult-wrapper {
+    filter: drop-shadow(2px 8px 16px var(--Gray64));
+  }
+  .colors-section-realised.link-open-chat-wrapper .link-open-chat:hover .icon-consult-wrapper {
+    filter: drop-shadow(0 10px 18px var(--Gray64));
+  }
+  .colors-section-order.link-open-chat-wrapper .icon-consult-wrapper {
+    filter: drop-shadow(2px 8px 16px var(--Beige64));
+  }
+  .colors-section-order.link-open-chat-wrapper .link-open-chat:hover .icon-consult-wrapper {
+    filter: drop-shadow(0 10px 18px var(--Beige64));
   }
 
   .icon-consult-svg {
@@ -75,17 +97,33 @@ export default {
     transform: translateY(-.4rem);
     filter: drop-shadow(1px 4px 4px rgba(133, 1, 56, .28));
   }
+  .colors-section-realised.link-open-chat-wrapper .icon-consult-svg {
+    filter: drop-shadow(1px 3px 3px var(--Gray88));
+  }
+  .colors-section-realised.link-open-chat-wrapper .link-open-chat:hover .icon-consult-svg {
+    filter: drop-shadow(1px 4px 4px var(--Gray88));
+  }
+  .colors-section-order.link-open-chat-wrapper .icon-consult-svg {
+    filter: drop-shadow(1px 3px 3px var(--Beige88));
+  }
+  .colors-section-order.link-open-chat-wrapper .link-open-chat:hover .icon-consult-svg {
+    filter: drop-shadow(1px 4px 4px var(--Beige88));
+  }
+
   .icon-consult-svg>use {
     fill: var(--PinkLight100);
+    transition: fill .175s ease-in-out;
   }
-<<<<<<< HEAD
-=======
+  .colors-section-realised.link-open-chat-wrapper .icon-consult-svg>use,
+  .colors-section-order.link-open-chat-wrapper .icon-consult-svg>use,
+  .colors-section-contacts.link-open-chat-wrapper .icon-consult-svg>use {
+    fill: var(--GrayLight100);
+  }
 
   .link-open-words-wrapper {
       display: inline-block;
       vertical-align: top;
     }
->>>>>>> des2
 
   @media (max-width: 460px) {
     .link-open-chat-wrapper {

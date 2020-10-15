@@ -66,13 +66,36 @@ export default {
                 inset -1px -8px 12px rgba(217, 181, 201, 0.44),
                 inset -0.5px -0.5px 1.5px rgba(133, 0, 32, 0.2),
                 inset 1px 1px 4px var(--White100);
+    
   }
   .button-measurer:hover {
+    background: var(--White100);
     box-shadow: 0px 12px 24px rgba(101, 0, 19, 0.04),
                 1px 8px 16px rgba(133, 1, 40, 0.08),
                 1px 12px 20px rgba(101, 0, 19, 0.16),
                 inset -1px -8px 12px rgba(217, 181, 201, 0.44),
                 inset -0.5px -0.5px 1.5px rgba(133, 0, 32, 0.2),
+                inset 1px 1px 4px var(--White100);
+  }
+  .colors-section-realised.button-measurer-wrapper .button-measurer {
+    background: var(--GrayLight100);
+    color: var(--Gray100);
+    text-shadow: 0.5px 0.5px 0.5px var(--White100),
+                -0.5px -0.5px 0.5px var(--Gray64);
+    box-shadow: 0px 12px 24px var(--Gray44),
+                1px 8px 16px var(--Gray88),
+                1px 12px 20px var(--Gray64),
+                inset -1px -8px 12px var(--Gray44),
+                inset -0.5px -0.5px 1.5px var(--Gray20),
+                inset 1px 1px 4px var(--White100);
+  }
+  .colors-section-realised.button-measurer-wrapper .button-measurer:hover {
+    background-color: var(--White100);
+    box-shadow: 0px 12px 24px var(--Gray44),
+                1px 8px 16px var(--Gray88),
+                1px 12px 20px var(--Gray64),
+                inset -1px -8px 12px var(--Gray44),
+                inset -0.5px -0.5px 1.5px var(--Gray20),
                 inset 1px 1px 4px var(--White100);
   }
 

@@ -62,7 +62,7 @@ export default {
 
 <style scoped>
   .order-section {
-    background-color: #E4D8D4;
+    background-color: var(--BeigeLight100);
   }
   .order-section>h1 {
     color: var(--White100);

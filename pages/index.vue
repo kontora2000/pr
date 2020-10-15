@@ -14,7 +14,7 @@
       <we-create />
     </main-section>
 
-    <free-section id="free-section" color-class="some-cool-class-2">
+    <free-section id="free-section" color-class="colors-section-freefreefree">
       <marque-background>
         <nobr>
           <span>Замерим</span>
@@ -26,11 +26,11 @@
       <arc />
     </free-section>
 
-    <realised-section color-class="some-cool-class-3" />
+    <realised-section color-class="colors-section-realised" />
 
-    <order-section color-class="some-cool-class-4" />
+    <order-section color-class="colors-section-order" />
 
-    <contacts-section color-class="some-cool-class-5" />
+    <contacts-section color-class="colors-section-contacts" />
 
     <!-- <title-section /> -->
     <dialog-mesurement />
