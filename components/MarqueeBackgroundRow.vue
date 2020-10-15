@@ -108,9 +108,35 @@ export default {
       max-height: 20vh;
     }
 
-     .marquee-background-row-inner-el > nobr {
-       overflow: hidden;
-     }
+    .marquee-background-row-inner-el > nobr {
+      overflow: hidden;
+    }
+
+    .marquee-word {
+      background-size: contain !important;
+      display: inline-block;
+      height: 169px;
+    }
+    .marquee-word:not(:last-child) {
+      margin-right: 0;
+    }
+
+    .marquee-word-zamerim {
+      background: transparent url('../static/_img/free/zamerim.png') 0 0 no-repeat;
+      width: 856px;
+    }
+    .marquee-word-sproektiruem {
+      background: transparent url('../static/_img/free/sproektiruem.png') 0 0 no-repeat;
+      width: 1370px;
+    }
+    .marquee-word-dostavim {
+      background: transparent url('../static/_img/free/dostavim.png') 0 0 no-repeat;
+      width: 930px;
+    }
+    .marquee-word-soberem {
+      background: transparent url('../static/_img/free/soberem.png') 0 0 no-repeat;
+      width: 856px;
+    }
 
     @media (max-width: 460px) {
       .marquee-background-row-inner-el {

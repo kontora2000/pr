@@ -17,10 +17,14 @@
     <free-section id="free-section" color-class="colors-section-freefreefree">
       <marque-background>
         <nobr>
-          <span>Замерим</span>
+          <!--<span>Замерим</span>
           <span>Cпроектируем</span>
           <span>Соберем</span>
-          <span>Доставим</span>
+          <span>Доставим</span>-->
+          <span class="marquee-word marquee-word-zamerim"></span>
+          <span class="marquee-word marquee-word-sproektiruem"></span>
+          <span class="marquee-word marquee-word-dostavim"></span>
+          <span class="marquee-word marquee-word-soberem"></span>
         </nobr>
       </marque-background>
       <arc />
