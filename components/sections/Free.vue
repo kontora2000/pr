@@ -59,4 +59,16 @@ export default {
     padding-top: 10rem;
     text-align: center;
   }
+
+  @media (max-width: 460px) {
+    .freefreefree-arch {
+      height: 100vh;
+      max-width: calc(100vw - 3.2rem);
+    }
+
+    .freefreefree-arch-inner {
+      font-size: 2.8rem;
+      margin: 0 .4rem;
+    }
+  }
 </style>

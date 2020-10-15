@@ -43,6 +43,15 @@
   </section>
 </template>
 
+<script>
+import sectionMixin from '../../mixins/sectionMixin'
+
+export default {
+  name: 'RealisedSection',
+  mixins: [sectionMixin],
+}
+</script>
+
 <style scoped>
   .realised-section {
     background: var(--White100);
@@ -110,5 +119,22 @@
 
   .realised-section-gradient-bottom {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #E4D8D4 100%);
+  }
+
+  @media (max-width: 460px) {
+    .realised-section>h1 {
+      margin-left: .8rem;
+      margin-right: .8rem;
+      text-align: left;
+    }
+
+    .realised-gallery-grid {
+      grid-template-columns: 1fr 1fr;
+      margin: 4rem .4rem 6.4rem;
+    }
+
+    .gallery-photo-wrapper {
+      grid-column: span 1;
+    }
   }
 </style>

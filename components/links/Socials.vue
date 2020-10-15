@@ -3,6 +3,11 @@
     <div class="socials-item">
       <a class="socials-item-link socials-item-link-instagram link-underline-solid" href="https://instagram.com/princess_mebel" target="_blank">Instagram</a>
     </div>
+    <span class="socials-star only-phone">
+        <svg class="socials-star-svg star-plus-svg" v-hide>
+          <use xlink:href="~/static/sprite.svg#star-plus"></use>
+        </svg>
+    </span>
     <div class="socials-item">
       <a class="socials-item-link socials-item-link-telegram link-underline-solid" href="https://t.me/princessfurniture" target="_blank">Telegram</a>
     </div>
@@ -39,5 +44,29 @@ export default {
     line-height: 1.6rem;
     letter-spacing: .08em;
     text-transform: uppercase;
+  }
+
+  .socials-star {
+    margin: .3rem 1.2rem 0;
+  }
+
+  .socials-star-svg {
+    height: .9rem;
+    width: .9rem;
+  }
+
+  .socials-star-svg>use {
+    fill: var(--Violet100);
+  }
+
+  @media (max-width: 460px) {
+    .socials-wrapper {
+      display: inline-flex;
+      flex-direction: row;
+      left: 50%;
+      margin: .8rem 0 0;
+      position: relative;
+      transform: translateX(-50%);
+    }
   }
 </style>

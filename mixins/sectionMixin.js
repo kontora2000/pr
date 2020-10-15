@@ -30,12 +30,20 @@ export default {
     gsap.to('#app', {
       scrollTrigger: {
         trigger: this.$el,
+        backgroundColor: this.backgroundColor,
+        duration: 0.1,
         onEnter: () => {
           if (this.colorClass !== '') {
             this.$store.commit('system/setColorClass', this.colorClass)
           }
         },
+        onEnterBack: () => {
+          if (this.colorClass !== '') {
+            this.$store.commit('system/setColorClass', this.colorClass)
+          }
+        },
       },
+      start: 'top top',
       ease: 'linear',
     })
   },

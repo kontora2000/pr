@@ -13,10 +13,10 @@ export const mutations = {
     state.textColor = textColor
   },
   isDialogOpen (state, isDialogOpen) {
-    this.isDialogMesurementOpen = isDialogOpen
+    state.isDialogMesurementOpen = isDialogOpen
   },
   setColorClass (state, colorClass) {
-    this.colorClass = colorClass
+    state.colorClass = colorClass
   },
 }
 

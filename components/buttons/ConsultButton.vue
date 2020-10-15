@@ -6,7 +6,7 @@
           <use xlink:href="~/static/sprite.svg#icon-consult" />
         </svg>
       </span>
-      <span class="link-underline-solid"><span class="only-desktop">Проконсультироваться </span><span class="only-phone">Спросить <br></span>в&nbsp;WhatsApp</span>
+      <span class="link-open-words-wrapper link-underline-solid"><span class="only-desktop">Проконсультироваться </span><span class="only-phone link-underline-solid">Спросить<br></span>в&nbsp;WhatsApp</span>
     </a>
   </div>
 </template>
@@ -71,5 +71,24 @@ export default {
   .icon-consult-svg>use {
     fill: var(--PinkLight100);
     filter: drop-shadow(2px 4px 8px rgba(133, 1, 40, 0.12));
+  }
+
+  @media (max-width: 460px) {
+    .link-open-chat-wrapper {
+      bottom: 1.6rem;
+      left: .8rem;
+    }
+
+    .icon-consult-wrapper {
+      display: inline-block;
+      height: 2.8rem;
+      vertical-align: top;
+    }
+
+    .link-open-words-wrapper {
+      display: inline-block;
+      margin-top: -.4rem;
+      vertical-align: top;
+    }
   }
 </style>

@@ -28,9 +28,17 @@ export default {
   }
 
   @media (max-width: 460px) {
+    .phone-block.fixed-block {
+      margin: .8rem 0 0;
+      position: relative;
+      left: 50%;
+      text-align: center;
+      transform: translateX(-50%);
+      width: 100%;
+    }
     .phone-number-link {
-      font-size: 1.2rem;
-      letter-spacing: .1em;
+      font-size: 1.3rem;
+      letter-spacing: .04em;
     }
   }
 </style>

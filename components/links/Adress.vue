@@ -29,9 +29,9 @@ export default {
   }
 
   .address-star-svg {
-    height: .7rem;
+    height: .8rem;
     margin: 0 .4rem;
-    width: .7rem;
+    width: .8rem;
   }
 
   .address-star-svg>use {
@@ -42,5 +42,11 @@ export default {
     font-size: 7px;
     font-weight: 500;
     margin-left: .5px;
+  }
+  @media (max-width: 460px) {
+    .address-block {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 </style>
