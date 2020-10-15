@@ -6,20 +6,16 @@ if (process.client) {
 }
 
 export default {
-  computed: {
-    colorClass () {
-      return this.$store.getters['system/colorClass']
-    },
-  },
   mounted () {
-    const { clientHeight, } = window.document.documentElement
+    // const { clientHeight, } = window.document.documentElement
     gsap.to(this.$el, {
       opacity: 0,
       duration: 0.25,
       scrollTrigger: {
-        trigger: '#app',
+        trigger: '#free-section',
         start: 'top top',
-        end: clientHeight + 'px',
+        end: 'top top',
+        markers: true,
         toggleActions: 'play none reverse none',
       },
     })

@@ -29,7 +29,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-
+    '~/directives/vHide.js'
   ],
   /*
   ** Nuxt.js dev-modules

@@ -1,5 +1,5 @@
 <template>
-  <div class="socials-wrapper">
+  <div class="socials-wrapper" :class="colorClass">
     <div class="socials-item">
       <a class="socials-item-link socials-item-link-instagram link-underline-solid" href="https://instagram.com/princess_mebel" target="_blank">Instagram</a>
     </div>
@@ -13,8 +13,11 @@
 </template>
 
 <script>
+import colorClassMixin from '~/mixins/colorClassMixin.js'
+
 export default {
   name: 'Socials',
+  mixins: [colorClassMixin],
 }
 </script>
 

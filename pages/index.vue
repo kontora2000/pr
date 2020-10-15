@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <div class="address-socials-wrapper">
-      <adress v-hide class="address-block">Краснодар,&nbsp;Тургенева,&nbsp;123</adress>
+    <div class="address-socials-wrapper" :class="colorClass">
+      <adress v-hide class="address-block">
+        Краснодар,&nbsp;Тургенева,&nbsp;123
+      </adress>
       <socials />
       <phone>+7&thinsp;861&thinsp;215-30-00</phone>
     </div>
     <consult-button />
     <call-babes-button />
-    <main-section text-color="#ffffff" background-color="transparent" color-class="some-cool-class">
+    <main-section color-class="some-cool-class">
       <logo />
       <we-create />
     </main-section>
 
-    <free-section id="#free-section">
+    <free-section id="free-section" color-class="some-cool-class-2">
       <marque-background>
         <nobr>
           <span>Замерим</span>
@@ -24,11 +26,11 @@
       <arc />
     </free-section>
 
-    <realised-section />
+    <realised-section color-class="some-cool-class-3" />
 
-    <order-section />
+    <order-section color-class="some-cool-class-4" />
 
-    <contacts-section />
+    <contacts-section color-class="some-cool-class-5" />
 
     <!-- <title-section /> -->
     <dialog-mesurement />
@@ -79,7 +81,7 @@ export default {
     consultButton,
     dialogMesurement,
     marqueBackground,
-    arc
+    arc,
   },
   computed: {
     backgroundColor () {
@@ -87,6 +89,9 @@ export default {
     },
     textColor () {
       return this.$store.getters['system/textColor']
+    },
+    colorClass () {
+      return this.$store.getters['system/colorClass']
     },
   },
 }

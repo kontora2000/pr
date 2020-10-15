@@ -1,41 +1,42 @@
 <template>
   <div class="logo-wrapper fixed-block">
-    <a href="/" class="logo">
+    <nuxt-link to="/" class="logo">
       <span class="logo-part-wrapper logo-part-wrapper-pr" :class="colorClass">
-        <svg class="logo-part-svg logo-part-pr-svg" ref="pr">
+        <svg ref="pr" v-hide class="logo-part-svg logo-part-pr-svg">
           <defs>
             <filter id="logo-innershadow" x0="-50%" y0="-50%" width="200%" height="200%">
-              <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur"></feGaussianBlur>
-              <feOffset dy="1" dx="1"></feOffset>
-              <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1.5" k3="1.5" result="shadowDiff"></feComposite>
+              <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur" />
+              <feOffset dy="1" dx="1" />
+              <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1.5" k3="1.5" result="shadowDiff" />
 
-              <feFlood flood-color="#fff" flood-opacity=".64"></feFlood>
-              <feComposite in2="shadowDiff" operator="in"></feComposite>
-              <feComposite in2="SourceGraphic" operator="over" result="firstfilter"></feComposite>
+              <feFlood flood-color="#fff" flood-opacity=".64" />
+              <feComposite in2="shadowDiff" operator="in" />
+              <feComposite in2="SourceGraphic" operator="over" result="firstfilter" />
 
+              <feGaussianBlur in="firstfilter" stdDeviation=".5" result="blur2" />
+              <feOffset dy="-.5" dx="-.5" />
+              <feComposite in2="firstfilter" operator="arithmetic" k2="-1.5" k3="1.5" result="shadowDiff" />
 
-              <feGaussianBlur in="firstfilter" stdDeviation=".5" result="blur2"></feGaussianBlur>
-              <feOffset dy="-.5" dx="-.5"></feOffset>
-              <feComposite in2="firstfilter" operator="arithmetic" k2="-1.5" k3="1.5" result="shadowDiff"></feComposite>
-
-              <feFlood flood-color="#850020" flood-opacity="0.2"></feFlood>
-              <feComposite in2="shadowDiff" operator="in"></feComposite>
-              <feComposite in2="firstfilter" operator="over"></feComposite>
+              <feFlood flood-color="#850020" flood-opacity="0.2" />
+              <feComposite in2="shadowDiff" operator="in" />
+              <feComposite in2="firstfilter" operator="over" />
             </filter>
           </defs>
-          <use xlink:href="~/assets/sprite.svg#logo-part-pr"></use>
+          <use xlink:href="~/assets/sprite.svg#logo-part-pr" />
         </svg>
       </span>
-      <span class="logo-part-wrapper logo-part-wrapper-crown" ref="crown">
+      <span ref="crown" class="logo-part-wrapper logo-part-wrapper-crown">
         <svg class="logo-part-svg logo-part-crown-svg">
-          <use xlink:href="~/assets/sprite.svg#logo-part-crown"></use>
+          <use xlink:href="~/assets/sprite.svg#logo-part-crown" />
         </svg>
       </span>
-      <span class="logo-part-wrapper logo-part-wrapper-cess" ref="cess">
+      <span ref="cess" v-hide class="logo-part-wrapper logo-part-wrapper-cess">
         <img class="logo-part-svg logo-part-cess-svg" src="~/assets/sprite.svg">
       </span>
-    </a>
-    <div class="logo-subtitle">Студия мебели и&nbsp;дизайна</div>
+    </nuxt-link>
+    <div class="logo-subtitle">
+      Студия мебели и&nbsp;дизайна
+    </div>
   </div>
 </template>
 
@@ -55,21 +56,21 @@ export default {
     return { isVisible: false, }
   },
   mounted () {
-    gsap.to(this.$refs.pr, {
-      duration: 0.25,
-      opacity: 0,
-      width: '0px',
-      scrollTrigger: {
-        trigger: '#free-section',
-        toggleActions: 'play none reverse none',
-      },
-    })
+    // gsap.to(this.$refs.pr, {
+    //   duration: 0.25,
+    //   opacity: 0,
+    //   width: '0px',
+    //   scrollTrigger: {
+    //     trigger: '#free-section',
+    //     toggleActions: 'play none reverse none',
+    //   },
+    // })
   },
   methods: {
     hide () {
       this.isVisible = false
-      this.$refs.left.style.width = '0px'
-      this.$refs.right.style.width = '0px'
+      this.$refs.pr.style.width = '0px'
+      this.$refs.cess.style.width = '0px'
     },
   },
 }

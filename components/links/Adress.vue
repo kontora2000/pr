@@ -2,9 +2,9 @@
   <div v-hide class="address-block">
     <a class="address-link link-underline-solid" href="#"><slot /></a>
     <span class="address-star">
-        <svg class="address-star-svg star-x-svg" v-hide>
-          <use xlink:href="~/static/sprite.svg#star-x"></use>
-        </svg>
+      <svg v-hide class="address-star-svg star-x-svg">
+        <use xlink:href="~/static/sprite.svg#star-x" />
+      </svg>
     </span>
     <span class="hours">c&nbsp;10 до&nbsp;18<sup>00</sup></span>
   </div>

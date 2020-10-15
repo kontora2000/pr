@@ -1,5 +1,5 @@
 <template>
-  <section class="order-section">
+  <section class="order-section" id="order-section">
     <h1 class="section-header section-header-order">Заказать</h1>
     <div class="section-subheader">Заполните эту форму и&nbsp;к&nbsp;вам приедет замерщик, чтобы снять размеры места под&nbsp;установку. Затем мы&nbsp;изготовим и&nbsp;установим вашу мебель.</div>
     <form class="order-form">

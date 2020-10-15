@@ -1,9 +1,9 @@
 <template>
-  <div class="link-open-chat-wrapper fixed-block">
+  <div class="link-open-chat-wrapper fixed-block" :class="colorClass">
     <a id="consult" href="#" class="link-open-chat">
       <span class="icon-consult-wrapper">
         <svg class="icon-svg icon-consult-svg">
-          <use xlink:href="~/static/sprite.svg#icon-consult"></use>
+          <use xlink:href="~/static/sprite.svg#icon-consult" />
         </svg>
       </span>
       <span class="link-underline-solid"><span class="only-desktop">Проконсультироваться </span><span class="only-phone">Спросить <br></span>в&nbsp;WhatsApp</span>
@@ -12,8 +12,24 @@
 </template>
 
 <script>
+import gsap from 'gsap'
+import colorClassMixin from '~/mixins/colorClassMixin.js'
+
 export default {
   name: 'ConsultButton',
+  mixins: [colorClassMixin],
+  mounted () {
+    gsap.to(this.$el, {
+      opacity: 0,
+      duration: 0.1,
+      scrollTrigger: {
+        trigger: '.section-header-order',
+        toggleActions: 'play none reverse none',
+        start: 'top bottom',
+        end: 'top bottom',
+      },
+    })
+  },
 }
 </script>
 
