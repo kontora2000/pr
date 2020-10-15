@@ -1,5 +1,5 @@
 <template>
-  <div class="phone-block fixed-block">
+  <div v-hide class="phone-block fixed-block">
     <a class="phone-number-link" href="tel:+78612153000">
       <slot />
     </a>
@@ -7,8 +7,11 @@
 </template>
 
 <script>
+import hideMixin from '~/mixins/hideMixin.js'
+
 export default {
   name: 'Phone',
+  mixins: [hideMixin],
 }
 </script>
 

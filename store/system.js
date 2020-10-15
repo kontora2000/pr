@@ -1,9 +1,10 @@
 export const state = () => ({
-  isDialogMesurementOpen: false, 
+  isDialogMesurementOpen: false,
   backgroundColor: '#fff1f5',
   textColor: '#000000',
+  colorClass: '',
 })
-  
+
 export const mutations = {
   setBackgroundColor (state, backgroundColor) {
     state.backgroundColor = backgroundColor
@@ -14,10 +15,14 @@ export const mutations = {
   isDialogOpen (state, isDialogOpen) {
     this.isDialogMesurementOpen = isDialogOpen
   },
+  setColorClass (state, colorClass) {
+    this.colorClass = colorClass
+  },
 }
-  
+
 export const getters = {
   isDialogMesurementOpen: s => s.isDialogMesurementOpen,
   backgroundColor: s => s.backgroundColor,
   textColor: s => s.textColor,
+  colorClass: s => s.colorClass,
 }
