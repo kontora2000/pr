@@ -6,7 +6,7 @@
           <use xlink:href="~/static/sprite.svg#icon-consult" />
         </svg>
       </span>
-      <span class="link-open-words-wrapper link-underline-solid"><span class="only-desktop">Проконсультироваться </span><span class="only-phone link-underline-solid">Спросить<br></span>в&nbsp;WhatsApp</span>
+      <span class="link-open-words-wrapper"><span class="only-desktop link-underline-solid">Проконсультироваться<br></span><span class="only-phone link-underline-solid">Спросить<br></span><span class="link-underline-solid">в&nbsp;WhatsApp</span></span>
     </a>
   </div>
 </template>
@@ -53,25 +53,39 @@ export default {
   }
 
   .icon-consult-wrapper {
-    filter: drop-shadow(0 0 20px rgba(101, 0, 19, 0.08));
+    filter: drop-shadow(2px 8px 16px rgba(101, 0, 37, 0.26));
+    transition: filter .2s ease-in-out, -webkit-filter .2s ease-in-out;
+    will-change: filter;
+  }
+  .link-open-chat:hover .icon-consult-wrapper {
+    filter: drop-shadow(0 10px 18px rgba(101, 0, 37, .28));
   }
 
   .icon-consult-svg {
     display: inline-block;
-    height: 2.8rem;
+    height: 3.6rem;
     margin-right: .4rem;
     vertical-align: middle;
-    width: 3.2rem;
-    filter: drop-shadow(2px 8px 8px rgba(101, 0, 19, 0.16));
-    transition: transform .125s ease-in-out;
+    width: 4.1rem;
+    filter: drop-shadow(1px 3px 3px rgba(133, 1, 40, 0.2));;
+    transition: transform .125s ease-in-out, filter .2s ease-in-out, -webkit-filter .2s ease-in-out;
+    will-change: transform, filter, -webkit-filter;
   }
   .link-open-chat:hover .icon-consult-svg {
     transform: translateY(-.4rem);
+    filter: drop-shadow(1px 4px 4px rgba(133, 1, 56, .28));
   }
   .icon-consult-svg>use {
     fill: var(--PinkLight100);
-    filter: drop-shadow(2px 4px 8px rgba(133, 1, 40, 0.12));
   }
+<<<<<<< HEAD
+=======
+
+  .link-open-words-wrapper {
+      display: inline-block;
+      vertical-align: top;
+    }
+>>>>>>> des2
 
   @media (max-width: 460px) {
     .link-open-chat-wrapper {

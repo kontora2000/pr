@@ -177,6 +177,10 @@ export default {
       margin-top: 2.4rem;
     }
 
+    .working-hours sup {
+      font-size: 8px;
+    }
+
     .contacts-section-inner-tel-email {
       text-align: center;
     }

@@ -31,7 +31,9 @@
         </svg>
       </span>
       <span ref="cess" v-hide class="logo-part-wrapper logo-part-wrapper-cess">
-        <img class="logo-part-svg logo-part-cess-svg" src="~/assets/sprite.svg">
+        <svg class="logo-part-svg logo-part-cess-svg">
+          <use xlink:href="~/assets/sprite.svg#logo-part-cess" />
+        </svg>
       </span>
     </nuxt-link>
     <div class="logo-subtitle">
@@ -110,10 +112,10 @@ export default {
     transition:  filter .2s ease-in-out, -webkit-filter .2s ease-in-out;
     will-change: -webkit-filter, filter;
 
-    filter: drop-shadow(2px 8px 16px rgba(101, 0, 37, .24));
+    filter: drop-shadow(2px 8px 16px rgba(101, 0, 37, 0.26));
   }
   .logo:hover .logo-part-wrapper {
-    filter: drop-shadow(0 10px 18px rgba(101, 0, 37, .26));
+    filter: drop-shadow(0 10px 18px rgba(101, 0, 37, .28));
   }
 
   .logo-part-wrapper-pr {
@@ -139,10 +141,10 @@ export default {
     transition: -webkit-filter .2s ease-in-out, filter .2s ease-in-out;
     will-change: -webkit-filter, filter;
 
-    filter: drop-shadow(2px 4px 4px rgba(133, 1, 56, .2));
+    filter: drop-shadow(1px 3px 3px rgba(133, 1, 56, .28));
   }
   .logo:hover .logo-part-svg {
-    filter: drop-shadow(2px 6px 6px rgba(133, 1, 56, .2));
+    filter: drop-shadow(1px 4px 4px rgba(133, 1, 56, .28));
   }
 
   .logo-part-pr-svg>use,
