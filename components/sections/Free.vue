@@ -17,8 +17,11 @@
 </template>
 
 <script>
+import sectionMixin from '../../mixins/sectionMixin'
+
 export default {
   name: 'FreeSection',
+  mixins: [sectionMixin],
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
-  <div class="logo-wrapper fixed-block">
+  <div class="logo-wrapper fixed-block" :class="colorClass">
     <nuxt-link to="/" class="logo">
-      <span class="logo-part-wrapper logo-part-wrapper-pr" :class="colorClass">
+      <span class="logo-part-wrapper logo-part-wrapper-pr">
         <svg ref="pr" v-hide class="logo-part-svg logo-part-pr-svg">
           <defs>
             <filter id="logo-innershadow" x0="-50%" y0="-50%" width="200%" height="200%">
@@ -36,7 +36,7 @@
         </svg>
       </span>
     </nuxt-link>
-    <div class="logo-subtitle">
+    <div v-hide class="logo-subtitle">
       Студия мебели и&nbsp;дизайна
     </div>
   </div>
@@ -106,6 +106,25 @@ export default {
     transform: translateY(-.6rem);
     filter: drop-shadow(0 4px 22px rgba(101, 0, 19, .1));
   }
+  .colors-section-realised.logo-wrapper .logo {
+    filter: drop-shadow(0 0 20px var(--Gray44));
+  }
+  .colors-section-realised.logo-wrapper .logo:hover {
+    filter: drop-shadow(0 4px 22px var(--Gray44));
+  }
+  .colors-section-order.logo-wrapper .logo {
+    filter: drop-shadow(0 0 20px  var(--Beige44));
+  }
+  .colors-section-order.logo-wrapper .logo:hover {
+    filter: drop-shadow(0 4px 22px var(--Beige44));
+  }
+  .colors-section-contacts.logo-wrapper .logo {
+    filter: drop-shadow(0 0 20px var(--BlueLightShadow44));
+  }
+  .colors-section-contacts.logo-wrapper .logo:hover {
+    filter: drop-shadow(0 4px 22px var(--BlueLightShadow44));
+  }
+
   .logo-part-wrapper {
     display: inline-block;
     vertical-align: top;
@@ -116,6 +135,24 @@ export default {
   }
   .logo:hover .logo-part-wrapper {
     filter: drop-shadow(0 10px 18px rgba(101, 0, 37, .28));
+  }
+  .colors-section-realised.logo-wrapper .logo-part-wrapper {
+    filter: drop-shadow(2px 8px 16px var(--Gray64));
+  }
+  .colors-section-realised.logo-wrapper .logo:hover .logo-part-wrapper {
+    filter: drop-shadow(0 10px 18px var(--Gray64));
+  }
+  .colors-section-order.logo-wrapper .logo-part-wrapper {
+    filter: drop-shadow(2px 8px 16px  var(--Beige64));
+  }
+  .colors-section-order.logo-wrapper .logo:hover .logo-part-wrapper {
+    filter: drop-shadow(0 10px 18px var(--Beige64));
+  }
+  .colors-section-contacts.logo-wrapper .logo-part-wrapper {
+    filter: drop-shadow(2px 8px 16px var(--BlueLightShadow64));
+  }
+  .colors-section-contacts.logo-wrapper .logo:hover .logo-part-wrapper {
+    filter: drop-shadow(0 10px 18px var(--BlueLightShadow64));
   }
 
   .logo-part-wrapper-pr {
@@ -146,11 +183,42 @@ export default {
   .logo:hover .logo-part-svg {
     filter: drop-shadow(1px 4px 4px rgba(133, 1, 56, .28));
   }
+  .colors-section-realised.logo-wrapper .logo-part-svg {
+    filter: drop-shadow(1px 3px 3px var(--Gray88));
+  }
+  .colors-section-realised.logo-wrapper .logo:hover .logo-part-svg {
+    filter: drop-shadow(1px 4px 4px var(--Gray88));
+  }
+  .colors-section-order.logo-wrapper .logo-part-svg {
+    filter: drop-shadow(1px 3px 3px var(--Beige88));
+  }
+  .colors-section-order.logo-wrapper .logo:hover .logo-part-svg {
+    filter: drop-shadow(1px 4px 4px var(--Beige88));
+  }
+  .colors-section-contacts.logo-wrapper .logo-part-svg {
+    filter: drop-shadow(1px 3px 3px var(--BlueLightShadow88));
+  }
+  .colors-section-contacts.logo-wrapper .logo:hover .logo-part-svg {
+    filter: drop-shadow(1px 4px 4px var(--BlueLightShadow88));
+  }
 
   .logo-part-pr-svg>use,
   .logo-part-crown-svg>use,
   .logo-part-cess-svg>use {
     fill: var(--PinkLight100);
+  }
+  .colors-section-realised.logo-wrapper .logo-part-pr-svg>use,
+  .colors-section-realised.logo-wrapper .logo-part-crown-svg>use,
+  .colors-section-realised.logo-wrapper .logo-part-cess-svg>use,
+
+  .colors-section-order.logo-wrapper .logo-part-pr-svg>use,
+  .colors-section-order.logo-wrapper .logo-part-crown-svg>use,
+  .colors-section-order.logo-wrapper .logo-part-cess-svg>use,
+
+  .colors-section-contacts.logo-wrapper .logo-part-pr-svg>use,
+  .colors-section-contacts.logo-wrapper .logo-part-crown-svg>use,
+  .colors-section-contacts.logo-wrapper .logo-part-cess-svg>use {
+    fill: var(--GrayLight100);
   }
 
   .logo-subtitle {

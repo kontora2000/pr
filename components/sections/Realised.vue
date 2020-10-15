@@ -43,6 +43,15 @@
   </section>
 </template>
 
+<script>
+import sectionMixin from '../../mixins/sectionMixin'
+
+export default {
+  name: 'RealisedSection',
+  mixins: [sectionMixin],
+}
+</script>
+
 <style scoped>
   .realised-section {
     background: var(--White100);

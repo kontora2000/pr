@@ -56,9 +56,18 @@
   </section>
 </template>
 
+<script>
+import sectionMixin from '../../mixins/sectionMixin'
+
+export default {
+  name: 'ContactsSection',
+  mixins: [sectionMixin],
+}
+</script>
+
 <style scoped>
   .contacts-section {
-    background: #98CEFF;
+    background: var(--BlueLight100);
     padding-bottom: 1rem;
   }
   .contacts-section-gradient-bottom {
