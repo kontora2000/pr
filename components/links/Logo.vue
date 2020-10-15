@@ -60,7 +60,7 @@ export default {
 <style scoped>
   .logo-wrapper {
     display: block;
-    height: 2.5rem;
+    /*height: 2.5rem;*/
     left: 50%;
     margin: 0;
     position: fixed;
@@ -141,5 +141,34 @@ export default {
     line-height: 1.6rem;
     margin-top: .2rem;
     text-transform: uppercase;
+  }
+
+  @media (max-width: 460px) {
+    .logo-wrapper {
+      top: 37%;
+      width: 24.3rem;
+    }
+
+    .logo-part-svg {
+      max-height: 3.2rem;
+    }
+
+    .logo-part-wrapper-pr {
+      height: 2.329rem;
+      width: 6.344rem;
+    }
+
+    .logo-part-wrapper-crown {
+      width: 5.545rem;
+    }
+
+    .logo-part-wrapper-cess {
+      height: 2.454rem;
+      width: 12.4rem;
+    }
+
+    .logo-subtitle {
+      display: none;
+    }
   }
 </style>

@@ -111,4 +111,11 @@ export default {
      .marquee-background-row-inner-el > nobr {
        overflow: hidden;
      }
+
+    @media (max-width: 460px) {
+      .marquee-background-row-inner-el {
+        /*font-size: 6.4rem;
+        line-height: 6rem;*/
+      }
+    }
 </style>

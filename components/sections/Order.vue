@@ -140,4 +140,34 @@ export default {
   .order-section-form-button-send-subtitle {
     margin-right: 4rem;
   }
+
+  @media (max-width: 460px) {
+    .order-section>h1 {
+      margin-left: .8rem;
+      margin-right: .8rem;
+      text-align: left;
+    }
+
+    .order-form {
+      margin: 3.6rem .8rem 0;
+    }
+
+    .order-form-checkbox + label {
+      padding: 1.3rem 1.2rem 1.1rem;
+    }
+
+    .order-section-form-button-send-wrapper {
+      display: block;
+    }
+
+    .order-section-form-button-send-subtitle {
+      margin-right: 0;
+      text-align: center;
+    }
+
+    .order-section-form-button-send {
+      display: block;
+      margin: 2.8rem auto 0;
+    }
+  }
 </style>

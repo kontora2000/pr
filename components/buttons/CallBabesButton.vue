@@ -56,8 +56,13 @@ export default {
   }
 
   @media (max-width: 460px) {
+    .button-measurer-wrapper {
+      bottom: 1.2rem;
+      right: .8rem;
+    }
     .button-measurer {
-      padding: 1.2rem 1rem 1.25rem;
+      padding: .6rem 2.4rem .6rem;
+      text-align: center;
     }
   }
 </style>

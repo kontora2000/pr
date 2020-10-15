@@ -65,19 +65,14 @@ export default {
 
   @media (max-width: 460px) {
     .we-create {
+      bottom: auto;
       font-size: 2rem;
       line-height: 3.4rem;
       margin-left: .5rem;
       margin-right: .5rem;
-      margin-top: 34vh;
+      margin-top: 0;
       text-align: center;
       width: calc(100% - 1rem);
-    }
-
-    .we-create-link {
-      display: inline-block;
-      margin-left: .45rem;
-      margin-right: .45rem;
     }
   }
 </style>

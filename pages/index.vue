@@ -97,4 +97,8 @@ export default {
   body, #app {
     overflow-x:hidden !important;
   }
+
+  @media (max-width: 460px) {
+    
+  }
 </style>

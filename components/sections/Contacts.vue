@@ -28,7 +28,7 @@
 
       <div class="contacts-section-inner-address">
         <a class="contacts-section-inner-address-link link-underline-solid" href="#" target="_blank">Краснодар, Тургенева, дом&nbsp;123</a>
-        <div>Работаем с 10 до 18<sup>00</sup></div>
+        <div class="working-hours">Работаем с 10 до 18<sup>00</sup></div>
       </div>
 
       <div class="contacts-section-inner-tel-email">
@@ -132,5 +132,58 @@
   .by-kontora-link:hover .kontora-logo-svg {
     fill: var(--White84);
     transform: scale(1.25) rotate(-16deg);
+  }
+
+  @media (max-width: 460px) {
+    .contacts-section-inner {
+      font-size: 1.1rem;
+      font-family: var(--font-default);
+      font-weight: 500;
+      grid-template-columns: auto;
+      letter-spacing: .08em;
+      /*margin: 5.6rem auto 16rem;*/
+      margin: 7vh auto 24vh;
+      text-transform: uppercase;
+    }
+
+    .contacts-section-inner-socials {
+      grid-row: 3/4;
+      /*margin: 7.2rem auto 0;*/
+      margin: 8vh auto 0;
+      width: 20rem;
+    }
+
+    .contacts-section-inner-socials-link>svg {
+      max-width: 4.8rem;
+      max-height: 4.8rem;
+    }
+
+    .contacts-section-inner-address {
+      grid-row: 2/3;
+      /*margin-top: 4.4rem;*/
+      margin-top: 8vh;
+    }
+
+    .working-hours {
+      margin-top: 2.4rem;
+    }
+
+    .contacts-section-inner-tel-email {
+      text-align: center;
+    }
+
+    .contacts-section-inner-tel-email-wrapper {
+      display: inline-block;
+      margin: 0 .4rem;
+    }
+
+    .contacts-section-inner .link-underline-solid {
+      border-bottom-color: var(--Black36);
+    }
+
+    .copyrights-cont {
+      bottom: 2rem;
+      width: 100%;
+    }
   }
 </style>

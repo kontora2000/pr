@@ -2,6 +2,7 @@
   <section class="main-scene">
     <div class="main-scene-mask">
       <div class="main-scene-bg"></div>
+      <div class="main-scene-stars main-scene-layer-2"></div>
       <div class="clouds-front main-scene-layer-4 main-scene-layer" />
       <div class="scene-kitchen-chairs main-scene-layer-3 main-scene-layer" />
       <div class="scene-kitchen-lights main-scene-layer-3 main-scene-layer" />
@@ -83,6 +84,19 @@ export default {
   .clouds-back {
     background-image: url('../../static/_img/main-scene/clouds-back.png');
     background-position-y: -100px;
+}
+
+  .main-scene-stars {
+    background-image: url('../../static/_img/main-scene/stars.png');
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 116%;
+    transform: translateX(-50%);
 }
 
   .main-scene-mask {
@@ -173,6 +187,41 @@ export default {
     width: 100%;
     min-width: 100vw;
     z-index: 10;
+  }
+
+  @media (max-width: 460px) {
+    .main-scene-layer {
+      background-position: 0 0;
+    }
+
+    .scene-kitchen-counter {
+      background-position-x: -40vw;
+    }
+
+    .scene-kitchen-chairs {
+      background-position-x: -86vw;
+    }
+
+    .scene-kitchen-lights {
+      background-position-x: -50vw;
+    }
+
+    .scene-table-chairs {
+      background-position-x: -30vw;
+    }
+
+    .clouds-front {
+      background-position-x: -100px;
+    }
+
+    .clouds-back {
+      background-position: -40vw -70px;
+    }
+
+    .main-scene-mask {
+      height: 100vh;
+      width: calc(100vw - .8rem);
+    }
   }
 
 </style>
