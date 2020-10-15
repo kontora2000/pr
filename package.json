@@ -17,6 +17,7 @@
     "gsap": "^3.5.1",
     "jquery": "^3.5.1",
     "nuxt": "^2.0.0",
+    "svg4everybody": "^2.1.9",
     "vue-scrollmagic": "^1.2.0"
   },
   "devDependencies": {
