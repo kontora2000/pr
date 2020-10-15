@@ -7,11 +7,8 @@
 </template>
 
 <script>
-import hideMixin from '~/mixins/hideMixin.js'
-
 export default {
   name: 'Phone',
-  mixins: [hideMixin],
 }
 </script>
 

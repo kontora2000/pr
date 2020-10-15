@@ -23,7 +23,7 @@ export default {
       opacity: 0,
       duration: 0.1,
       scrollTrigger: {
-        trigger: '.section-header-order',
+        trigger: '.contacts-section',
         toggleActions: 'play none reverse none',
         start: 'top bottom',
         end: 'top bottom',
