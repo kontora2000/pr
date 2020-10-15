@@ -98,6 +98,13 @@ export default {
     margin: 0 1.5rem;
     position: relative;
   }
+  .we-create-link:not(:last-child):not(:nth-child(3)):not(:nth-child(6))::after {
+    content: '✹';
+    display: inline-block;
+    font-size: 2.8rem;
+    margin-left: 1.6rem;
+    vertical-align: top;
+  }
 
   .we-create-preview {
     position: relative;
@@ -114,5 +121,19 @@ export default {
 
   .we-create {
     position: relative;
+  }
+
+  @media (max-width: 460px) {
+    .we-create-link {
+      display: inline-block;
+      font-size: 1.7rem;
+      line-height: 1.7rem;
+      margin-left: .45rem;
+      margin-right: .45rem;
+    }
+    .we-create-link:not(:last-child):not(:nth-child(3)):not(:nth-child(6))::after {
+      font-size: 2rem;
+      margin-left: .4rem;
+    }
   }
 </style>

@@ -1,20 +1,35 @@
 <template>
-  <div class="link-open-chat-wrapper fixed-block">
+  <div class="link-open-chat-wrapper fixed-block" :class="colorClass">
     <a id="consult" href="#" class="link-open-chat">
-      <svg class="link-open-chat-svg" width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M25.9578 1.78831C23.6361 0.66047 20.08 0 16.0028 0C11.9257 0 8.36948 0.66047 6.04777 1.78831C2.22544 3.64658 -0.0906033 7.22319 0.00283135 11.1272C0.0934346 14.9025 2.41231 18.1573 6.21765 19.8785L5.79861 20.8944H2.19147L0 28L13.1488 21.4485C14.0662 21.4849 16.4105 21.524 16.62 21.524C20.0856 21.524 23.1718 21.0091 25.5614 19.982C29.4999 18.2889 31.9065 14.9781 31.9971 11.1272C32.0934 7.22319 29.7773 3.64658 25.9578 1.78831Z"
-          fill="white"
-        />
-      </svg>
-      <span class="hide link-underline-solid"><span class="only-desktop">Проконсультироваться </span><span class="only-phone">Спросить <br></span>в&nbsp;WhatsApp</span>
+      <span class="icon-consult-wrapper">
+        <svg class="icon-svg icon-consult-svg">
+          <use xlink:href="~/static/sprite.svg#icon-consult" />
+        </svg>
+      </span>
+      <span class="link-open-words-wrapper"><span class="only-desktop link-underline-solid">Проконсультироваться<br></span><span class="only-phone link-underline-solid">Спросить<br></span><span class="link-underline-solid">в&nbsp;WhatsApp</span></span>
     </a>
   </div>
 </template>
 
 <script>
+import gsap from 'gsap'
+import colorClassMixin from '~/mixins/colorClassMixin.js'
+
 export default {
   name: 'ConsultButton',
+  mixins: [colorClassMixin],
+  mounted () {
+    gsap.to(this.$el, {
+      opacity: 0,
+      duration: 0.1,
+      scrollTrigger: {
+        trigger: '.section-header-order',
+        toggleActions: 'play none reverse none',
+        start: 'top bottom',
+        end: 'top bottom',
+      },
+    })
+  },
 }
 </script>
 
@@ -37,14 +52,54 @@ export default {
                  1px 1px 2px rgba(101, 0, 19, 0.16);
   }
 
-  .link-open-chat-svg {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: .5rem;
-    filter: drop-shadow(0 .2rem .25rem rgba(0,0,0,.13));
-    transition: transform .125s ease-in-out;
+  .icon-consult-wrapper {
+    filter: drop-shadow(2px 8px 16px rgba(101, 0, 37, 0.26));
+    transition: filter .2s ease-in-out, -webkit-filter .2s ease-in-out;
+    will-change: filter;
   }
-    .link-open-chat:hover .link-open-chat-svg {
-      transform: translateY(-.4rem);
+  .link-open-chat:hover .icon-consult-wrapper {
+    filter: drop-shadow(0 10px 18px rgba(101, 0, 37, .28));
+  }
+
+  .icon-consult-svg {
+    display: inline-block;
+    height: 3.6rem;
+    margin-right: .4rem;
+    vertical-align: middle;
+    width: 4.1rem;
+    filter: drop-shadow(1px 3px 3px rgba(133, 1, 40, 0.2));;
+    transition: transform .125s ease-in-out, filter .2s ease-in-out, -webkit-filter .2s ease-in-out;
+    will-change: transform, filter, -webkit-filter;
+  }
+  .link-open-chat:hover .icon-consult-svg {
+    transform: translateY(-.4rem);
+    filter: drop-shadow(1px 4px 4px rgba(133, 1, 56, .28));
+  }
+  .icon-consult-svg>use {
+    fill: var(--PinkLight100);
+  }
+
+  .link-open-words-wrapper {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+  @media (max-width: 460px) {
+    .link-open-chat-wrapper {
+      bottom: 1.6rem;
+      left: .8rem;
+    }
+
+    .icon-consult-wrapper {
+      display: inline-block;
+      height: 2.8rem;
+      vertical-align: top;
+    }
+
+    .link-open-words-wrapper {
+      display: inline-block;
+      margin-top: -.4rem;
+      vertical-align: top;
+    }
   }
 </style>

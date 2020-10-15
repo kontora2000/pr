@@ -1,5 +1,5 @@
 <template>
-  <section class="order-section">
+  <section class="order-section" id="order-section">
     <h1 class="section-header section-header-order">Заказать</h1>
     <div class="section-subheader">Заполните эту форму и&nbsp;к&nbsp;вам приедет замерщик, чтобы снять размеры места под&nbsp;установку. Затем мы&nbsp;изготовим и&nbsp;установим вашу мебель.</div>
     <form class="order-form">
@@ -32,15 +32,15 @@
       </div>
       <div class="order-form-input-wrapper input-wrapper">
         <input class="order-form-input" type="text" name="address" required>
-        <label class="floatting-label" data-placeholder="Адрес&nbsp;установки"></label>
+        <label class="floatting-label" data-placeholder="Адрес установки"></label>
       </div>
       <div class="order-form-input-wrapper input-wrapper">
         <input class="order-form-input" type="text" name="phone" required>
-        <label class="floatting-label" data-placeholder="Контактный&nbsp;телефон"></label>
+        <label class="floatting-label" data-placeholder="Контактный телефон"></label>
       </div>
       <div class="order-form-input-wrapper input-wrapper">
         <input class="order-form-input" type="text" name="name" required>
-        <label class="floatting-label" data-placeholder="Ваше&nbsp;имя"></label>
+        <label class="floatting-label" data-placeholder="Ваше имя"></label>
       </div>
       <div class="order-section-form-button-send-wrapper">
         <div class="subtitle order-section-form-button-send-subtitle">В&nbsp;течении 15&nbsp;минут мы&nbsp;перезвоним по&nbsp;указанному номеру телефона, чтобы подтвердить заявку и&nbsp;договориться об&nbsp;удобном для&nbsp;замера времени</div>
@@ -63,6 +63,7 @@ export default {
   }
   .order-section>h1 {
     color: var(--White100);
+    text-align: center;
   }
   .order-section-gradient-bottom {
     background: linear-gradient(180deg, rgba(255, 252, 244, 0) 0%, #98CEFF 100%);
@@ -138,5 +139,35 @@ export default {
 
   .order-section-form-button-send-subtitle {
     margin-right: 4rem;
+  }
+
+  @media (max-width: 460px) {
+    .order-section>h1 {
+      margin-left: .8rem;
+      margin-right: .8rem;
+      text-align: left;
+    }
+
+    .order-form {
+      margin: 3.6rem .8rem 0;
+    }
+
+    .order-form-checkbox + label {
+      padding: 1.3rem 1.2rem 1.1rem;
+    }
+
+    .order-section-form-button-send-wrapper {
+      display: block;
+    }
+
+    .order-section-form-button-send-subtitle {
+      margin-right: 0;
+      text-align: center;
+    }
+
+    .order-section-form-button-send {
+      display: block;
+      margin: 2.8rem auto 0;
+    }
   }
 </style>
