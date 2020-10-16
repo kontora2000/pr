@@ -1,8 +1,8 @@
 <template>
-  <div class="logo-wrapper fixed-block" :class="colorClass">
+  <div class="logo-wrapper fixed-block" :class="colorClass" ref="wrapper">
     <nuxt-link to="/" class="logo">
       <span class="logo-part-wrapper logo-part-wrapper-pr">
-        <svg ref="pr" v-hide class="logo-part-svg logo-part-pr-svg">
+        <svg ref="pr" class="logo-part-svg logo-part-pr-svg">
           <defs>
             <filter id="logo-innershadow" x0="-50%" y0="-50%" width="200%" height="200%">
               <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur" />
@@ -22,17 +22,17 @@
               <feComposite in2="firstfilter" operator="over" />
             </filter>
           </defs>
-          <use xlink:href="~/assets/sprite.svg#logo-part-pr" />
+          <use xlink:href="~/static/sprite.svg#logo-part-pr" ></use>
         </svg>
       </span>
       <span ref="crown" class="logo-part-wrapper logo-part-wrapper-crown">
         <svg class="logo-part-svg logo-part-crown-svg">
-          <use xlink:href="~/assets/sprite.svg#logo-part-crown" />
+          <use xlink:href="~/static/sprite.svg#logo-part-crown" />
         </svg>
       </span>
-      <span ref="cess" v-hide class="logo-part-wrapper logo-part-wrapper-cess">
-        <svg class="logo-part-svg logo-part-cess-svg">
-          <use xlink:href="~/assets/sprite.svg#logo-part-cess" />
+      <span ref="cessWrapper" class="logo-part-wrapper logo-part-wrapper-cess">
+        <svg ref="cess" class="logo-part-svg logo-part-cess-svg">
+          <use xlink:href="~/static/sprite.svg#logo-part-cess" />
         </svg>
       </span>
     </nuxt-link>
@@ -58,15 +58,27 @@ export default {
     return { isVisible: false, }
   },
   mounted () {
-    // gsap.to(this.$refs.pr, {
-    //   duration: 0.25,
-    //   opacity: 0,
-    //   width: '0px',
-    //   scrollTrigger: {
-    //     trigger: '#free-section',
-    //     toggleActions: 'play none reverse none',
-    //   },
-    // })
+    gsap.to(this.$refs.wrapper, {
+      duration: 0.5,
+      y:'-=30vh',
+      scrollTrigger: {
+        trigger: '#free-section',
+        toggleActions: 'play none reverse none',
+        start: '20% center',
+        end: '20% center',
+        markers: true,
+      },
+    })
+    gsap.to('.logo-part-wrapper-cess,.logo-part-wrapper-pr', {
+      duration: 0.25,
+      width: 0,
+      scrollTrigger: {
+        trigger: '#free-section',
+        toggleActions: 'play none reverse none',
+        start: '20% center',
+        end: '20% center',
+      },
+    })
   },
   methods: {
     hide () {

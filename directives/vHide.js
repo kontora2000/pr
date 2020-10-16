@@ -12,9 +12,8 @@ export default {
       duration: 0.25,
       scrollTrigger: {
         trigger: '#free-section',
-        start: 'top top',
-        end: 'top top',
-        markers: true,
+        start: '20% center',
+        end: '20% center',
         toggleActions: 'play none reverse none',
       },
     })
@@ -25,8 +24,8 @@ export default {
       duration: 0.25,
       scrollTrigger: {
         trigger: '#free-section',
-        start: 'top top',
-        end: 'top top',
+        start: '20% center',
+        end: '20% center',
         markers: true,
         toggleActions: 'play none reverse none',
       },
