@@ -30,7 +30,7 @@
           <use xlink:href="~/static/sprite.svg#logo-part-crown" />
         </svg>
       </span>
-      <span ref="cessWrapper" v-hide class="logo-part-wrapper logo-part-wrapper-cess">
+      <span ref="cessWrapper" class="logo-part-wrapper logo-part-wrapper-cess">
         <svg ref="cess" class="logo-part-svg logo-part-cess-svg">
           <use xlink:href="~/static/sprite.svg#logo-part-cess" />
         </svg>
@@ -58,9 +58,9 @@ export default {
     return { isVisible: false, }
   },
   mounted () {
-    gsap.to(this.$refs.wrapper, {
-      duration: 0.5,
-      y: -250,
+    gsap.to('.logo-wrapper', {
+      duration: 0.3,
+      y: '-=30vh',
       scrollTrigger: {
         trigger: '#free-section',
         toggleActions: 'play none reverse none',
@@ -70,8 +70,18 @@ export default {
       },
     })
     gsap.to('.logo-part-wrapper-cess,.logo-part-wrapper-pr', {
-      duration: 0.25,
+      duration: 0.3,
       width: 0,
+      scrollTrigger: {
+        trigger: '#free-section',
+        toggleActions: 'play none reverse none',
+        start: '20% center',
+        end: '20% center',
+      },
+    })
+    gsap.to('.logo-subtitle', {
+      duration: 0.3,
+      opacity: 0,
       scrollTrigger: {
         trigger: '#free-section',
         toggleActions: 'play none reverse none',
