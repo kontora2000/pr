@@ -42,7 +42,7 @@ export default {
     if (this.number % 2 === 0) {
       offsetX = -w
       originX = '0% 0%'
-      startX = 0 - this.number * 500
+      startX = 0 - this.number * 800
     } else {
       offsetX = 0
       startX = -w * 0.25 - this.number * 500
@@ -59,10 +59,9 @@ export default {
           scrub: true,
           start: '17% center',
           end: '1000px',
-          markers: true
+          markers: true,
         },
       }
-
     )
   },
 }
