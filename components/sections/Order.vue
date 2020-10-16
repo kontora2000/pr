@@ -1,8 +1,17 @@
 <template>
-  <section class="order-section" id="order-section">
-    <h1 class="section-header section-header-order">Заказать</h1>
-    <div class="section-subheader">Заполните эту форму и&nbsp;к&nbsp;вам приедет замерщик, чтобы снять размеры места под&nbsp;установку. Затем мы&nbsp;изготовим и&nbsp;установим вашу мебель.</div>
-    <form class="order-form">
+  <section class="order-section">
+    <h1 class="section-header section-header-order">
+      Заказать
+    </h1>
+    <div class="section-subheader">
+      Заполните эту форму и&nbsp;к&nbsp;вам приедет замерщик, чтобы снять размеры места под&nbsp;установку. Затем мы&nbsp;изготовим и&nbsp;установим вашу мебель.
+    </div>
+    <div class="errors">
+      <span v-if="phoneErrorMessage!==''">{{ phoneErrorMessage }}</span>
+      <span v-if="nameErrorMessage!==''">{{ nameErrorMessage }}</span>
+      <span v-if="adressErrorMessage!==''">{{ adressErrorMessage }}</span>
+    </div>
+    <form ref="form" class="order-form" @submit.prevent="submitForm()" v-if="!isSuccess">
       <div class="order-form-checkboxes-wrapper">
         <span class="order-form-checkboxes-header">Вас интересуют:</span>
 
@@ -31,32 +40,70 @@
         <label for="checkbox-hallway">в&nbsp;прихожую</label>
       </div>
       <div class="order-form-input-wrapper input-wrapper">
-        <input class="order-form-input" type="text" name="address" required>
-        <label class="floatting-label" data-placeholder="Адрес установки"></label>
+        <input v-model="adress" class="order-form-input" type="text" name="adress" required>
+        <label class="floatting-label" data-placeholder="Адрес&nbsp;установки" />
       </div>
       <div class="order-form-input-wrapper input-wrapper">
-        <input class="order-form-input" type="text" name="phone" required>
-        <label class="floatting-label" data-placeholder="Контактный телефон"></label>
+        <input v-model="phone" class="order-form-input" type="text" name="phone" required>
+        <label class="floatting-label" data-placeholder="Контактный&nbsp;телефон" />
       </div>
       <div class="order-form-input-wrapper input-wrapper">
-        <input class="order-form-input" type="text" name="name" required>
-        <label class="floatting-label" data-placeholder="Ваше имя"></label>
+        <input v-model="name" class="order-form-input" type="text" name="name" required>
+        <label class="floatting-label" data-placeholder="Ваше&nbsp;имя" />
       </div>
       <div class="order-section-form-button-send-wrapper">
-        <div class="subtitle order-section-form-button-send-subtitle">В&nbsp;течении 15&nbsp;минут мы&nbsp;перезвоним по&nbsp;указанному номеру телефона, чтобы подтвердить заявку и&nbsp;договориться об&nbsp;удобном для&nbsp;замера времени</div>
-        <button disabled="disabled" class="button-big order-section-form-button-send">Вызвать&nbsp;замерщика</button>
+        <div class="subtitle order-section-form-button-send-subtitle">
+          В&nbsp;течении 15&nbsp;минут мы&nbsp;перезвоним по&nbsp;указанному номеру телефона, чтобы подтвердить заявку и&nbsp;договориться об&nbsp;удобном для&nbsp;замера времени
+        </div>
+        <button class="button-big order-section-form-button-send">
+          Вызвать&nbsp;замерщика
+        </button>
       </div>
     </form>
-    <div class="section-gradient-bottom order-section-gradient-bottom"></div>
+    <div v-if="isSuccess">
+      Вашая заявка отправлена! Ждите звонка!
+    </div>
+    <div v-if="isError">
+      Ошибка отправления заявки. попробуйте позже!
+    </div>
+    <div class="section-gradient-bottom order-section-gradient-bottom" />
   </section>
 </template>
 
 <script>
-import sectionMixin from '../../mixins/sectionMixin'
+import validationMixin from '~/mixins/validationMixin'
 
 export default {
   name: 'OrderSection',
-  mixins: [sectionMixin],
+  mixins: [validationMixin],
+  data () {
+    return {
+      name: '',
+      phone: '',
+      adress: '',
+      isSuccess: false,
+      isError: false,
+    }
+  },
+  methods: {
+    filter () {
+      return true
+    },
+    async submitForm () {
+      if (this.validate() === true) {
+        const formData = new FormData(this.$refs.form)
+        formData.set('type', ['Шкафы', 'Мафы'])
+        formData.set('key', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9')
+        const res = await this.$axios.post('https://www.api.kontora.cc/order.php', formData)
+        if (res.data.isSuccess) {
+          this.isSuccess = true
+          console.log(res.data)
+        } else { this.isError = true }
+      } else {
+        this.isNotValid = true
+      }
+    },
+  },
 }
 </script>
 
