@@ -58,9 +58,9 @@ export default {
     return { isVisible: false, }
   },
   mounted () {
-    gsap.to('.logo-wrapper', {
-      duration: 0.3,
-      y: '-=30vh',
+    gsap.to(this.$refs.wrapper, {
+      duration: 0.5,
+      y:'-=30vh',
       scrollTrigger: {
         trigger: '#free-section',
         toggleActions: 'play none reverse none',
@@ -228,19 +228,35 @@ export default {
   .logo-part-crown-svg>use,
   .logo-part-cess-svg>use {
     fill: var(--PinkLight100);
+    transition: fill .175s ease-in-out;
+    will-change: fill;
+  }
+  .logo:hover .logo-part-pr-svg>use,
+  .logo:hover .logo-part-crown-svg>use,
+  .logo:hover .logo-part-cess-svg>use {
+    fill: var(--GrayLight100);
   }
   .colors-section-realised.logo-wrapper .logo-part-pr-svg>use,
   .colors-section-realised.logo-wrapper .logo-part-crown-svg>use,
   .colors-section-realised.logo-wrapper .logo-part-cess-svg>use,
-
   .colors-section-order.logo-wrapper .logo-part-pr-svg>use,
   .colors-section-order.logo-wrapper .logo-part-crown-svg>use,
   .colors-section-order.logo-wrapper .logo-part-cess-svg>use,
-
   .colors-section-contacts.logo-wrapper .logo-part-pr-svg>use,
   .colors-section-contacts.logo-wrapper .logo-part-crown-svg>use,
   .colors-section-contacts.logo-wrapper .logo-part-cess-svg>use {
     fill: var(--GrayLight100);
+  }
+  .colors-section-realised.logo-wrapper .logo:hover .logo-part-pr-svg>use,
+  .colors-section-realised.logo-wrapper .logo:hover .logo-part-crown-svg>use,
+  .colors-section-realised.logo-wrapper .logo:hover .logo-part-cess-svg>use,
+  .colors-section-order.logo-wrapper .logo:hover .logo-part-pr-svg>use,
+  .colors-section-order.logo-wrapper .logo:hover .logo-part-crown-svg>use,
+  .colors-section-order.logo-wrapper .logo:hover .logo-part-cess-svg>use,
+  .colors-section-contacts.logo-wrapper .logo:hover .logo-part-pr-svg>use,
+  .colors-section-contacts.logo-wrapper .logo:hover .logo-part-crown-svg>use,
+  .colors-section-contacts.logo-wrapper .logo:hover .logo-part-cess-svg>use {
+    fill: var(--White100);
   }
 
   .logo-subtitle {

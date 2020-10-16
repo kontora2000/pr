@@ -1,6 +1,6 @@
 <template>
   <div class="link-open-chat-wrapper fixed-block" :class="colorClass">
-    <a id="consult" href="#" class="link-open-chat">
+    <a id="consult" href="https://wa.me/send?phone=79676738990" class="link-open-chat">
       <span class="icon-consult-wrapper">
         <svg class="icon-svg icon-consult-svg">
           <use xlink:href="~/static/sprite.svg#icon-consult" />
@@ -114,10 +114,18 @@ export default {
     fill: var(--PinkLight100);
     transition: fill .175s ease-in-out;
   }
+  .link-open-chat:hover .icon-consult-svg>use {
+    fill: var(--GrayLight100);
+  }
   .colors-section-realised.link-open-chat-wrapper .icon-consult-svg>use,
   .colors-section-order.link-open-chat-wrapper .icon-consult-svg>use,
   .colors-section-contacts.link-open-chat-wrapper .icon-consult-svg>use {
     fill: var(--GrayLight100);
+  }
+  .colors-section-realised.link-open-chat-wrapper .link-open-chat:hover .icon-consult-svg>use,
+  .colors-section-order.link-open-chat-wrapper .link-open-chat:hover .icon-consult-svg>use,
+  .colors-section-contacts.link-open-chat-wrapper .link-open-chat:hover .icon-consult-svg>use {
+    fill: var(--White100);
   }
 
   .link-open-words-wrapper {

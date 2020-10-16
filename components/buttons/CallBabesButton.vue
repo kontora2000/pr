@@ -1,8 +1,8 @@
 <template>
   <div class="button-measurer-wrapper fixed-block" :class="colorClass">
-    <button id="call-babes" class="button-measurer" @click="openDialog">
+    <a href="#order-section" id="call-babes" class="button-measurer button">
       Вызвать <br class="only-phone">замерщика
-    </button>
+    </a>
   </div>
 </template>
 
@@ -66,10 +66,11 @@ export default {
                 inset -1px -8px 12px rgba(217, 181, 201, 0.44),
                 inset -0.5px -0.5px 1.5px rgba(133, 0, 32, 0.2),
                 inset 1px 1px 4px var(--White100);
+    will-change: text-shadow, box-shadow, transform;
     
   }
   .button-measurer:hover {
-    background: var(--White100);
+    background: var(--GrayLight100);
     box-shadow: 0px 12px 24px rgba(101, 0, 19, 0.04),
                 1px 8px 16px rgba(133, 1, 40, 0.08),
                 1px 12px 20px rgba(101, 0, 19, 0.16),
