@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <section class="order-section">
     <h1 class="section-header section-header-order">
       Заказать
@@ -12,6 +13,12 @@
       <span v-if="adressErrorMessage!==''">{{ adressErrorMessage }}</span>
     </div>
     <form ref="form" class="order-form" @submit.prevent="submitForm()">
+=======
+  <section class="order-section" id="order-section">
+    <h1 class="section-header section-header-order">Заказать</h1>
+    <div class="section-subheader">Заполните эту форму и&nbsp;к&nbsp;вам приедет замерщик, чтобы снять размеры места под&nbsp;установку. Затем мы&nbsp;изготовим и&nbsp;установим вашу мебель.</div>
+    <form class="order-form">
+>>>>>>> 3d3a300d458747c9081f73e00107171dd22266b9
       <div class="order-form-checkboxes-wrapper">
         <span class="order-form-checkboxes-header">Вас интересуют:</span>
 
@@ -40,6 +47,7 @@
         <label for="checkbox-hallway">в&nbsp;прихожую</label>
       </div>
       <div class="order-form-input-wrapper input-wrapper">
+<<<<<<< HEAD
         <input v-model="adress" class="order-form-input" type="text" name="adress" required>
         <label class="floatting-label" data-placeholder="Адрес&nbsp;установки" />
       </div>
@@ -50,6 +58,18 @@
       <div class="order-form-input-wrapper input-wrapper">
         <input v-model="name" class="order-form-input" type="text" name="name" required>
         <label class="floatting-label" data-placeholder="Ваше&nbsp;имя" />
+=======
+        <input class="order-form-input" type="text" name="address" required>
+        <label class="floatting-label" data-placeholder="Адрес установки"></label>
+      </div>
+      <div class="order-form-input-wrapper input-wrapper">
+        <input class="order-form-input" type="text" name="phone" required>
+        <label class="floatting-label" data-placeholder="Контактный телефон"></label>
+      </div>
+      <div class="order-form-input-wrapper input-wrapper">
+        <input class="order-form-input" type="text" name="name" required>
+        <label class="floatting-label" data-placeholder="Ваше имя"></label>
+>>>>>>> 3d3a300d458747c9081f73e00107171dd22266b9
       </div>
       <div class="order-section-form-button-send-wrapper">
         <div class="subtitle order-section-form-button-send-subtitle">
@@ -65,6 +85,7 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import validationMixin from '~/mixins/validationMixin'
 
 export default {
@@ -98,15 +119,23 @@ export default {
       }
     },
   },
+=======
+import sectionMixin from '../../mixins/sectionMixin'
+
+export default {
+  name: 'OrderSection',
+  mixins: [sectionMixin],
+>>>>>>> 3d3a300d458747c9081f73e00107171dd22266b9
 }
 </script>
 
 <style scoped>
   .order-section {
-    background-color: #E4D8D4;
+    background-color: var(--BeigeLight100);
   }
   .order-section>h1 {
     color: var(--White100);
+    text-align: center;
   }
   .order-section-gradient-bottom {
     background: linear-gradient(180deg, rgba(255, 252, 244, 0) 0%, #98CEFF 100%);
@@ -182,5 +211,35 @@ export default {
 
   .order-section-form-button-send-subtitle {
     margin-right: 4rem;
+  }
+
+  @media (max-width: 460px) {
+    .order-section>h1 {
+      margin-left: .8rem;
+      margin-right: .8rem;
+      text-align: left;
+    }
+
+    .order-form {
+      margin: 3.6rem .8rem 0;
+    }
+
+    .order-form-checkbox + label {
+      padding: 1.3rem 1.2rem 1.1rem;
+    }
+
+    .order-section-form-button-send-wrapper {
+      display: block;
+    }
+
+    .order-section-form-button-send-subtitle {
+      margin-right: 0;
+      text-align: center;
+    }
+
+    .order-section-form-button-send {
+      display: block;
+      margin: 2.8rem auto 0;
+    }
   }
 </style>

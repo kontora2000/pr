@@ -1,6 +1,6 @@
 <template>
   <div class="marquee-background">
-    <row v-for="i in 4" :key="i" :number="i-0">
+    <row v-for="i in 5" :key="i" :number="i-0">
       <slot />
     </row>
   </div>
@@ -18,12 +18,11 @@ export default {
 </script>
 
 <style scoped>
-
   .marquee-background {
     min-width: 100vw;
     height: auto;
     overflow: hidden;
     position: absolute;
-
+    top: 4rem;
   }
 </style>

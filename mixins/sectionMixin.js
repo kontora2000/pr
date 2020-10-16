@@ -14,24 +14,41 @@ export default {
   },
   props: {
     backgroundColor: {
-      type: String, 
-      default: '#ffffff', 
-    },  
+      type: String,
+      default: '#ffffff',
+    },
     textColor: {
-      type: String, 
-      default: '#000000', 
+      type: String,
+      default: '#000000',
+    },
+    colorClass: {
+      type: String,
+      default: '',
     },
   },
   mounted () {
     gsap.to('#app', {
       scrollTrigger: {
         trigger: this.$el,
+        backgroundColor: this.backgroundColor,
+        duration: 0.1,
+        onEnter: () => {
+          if (this.colorClass !== '') {
+            this.$store.commit('system/setColorClass', this.colorClass)
+          }
+        },
+        onEnterBack: () => {
+          if (this.colorClass !== '') {
+            this.$store.commit('system/setColorClass', this.colorClass)
+          }
+        },
       },
-      backgroundColor: this.backgroundColor,
+      start: 'top top',
+      end: 'bottom center',
       ease: 'linear',
     })
   },
-  methods: {  
+  methods: {
     changeBackgroundColor () {
       if (this.backgroundColor !== '') {
         this.$store.commit('setBackgroundColor', this.backgroundColor)

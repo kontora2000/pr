@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="address-socials-wrapper">
+    <div class="address-socials-wrapper" :class="colorClass">
       <adress v-hide class="address-block">
         Краснодар,&nbsp;Тургенева,&nbsp;123
       </adress>
@@ -9,12 +9,12 @@
     </div>
     <consult-button />
     <call-babes-button />
-    <main-section text-color="#ffffff" background-color="transparent">
+    <main-section color-class="some-cool-class">
       <logo />
       <we-create />
     </main-section>
 
-    <free-section id="#free-section">
+    <free-section id="free-section" color-class="colors-section-freefreefree">
       <marque-background>
         <nobr>
           <span>Замерим</span>
@@ -23,17 +23,17 @@
           <span>Доставим</span>
         </nobr>
       </marque-background>
+      <arc />
     </free-section>
 
-    <realised-section />
+    <realised-section color-class="colors-section-realised" />
 
-    <order-section />
+    <order-section color-class="colors-section-order" />
 
-    <contacts-section />
+    <contacts-section color-class="colors-section-contacts" />
 
     <!-- <title-section /> -->
     <dialog-mesurement />
-    <footer />
   </div>
 </template>
 
@@ -55,6 +55,7 @@ import orderSection from '~/components/sections/Order.vue'
 // import section parts
 import weCreate from '~/components/WeCreate.vue'
 import marqueBackground from '~/components/MarqueeBackground.vue'
+import arc from '~/components/Arc.vue'
 
 // import buttons
 import callBabesButton from '@/components/buttons/CallBabesButton.vue'
@@ -80,6 +81,7 @@ export default {
     consultButton,
     dialogMesurement,
     marqueBackground,
+    arc,
   },
   computed: {
     backgroundColor () {
@@ -87,6 +89,9 @@ export default {
     },
     textColor () {
       return this.$store.getters['system/textColor']
+    },
+    colorClass () {
+      return this.$store.getters['system/colorClass']
     },
   },
 }
@@ -97,4 +102,7 @@ export default {
     overflow-x:hidden !important;
   }
 
+  @media (max-width: 460px) {
+    
+  }
 </style>
