@@ -70,8 +70,18 @@ export default {
       },
     })
     gsap.to('.logo-part-wrapper-cess,.logo-part-wrapper-pr', {
-      duration: 0.25,
+      duration: 0.3,
       width: 0,
+      scrollTrigger: {
+        trigger: '#free-section',
+        toggleActions: 'play none reverse none',
+        start: '20% center',
+        end: '20% center',
+      },
+    })
+    gsap.to('.logo-subtitle', {
+      duration: 0.3,
+      opacity: 0,
       scrollTrigger: {
         trigger: '#free-section',
         toggleActions: 'play none reverse none',
