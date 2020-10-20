@@ -64,7 +64,7 @@
       Вашая заявка отправлена! Ждите звонка!
     </div>
     <div v-if="isError">
-      Ошибка отправления заявки. попробуйте позже!
+      Ошибка отправления заявки. Попробуйте позже!
     </div>
     <div class="section-gradient-bottom order-section-gradient-bottom" />
   </section>
