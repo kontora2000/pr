@@ -1,6 +1,7 @@
 <template>
-  <div class="logo-wrapper fixed-block" :class="colorClass" ref="wrapper">
+  <div ref="wrapper" class="logo-wrapper fixed-block" :class="colorClass">
     <nuxt-link to="/" class="logo">
+    <Sprite />
       <span class="logo-part-wrapper logo-part-wrapper-pr">
         <svg ref="pr" class="logo-part-svg logo-part-pr-svg">
           <defs>
@@ -22,21 +23,21 @@
               <feComposite in2="firstfilter" operator="over" />
             </filter>
           </defs>
-          <use xlink:href="~/static/sprite.svg#logo-part-pr" ></use>
+          <use xlink:href="#logo-part-pr" />
         </svg>
       </span>
       <span ref="crown" class="logo-part-wrapper logo-part-wrapper-crown">
         <svg class="logo-part-svg logo-part-crown-svg">
-          <use xlink:href="~/static/sprite.svg#logo-part-crown" />
+          <use xlink:href="#logo-part-crown" />
         </svg>
       </span>
       <span ref="cessWrapper" class="logo-part-wrapper logo-part-wrapper-cess">
         <svg ref="cess" class="logo-part-svg logo-part-cess-svg">
-          <use xlink:href="~/static/sprite.svg#logo-part-cess" />
+          <use xlink:href="#logo-part-cess" />
         </svg>
       </span>
     </nuxt-link>
-    <div v-hide class="logo-subtitle">
+    <div class="logo-subtitle">
       Студия мебели и&nbsp;дизайна
     </div>
   </div>
@@ -47,12 +48,17 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import colorClassMixin from '~/mixins/colorClassMixin.js'
 
+import Sprite from '~/components/Sprite'
+
 if (process.client) {
   gsap.registerPlugin(ScrollTrigger)
 }
 
 export default {
   name: 'Logo',
+  components: {
+    Sprite,
+  },
   mixins: [colorClassMixin],
   data () {
     return { isVisible: false, }
@@ -60,7 +66,7 @@ export default {
   mounted () {
     gsap.to(this.$refs.wrapper, {
       duration: 0.5,
-      y:'-=30vh',
+      y: '-=30vh',
       scrollTrigger: {
         trigger: '#free-section',
         toggleActions: 'play none reverse none',
