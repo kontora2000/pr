@@ -235,7 +235,7 @@ textarea {
 .input-wrapper input[type="datetime"]:valid,
 .input-wrapper input[type="tel"]:valid,
 .input-wrapper textarea:valid {
-    border-bottom-color: var(--Black100);
+	border-bottom-color: var(--Black100);
 }
 .input-wrapper input[type="text"]:focus + label[data-placeholder]:after,
 .input-wrapper input[type="datetime"]:focus + label[data-placeholder]:after,
@@ -245,9 +245,18 @@ textarea {
 .input-wrapper input[type="datetime"]:valid + label[data-placeholder]:after,
 .input-wrapper input[type="tel"]:valid + label[data-placeholder]:after,
 .input-wrapper textarea:valid + label[data-placeholder]:after {
-    -webkit-transform: translate(-10%, -340%) scale(0.8, 0.8);
-            transform: translate(-10%, -340%) scale(0.8, 0.8);
-    color: var(--Black100);
+	-webkit-transform: translate(-10%, -340%) scale(0.8, 0.8);
+			transform: translate(-10%, -340%) scale(0.8, 0.8);
+	color: var(--Black100);
+}
+
+.errors {
+	margin: .8rem 0 0;
+	position: absolute;
+	color: var(--PinkDark100);
+	text-transform: uppercase;
+	letter-spacing: .08em;
+	font-weight: 500;
 }
 
 .button,
@@ -306,7 +315,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 8rem;
+	font-size: 7.2rem;
 	line-height: 8.5rem;
 	margin: 2rem 0 0;
 }
@@ -460,6 +469,39 @@ section {
 	padding: 16rem 0;
 	position: relative;
 	width: 100vw;
+}
+
+.section-grid {
+	display: grid;
+	grid-template-columns: 10rem auto;
+	grid-column-gap: 2rem;
+}
+
+.section-grid-header-sticky-cont-wrapper {
+	grid-column: 1/2;
+}
+
+.section-grid-header-sticky-cont {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 1.2rem;
+	z-index: 1;
+}
+
+.section-grid-header-sticky-cont>.section-header {
+	-webkit-transform: rotate(270deg) translateX(-100%);
+	-moz-transform: rotate(270deg) translateX(-100%);
+	-ms-transform: rotate(270deg) translateX(-100%);
+	-o-transform: rotate(270deg) translateX(-100%);
+	transform: rotate(270deg) translateX(-100%);
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	transform-origin: 0 0;
+	position: relative;
+	top: 0;
+	max-width: calc(100vh - 1.2rem);
 }
 
 .section-subheader {

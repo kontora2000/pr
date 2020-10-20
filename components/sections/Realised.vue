@@ -1,37 +1,43 @@
 <template>
   <section class="realised-section">
-    <h1>Реализовали</h1>
-    <div class="realised-gallery-grid gallery-grid">
-      <picture class="gallery-photo-wrapper">
-        <img class="gallery-photo" src="~/static/projects/1.jpg" />
-      </picture>
-      <picture class="gallery-photo-wrapper">
-        <img class="gallery-photo" src="~/static/projects/2.jpg" />
-      </picture>
-      <picture class="gallery-photo-wrapper">
-        <img class="gallery-photo" src="~/static/projects/3.jpg" />
-      </picture>
-      <picture class="gallery-photo-wrapper">
-        <img class="gallery-photo" src="~/static/projects/4.jpg" />
-      </picture>
-      <picture class="gallery-photo-wrapper">
-        <img class="gallery-photo" src="~/static/projects/5.jpg" />
-      </picture>
-      <picture class="gallery-photo-wrapper">
-        <img class="gallery-photo" src="~/static/projects/6.jpg" />
-      </picture>
-      <picture class="gallery-photo-wrapper">
-        <img class="gallery-photo" src="~/static/projects/7.jpg" />
-      </picture>
-      <picture class="gallery-photo-wrapper">
-        <img class="gallery-photo" src="~/static/projects/8.jpg" />
-      </picture>
-      <picture class="gallery-photo-wrapper">
-        <img class="gallery-photo" src="~/static/projects/9.jpg" />
-      </picture>
-      <picture class="gallery-photo-wrapper">
-        <img class="gallery-photo" src="~/static/projects/10.jpg" />
-      </picture>
+    <div class="section-grid realised-section-grid">
+      <div class="section-grid-header-sticky-cont-wrapper">
+        <div class="section-grid-header-sticky-cont realised-section-grid-header-sticky-cont">
+          <h1 class="section-header realised-section-header">Реализовали</h1>
+        </div>
+      </div>
+      <div class="realised-gallery-grid gallery-grid">
+        <picture class="gallery-photo-wrapper">
+          <img class="gallery-photo" src="~/static/projects/1.jpg" />
+        </picture>
+        <picture class="gallery-photo-wrapper">
+          <img class="gallery-photo" src="~/static/projects/2.jpg" />
+        </picture>
+        <picture class="gallery-photo-wrapper">
+          <img class="gallery-photo" src="~/static/projects/3.jpg" />
+        </picture>
+        <picture class="gallery-photo-wrapper">
+          <img class="gallery-photo" src="~/static/projects/4.jpg" />
+        </picture>
+        <picture class="gallery-photo-wrapper">
+          <img class="gallery-photo" src="~/static/projects/5.jpg" />
+        </picture>
+        <picture class="gallery-photo-wrapper">
+          <img class="gallery-photo" src="~/static/projects/6.jpg" />
+        </picture>
+        <picture class="gallery-photo-wrapper">
+          <img class="gallery-photo" src="~/static/projects/7.jpg" />
+        </picture>
+        <picture class="gallery-photo-wrapper">
+          <img class="gallery-photo" src="~/static/projects/8.jpg" />
+        </picture>
+        <picture class="gallery-photo-wrapper">
+          <img class="gallery-photo" src="~/static/projects/9.jpg" />
+        </picture>
+        <picture class="gallery-photo-wrapper">
+          <img class="gallery-photo" src="~/static/projects/10.jpg" />
+        </picture>
+      </div>
     </div>
     <div class="realised-section-link-instagram-wrapper">
       <div class="realised-section-link-instagram-comment">
@@ -55,15 +61,21 @@ export default {
 <style scoped>
   .realised-section {
     background: var(--White100);
+    padding-top: 0;
   }
 
-  .realised-section>h1,
+  .realised-section-header,
   .realised-section-link-instagram-comment {
     color: var(--Gray100);
   }
 
-  .realised-section>h1 {
-    text-align: center;
+  .realised-section-grid-header-sticky-cont {
+    height: 62.1rem;
+    margin-top: -2.2rem;
+  }
+
+  .realised-section-header {
+    width: 62.1rem;
   }
 
   .realised-gallery-grid {
@@ -71,7 +83,7 @@ export default {
     grid-template-columns: repeat(auto-fill, calc((100% - 32.4rem) / 39));
     grid-column-gap: .8rem;
     grid-row-gap: 4.8rem;
-    margin: 8rem 2rem 6.4rem;
+    margin: 0 0 6.4rem;
   }
 
   .gallery-photo-wrapper {
