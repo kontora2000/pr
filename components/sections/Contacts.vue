@@ -160,6 +160,13 @@ export default {
     transform: scale(1.25) rotate(-16deg);
   }
 
+  @media (min-width: 1460px) {
+    .contacts-section {
+      padding-bottom: 0.1rem;
+      padding-top: 10rem;
+    }
+  }
+
   @media (max-width: 460px) {
     .contacts-section-inner {
       font-size: 1.1rem;

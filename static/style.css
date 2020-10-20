@@ -475,6 +475,8 @@ section {
 	display: grid;
 	grid-template-columns: 10rem auto;
 	grid-column-gap: 2rem;
+	max-width: 1500px;
+	margin: 0 auto;
 }
 
 .section-grid-header-sticky-cont-wrapper {
@@ -551,6 +553,13 @@ section {
 
 /* Adaptiv ochka */
 
+@media (min-width: 1460px) {
+	h1 {
+		font-size: 9.2rem;
+		line-height: 9.7rem;
+	}
+}
+
 @media (min-width: 461px) {
 	.only-phone {
 		display: none;
@@ -608,6 +617,20 @@ section {
 
 	section {
 		padding: 12rem 0;
+	}
+
+	.section-grid {
+		display: block;
+		grid-template-columns: auto;
+	}
+
+	.section-grid-header-sticky-cont {
+		height: auto !important;
+	}
+
+	.section-grid-header-sticky-cont>.section-header {
+		transform: none;
+		transform-origin: 0;
 	}
 
 	.section-subheader {

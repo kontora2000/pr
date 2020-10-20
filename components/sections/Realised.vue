@@ -133,6 +133,16 @@ export default {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #E4D8D4 100%);
   }
 
+  @media (min-width: 1460px) {
+    .realised-section-grid-header-sticky-cont {
+      width: 79.6rem;
+    }
+
+    .realised-section-header {
+      width: 79.6rem;
+    }
+  }
+
   @media (max-width: 460px) {
     .realised-section>h1 {
       margin-left: .8rem;

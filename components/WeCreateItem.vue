@@ -123,6 +123,17 @@ export default {
     position: relative;
   }
 
+  @media (min-width: 1460px) {
+    .we-create-link {
+      font-size: 5.6rem;
+      line-height: 4.8rem;
+    }
+    .we-create-link:not(:last-child):not(:nth-child(3)):not(:nth-child(6))::after {
+    font-size: 5rem;
+    margin-left: 1.2rem;
+    }
+  }
+
   @media (max-width: 460px) {
     .we-create-link {
       display: inline-block;

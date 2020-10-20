@@ -63,6 +63,21 @@ export default {
     text-align: center;
   }
 
+  @media (min-width: 1500px) {
+    .freefreefree-arch-wrapper {
+      max-width: 90rem;
+    }
+
+    .freefreefree-arch {
+      max-width: 96rem;
+    }
+
+    .freefreefree-arch-inner {
+      font-size: 5.6rem;
+      padding-top: 20rem;
+    }
+  }
+
   @media (max-width: 460px) {
     .freefreefree-arch {
       height: 100vh;

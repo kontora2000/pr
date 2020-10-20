@@ -57,10 +57,22 @@ export default {
 <style scoped>
   .we-create {
     line-height: 5rem;
+    max-width: 116rem;
+    width: 100%;
     text-align: center;
     position: absolute;
     bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 6;
+  }
+
+  @media (min-width: 1460px) {
+    .we-create {
+      line-height: 7.2rem;
+      width: 100%;
+      max-width: 172rem;
+    }
   }
 
   @media (max-width: 460px) {

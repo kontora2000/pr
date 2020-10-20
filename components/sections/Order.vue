@@ -137,7 +137,7 @@ export default {
 
   .order-section-header {
     color: var(--White100);
-    width: 436px;
+    width: 43.6rem;
   }
 
   .order-section-grid-content-wrapper {
@@ -219,6 +219,16 @@ export default {
 
   .order-section-form-button-send-subtitle {
     margin-right: 4rem;
+  }
+
+  @media (min-width: 1460px) {
+    .order-section-grid-header-sticky-cont {
+      height: 56rem;
+    }
+
+    .order-section-header {
+      width: 56rem;
+    }
   }
 
   @media (max-width: 460px) {

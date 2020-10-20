@@ -189,6 +189,24 @@ export default {
     z-index: 10;
   }
 
+
+  @media (min-width: 1460px) {
+    .main-scene-mask {
+      width: 92rem;
+    }
+
+    .main-scene-layer {
+      background-position-x: 100%;
+      width: 1800px;
+      min-width: 300px;
+    }
+
+    .scene-kitchen-counter {
+      background-position-y: -30px;
+    }
+
+  }
+
   @media (max-width: 460px) {
     .main-scene-layer {
       background-position: 0 0;
