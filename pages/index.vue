@@ -32,7 +32,7 @@
 
     <realised-section color-class="colors-section-realised" />
 
-    <order-section color-class="colors-section-order" />
+    <order-section id="order-section" color-class="colors-section-order" />
 
     <contacts-section color-class="colors-section-contacts" />
 
@@ -103,7 +103,7 @@ export default {
 
 <style scoped>
   body, #app {
-    overflow-x:hidden !important;
+    /*overflow-x:hidden !important;*/
   }
 
   @media (max-width: 460px) {

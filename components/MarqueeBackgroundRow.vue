@@ -96,16 +96,10 @@ export default {
 
     .marquee-background-row-inner-el {
       display: block;
-      float: left;
-      width: 50%;
-      text-transform: lowercase;
-      font-family: 'Transgender Grotesk';
-      font-weight: 400;
-      color: #FFF1F4;
     }
 
     .marquee-background-row-inner-el > nobr {
-      overflow: hidden;
+      
     }
 
     .marquee-word {

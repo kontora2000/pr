@@ -1,6 +1,6 @@
 <template>
   <section class="contacts-section">
-    <h1>Оставайтесь <br><span class="only-desktop">с&nbsp;нами </span>на&nbsp;связи</h1>
+    <h1 class="section-header contacts-section-header">Оставайтесь <br><span class="only-desktop">с&nbsp;нами </span>на&nbsp;связи</h1>
     <div class="contacts-section-inner">
       <div class="contacts-section-inner-socials">
         <div class="contacts-section-inner-socials-link-wrapper">
@@ -27,7 +27,7 @@
       </div>
 
       <div class="contacts-section-inner-address">
-        <a class="contacts-section-inner-address-link link-underline-solid" href="#" target="_blank">Краснодар, Тургенева, дом&nbsp;123</a>
+        <a class="contacts-section-inner-address-link link-underline-solid" href="#" target="_blank">Краснодар, улица Тургенева, дом&nbsp;123</a>
         <div class="working-hours">Работаем с 10 до 18<sup>00</sup></div>
       </div>
 
@@ -81,13 +81,17 @@ export default {
 
   .contacts-section-inner {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 25.6rem calc(100% - 45.6rem) 20rem;
     font-family: var(--font-serif);
-    font-size: 3.2rem;
-    margin: 10rem auto 20rem;
+    font-size: 2rem;
+    margin: 13.2rem auto 22rem;
     max-width: 1248px;
     position: relative;
     z-index: 1;
+  }
+
+  .contacts-section-inner a.link-underline-solid {
+    border-bottom-color: var(--Black36);
   }
 
   .contacts-section-inner-socials {
@@ -114,11 +118,24 @@ export default {
     text-align: center;
   }
 
+  .contacts-section-inner-address .working-hours {
+    margin-top: 1.2rem;
+  }
+
+  .contacts-section-inner-address .working-hours>sup {
+    font-size: 1.2rem;
+    margin-left: 1px;
+  }
+
+  .contacts-section-inner-tel-email-wrapper:not(:first-child) {
+    margin-top: 1.2rem;
+  }
+
   .copyrights-cont {
     color: var(--White64);
     text-align: center;
     position: absolute;
-    bottom: 4rem;
+    bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -195,7 +212,6 @@ export default {
     }
 
     .copyrights-cont {
-      bottom: 2rem;
       width: 100%;
     }
   }
