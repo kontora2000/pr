@@ -15,6 +15,8 @@
 import gsap from 'gsap'
 import colorClassMixin from '~/mixins/colorClassMixin.js'
 
+import Sprite from '~/components/Sprite'
+
 export default {
   name: 'ConsultButton',
   mixins: [colorClassMixin],
@@ -63,7 +65,11 @@ export default {
   }
 
   .icon-consult-wrapper {
+    display: inline-block;
     filter: drop-shadow(2px 8px 16px rgba(101, 0, 37, 0.26));
+    height: 4.55rem;
+    margin-right: .6rem;
+    width: 5.2rem;
     transition: filter .2s ease-in-out, -webkit-filter .2s ease-in-out;
     will-change: filter;
   }
@@ -85,10 +91,9 @@ export default {
 
   .icon-consult-svg {
     display: inline-block;
-    height: 3.6rem;
-    margin-right: .4rem;
+    height: 4.55rem;
     vertical-align: middle;
-    width: 4.1rem;
+    width: 5.2rem;
     filter: drop-shadow(1px 3px 3px rgba(133, 1, 40, 0.2));;
     transition: transform .125s ease-in-out, filter .2s ease-in-out, -webkit-filter .2s ease-in-out;
     will-change: transform, filter, -webkit-filter;
@@ -112,7 +117,9 @@ export default {
 
   .icon-consult-svg>use {
     fill: var(--PinkLight100);
+    transform: scale(1.6);
     transition: fill .175s ease-in-out;
+    will-change: transform, fill;
   }
   .link-open-chat:hover .icon-consult-svg>use {
     fill: var(--GrayLight100);
@@ -130,6 +137,7 @@ export default {
 
   .link-open-words-wrapper {
       display: inline-block;
+      margin-top: .2rem;
       vertical-align: top;
     }
 
