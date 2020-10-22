@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="address-socials-wrapper" :class="colorClass">
-      <adress v-hide class="address-block">
+      <adress class="address-block">
         Краснодар,&nbsp;Тургенева,&nbsp;123
       </adress>
       <socials />
@@ -107,6 +107,6 @@ export default {
   }
 
   @media (max-width: 460px) {
-    
+
   }
 </style>

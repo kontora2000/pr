@@ -42,12 +42,12 @@ export default {
     //   this.menu, {
     //     scrollTrigger: {
     //       trigger: this.$el,
-    //       markers: true,
-    //       // toggleActions: 'restart none reverse none', 
+    //       markers: false,
+    //       // toggleActions: 'restart none reverse none',
     //       scrub: true,
     //     },
     //     y: -400,
-    //     ease: 'linear', 
+    //     ease: 'linear',
     //     duration: 0.4,
     //   })
   },

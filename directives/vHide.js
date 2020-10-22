@@ -26,7 +26,7 @@ export default {
         trigger: '#free-section',
         start: '20% center',
         end: '20% center',
-        markers: true,
+        markers: false,
         toggleActions: 'play none reverse none',
       },
     })

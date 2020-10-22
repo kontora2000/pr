@@ -1,7 +1,7 @@
 <template>
   <div ref="wrapper" class="logo-wrapper fixed-block" :class="colorClass">
     <nuxt-link to="/" class="logo">
-    <Sprite />
+      <Sprite />
       <span class="logo-part-wrapper logo-part-wrapper-pr">
         <svg ref="pr" class="logo-part-svg logo-part-pr-svg">
           <defs>
@@ -68,31 +68,35 @@ export default {
       duration: 0.5,
       y: '-=30vh',
       scrollTrigger: {
-        trigger: '#free-section',
+        trigger: '#app',
         toggleActions: 'play none reverse none',
-        start: '20% center',
-        end: '20% center',
-        markers: true,
+        start: '2% top',
+        end: '6% top',
+        scrub: true,
+        ease: 'linear',
       },
     })
-    gsap.to('.logo-part-wrapper-cess,.logo-part-wrapper-pr', {
-      duration: 0.3,
-      width: 0,
-      scrollTrigger: {
-        trigger: '#free-section',
-        toggleActions: 'play none reverse none',
-        start: '20% center',
-        end: '20% center',
-      },
+
+    const tl = gsap.timeline()
+    tl.to('.logo-part-wrapper-cess,.logo-part-wrapper-pr', { duration: 0.1, opacity: 0, })
+      .to('.logo-part-wrapper-cess,.logo-part-wrapper-pr', { duration: 0.1, width: 0, })
+
+    ScrollTrigger.create({
+      animation: tl,
+      trigger: '#app',
+      toggleActions: 'play none reverse none',
+      start: '2% top',
+      end: '2% top',
     })
+
     gsap.to('.logo-subtitle', {
       duration: 0.3,
       opacity: 0,
       scrollTrigger: {
-        trigger: '#free-section',
+        trigger: '#app',
         toggleActions: 'play none reverse none',
-        start: '20% center',
-        end: '20% center',
+        start: '2% top',
+        end: '2% top',
       },
     })
   },
