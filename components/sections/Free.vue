@@ -27,11 +27,11 @@ export default {
       { opacity: 0, },
       {
         opacity: 1,
-        duration: 0.1,
+        duration: 0.25,
         scrollTrigger: {
           trigger: '.freefreefree-section',
-          start: '10% top',
-          end: '10% top',
+          start: '3% top',
+          end: '3% top',
           toggleActions: 'play none reverse none',
         },
       }
@@ -41,11 +41,11 @@ export default {
       { opacity: 0, },
       {
         opacity: 1,
-        duration: 0.1,
+        duration: 0.25,
         scrollTrigger: {
           trigger: '.freefreefree-section',
-          start: '12% top',
-          end: '12% top',
+          start: '5% top',
+          end: '5% top',
           toggleActions: 'play none reverse none',
         },
       }
@@ -55,11 +55,11 @@ export default {
       { opacity: 0, },
       {
         opacity: 1,
-        duration: 0.1,
+        duration: 0.25,
         scrollTrigger: {
           trigger: '.freefreefree-section',
-          start: '20% top',
-          end: '20% top',
+          start: '15% top',
+          end: '15% top',
           toggleActions: 'play none reverse none',
         },
       }
@@ -69,11 +69,11 @@ export default {
       { opacity: 0, },
       {
         opacity: 1,
-        duration: 0.1,
+        duration: 0.25,
         scrollTrigger: {
           trigger: '.freefreefree-section',
-          start: '50% top',
-          end: '50% top',
+          start: '30% top',
+          end: '30% top',
           toggleActions: 'play none reverse none',
         },
       }
@@ -83,11 +83,11 @@ export default {
       { opacity: 0, },
       {
         opacity: 1,
-        duration: 0.1,
+        duration: 0.25,
         scrollTrigger: {
           trigger: '.freefreefree-section',
-          start: '70% top',
-          end: '70% top',
+          start: '45% top',
+          end: '45% top',
           toggleActions: 'play none reverse none',
         },
       }
@@ -97,11 +97,11 @@ export default {
       { opacity: 0, },
       {
         opacity: 1,
-        duration: 0.1,
+        duration: 0.25,
         scrollTrigger: {
           trigger: '.freefreefree-section',
-          start: '90% top',
-          end: '90% top',
+          start: '60% top',
+          end: '60% top',
           toggleActions: 'play none reverse none',
         },
       }
