@@ -1,15 +1,13 @@
 <template>
   <div id="app">
     <div class="address-socials-wrapper" :class="colorClass">
-      <adress v-hide class="address-block">
-        Краснодар,&nbsp;Тургенева,&nbsp;123
-      </adress>
+      <adress v-hide class="address-block">Краснодар,&nbsp;Тургенева,&nbsp;123</adress>
       <socials />
       <phone>+7&thinsp;861&thinsp;215-30-00</phone>
     </div>
     <consult-button />
     <call-babes-button />
-    <main-section color-class="some-cool-class">
+    <main-section color-class="colors-section-main">
       <logo />
       <we-create />
     </main-section>

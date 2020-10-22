@@ -61,7 +61,7 @@
           </div>
           <div class="order-section-form-button-send-wrapper">
             <div class="subtitle order-section-form-button-send-subtitle">
-              В&nbsp;течении 15&nbsp;минут мы&nbsp;перезвоним по&nbsp;указанному номеру телефона, чтобы подтвердить заявку и&nbsp;договориться об&nbsp;удобном для&nbsp;замера времени
+              Чтобы подтвердить заявку и&nbsp;договориться об&nbsp;удобном для&nbsp;замера времени, мы&nbsp;перезвоним по&nbsp;указанному номеру телефона в&nbsp;течении 15&nbsp;минут
             </div>
             <button class="button-big order-section-form-button-send">
               Вызвать&nbsp;замерщика

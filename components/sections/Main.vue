@@ -24,6 +24,9 @@ export default {
 </script>
 
 <style scoped>
+  .colors-section-main {
+    /*background-color: var(--PinkThin100);*/
+  }
   .top-section {
     background-color:transparent;
     color: var(--Black);
