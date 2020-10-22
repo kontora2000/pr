@@ -3,7 +3,7 @@
     <a id="consult" href="https://wa.me/send?phone=79676738990" class="link-open-chat">
       <span class="icon-consult-wrapper">
         <svg class="icon-svg icon-consult-svg">
-          <use xlink:href="~/static/sprite.svg#icon-consult" />
+          <use xlink:href="#icon-consult" />
         </svg>
       </span>
       <span class="link-open-words-wrapper"><span class="only-desktop link-underline-solid">Проконсультироваться<br></span><span class="only-phone link-underline-solid">Спросить<br></span><span class="link-underline-solid">в&nbsp;WhatsApp</span></span>

@@ -59,7 +59,7 @@ export default {
           scrub: true,
           start: '17% center',
           end: '1000px',
-          markers: true,
+          markers: false,
         },
       }
     )
@@ -99,7 +99,7 @@ export default {
     }
 
     .marquee-background-row-inner-el > nobr {
-      
+
     }
 
     .marquee-word {

@@ -1,6 +1,7 @@
 <template>
-  <div class="logo-wrapper fixed-block" :class="colorClass" ref="wrapper">
+  <div ref="wrapper" class="logo-wrapper fixed-block" :class="colorClass">
     <nuxt-link to="/" class="logo">
+      <Sprite />
       <span class="logo-part-wrapper logo-part-wrapper-pr">
         <svg ref="pr" class="logo-part-svg logo-part-pr-svg">
           <defs>
@@ -22,21 +23,21 @@
               <feComposite in2="firstfilter" operator="over" />
             </filter>
           </defs>
-          <use xlink:href="~/static/sprite.svg#logo-part-pr" ></use>
+          <use xlink:href="#logo-part-pr" />
         </svg>
       </span>
       <span ref="crown" class="logo-part-wrapper logo-part-wrapper-crown">
         <svg class="logo-part-svg logo-part-crown-svg">
-          <use xlink:href="~/static/sprite.svg#logo-part-crown" />
+          <use xlink:href="#logo-part-crown" />
         </svg>
       </span>
       <span ref="cessWrapper" class="logo-part-wrapper logo-part-wrapper-cess">
         <svg ref="cess" class="logo-part-svg logo-part-cess-svg">
-          <use xlink:href="~/static/sprite.svg#logo-part-cess" />
+          <use xlink:href="#logo-part-cess" />
         </svg>
       </span>
     </nuxt-link>
-    <div v-hide class="logo-subtitle">
+    <div class="logo-subtitle">
       Студия мебели и&nbsp;дизайна
     </div>
   </div>
@@ -47,12 +48,17 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import colorClassMixin from '~/mixins/colorClassMixin.js'
 
+import Sprite from '~/components/Sprite'
+
 if (process.client) {
   gsap.registerPlugin(ScrollTrigger)
 }
 
 export default {
   name: 'Logo',
+  components: {
+    Sprite,
+  },
   mixins: [colorClassMixin],
   data () {
     return { isVisible: false, }
@@ -60,33 +66,37 @@ export default {
   mounted () {
     gsap.to(this.$refs.wrapper, {
       duration: 0.5,
-      y:'-=30vh',
+      y: '-=30vh',
       scrollTrigger: {
-        trigger: '#free-section',
+        trigger: '#app',
         toggleActions: 'play none reverse none',
-        start: '20% center',
-        end: '20% center',
-        markers: true,
+        start: '2% top',
+        end: '6% top',
+        scrub: true,
+        ease: 'linear',
       },
     })
-    gsap.to('.logo-part-wrapper-cess,.logo-part-wrapper-pr', {
-      duration: 0.3,
-      width: 0,
-      scrollTrigger: {
-        trigger: '#free-section',
-        toggleActions: 'play none reverse none',
-        start: '20% center',
-        end: '20% center',
-      },
+
+    const tl = gsap.timeline()
+    tl.to('.logo-part-wrapper-cess,.logo-part-wrapper-pr', { duration: 0.1, opacity: 0, })
+      .to('.logo-part-wrapper-cess,.logo-part-wrapper-pr', { duration: 0.1, width: 0, })
+
+    ScrollTrigger.create({
+      animation: tl,
+      trigger: '#app',
+      toggleActions: 'play none reverse none',
+      start: '2% top',
+      end: '2% top',
     })
+
     gsap.to('.logo-subtitle', {
       duration: 0.3,
       opacity: 0,
       scrollTrigger: {
-        trigger: '#free-section',
+        trigger: '#app',
         toggleActions: 'play none reverse none',
-        start: '20% center',
-        end: '20% center',
+        start: '2% top',
+        end: '2% top',
       },
     })
   },

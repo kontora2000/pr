@@ -15,7 +15,7 @@ export default {
         trigger: '#free-section',
         start: 'top top',
         end: 'top top',
-        markers: true,
+        markers: false,
         toggleActions: 'play none reverse none',
       },
     })

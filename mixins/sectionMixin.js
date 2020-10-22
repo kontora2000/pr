@@ -60,6 +60,7 @@ export default {
         if (this.textColor > 0x7FFFFF) { this.textColor = '#ffffff' } else {
           this.textColor = '#000000'
         }
+        // ввыбираем все текстовые элементы и меняем им цвет шрифта
         const els = document.querySelectorAll('div,span,p,i,section,a,li')
         // eslint-disable-next-line no-plusplus
         for (let k = 0; k < els.length; k++) {

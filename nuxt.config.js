@@ -29,8 +29,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/directives/vHide.js',
-    { src: '~plugins/svg4everybody.js', ssr: false, }
+    { src: '~/directives/vHide.js', ssr: false, }
   ],
   /*
   ** Nuxt.js dev-modules
