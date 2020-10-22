@@ -23,6 +23,7 @@ export default {
     height: auto;
     overflow: hidden;
     position: -webkit-sticky;
+    position: sticky;
     top: 0rem;
   }
 </style>

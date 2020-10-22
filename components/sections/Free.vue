@@ -3,7 +3,7 @@
     <slot />
     <div class="freefreefree-wrapper">
       <div class="freefreefree-star-wrapper">
-        <svg v-hide class="freefreefree-star-svg star-plus-svg">
+        <svg class="freefreefree-star-svg star-plus-svg">
           <use xlink:href="~/static/sprite.svg#star-plus" />
         </svg>
       </div>
@@ -36,10 +36,11 @@ export default {
 
   .freefreefree-wrapper {
     display: flex;
-    margin: -100vh auto 16rem;
+    margin: -100vh auto 20rem;
     padding: 0 2rem;
     max-width: 1500px;
     width: 100%;
+    position: sticky;
     position: -webkit-sticky;
     top: 16rem;
     z-index: 2;
@@ -60,12 +61,9 @@ export default {
 
   @media (min-width: 1500px) {
     .freefreefree-wrapper {
-      max-width: 90rem;
     }
 
     .freefreefree-inner {
-      font-size: 5.6rem;
-      padding-top: 20rem;
     }
   }
 

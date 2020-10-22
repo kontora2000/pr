@@ -1,8 +1,5 @@
 <template>
-  <a class="we-create-link" @mouseenter="showImg" @mouseleave="hideImg">
-    <slot />
-    <img v-show="showImage" ref="image" class="we-create-preview-img" :src="currentImageSrc">
-  </a>
+  <a class="we-create-link" @mouseenter="showImg" @mouseleave="hideImg"><slot /><img v-show="showImage" ref="image" class="we-create-preview-img" :src="currentImageSrc"></a>
 </template>
 
 <script>
@@ -92,17 +89,18 @@ export default {
     cursor: default; /* стереть, при релизе полного сайта */
     display: inline-block;
     font-family: var(--font-transgender);
-    font-size: 3.6rem;
-    letter-spacing: .02em;
+    font-size: 3.2rem;
+    letter-spacing: .08em;
     line-height: 2.4rem;
-    margin: 0 1.5rem;
+    margin: 0 .4rem;
     position: relative;
+    text-transform: uppercase;
   }
   .we-create-link:not(:last-child):not(:nth-child(3)):not(:nth-child(6))::after {
     content: '✹';
     display: inline-block;
     font-size: 2.8rem;
-    margin-left: 1.6rem;
+    margin-left: .8rem;
     vertical-align: top;
   }
 
