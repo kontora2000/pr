@@ -1,16 +1,13 @@
 <template>
   <section class="freefreefree-section">
     <slot />
-    <div class="freefreefree-arch-wrapper">
-      <div class="freefreefree-arch">
-        <div class="freefreefree-arch-inner">
-          Замерим,<br>
-          спроектируем,<br>
-          доставим<br>
-          и<br>
-          установим
-        </div>
+    <div class="freefreefree-wrapper">
+      <div class="freefreefree-star-wrapper">
+        <svg v-hide class="freefreefree-star-svg star-plus-svg">
+          <use xlink:href="~/static/sprite.svg#star-plus" />
+        </svg>
       </div>
+      <div class="freefreefree-inner"><span class="free-free-free-word">Бесплатно</span> <span class="free-free-free-word">замерим,</span> <br><span class="free-free-free-word">спроектируем, </span><span class="free-free-free-word">доставим</span> <span class="free-free-free-word">и&nbsp;установим</span></div>
     </div>
     <div class="section-gradient-bottom freefreefree-section-gradient-bottom" />
   </section>
@@ -28,8 +25,8 @@ export default {
 <style scoped>
   .freefreefree-section {
     background: var(--Pink100);
-    max-height: 100vh;
-    overflow: hidden;
+    height: 400vh;
+    max-height: 400vh;
     padding-bottom: 0;
   }
   .freefreefree-section-gradient-bottom {
@@ -37,54 +34,44 @@ export default {
     z-index: 1;
   }
 
-  .freefreefree-arch-wrapper {
-    margin: 0 auto;
-    max-width: 60rem;
+  .freefreefree-wrapper {
+    display: flex;
+    margin: -100vh auto 16rem;
+    padding: 0 2rem;
+    max-width: 1500px;
     width: 100%;
-    position: relative;
-    z-index: 1;
+    position: -webkit-sticky;
+    top: 16rem;
+    z-index: 2;
   }
 
-  .freefreefree-arch {
-    background: var(--White24);
-    backdrop-filter: blur(24px);
-    border-radius: 1000px 1000px 0 0;
-    height: calc(100vh - 10rem);
-    margin: 0 auto;
-    max-width: 53.6rem;
-    width: 100%;
+  .freefreefree-star-svg {
+    margin-top: 1.2rem;
+    height: 5.6rem;
+    width: 5.6rem;
   }
 
-  .freefreefree-arch-inner {
-    font-size: 4.8rem;
+  .freefreefree-inner {
+    font-size: 7.2rem;
     font-family: var(--font-transgender);
+    line-height: 8rem;
     margin: 0 2rem;
-    padding-top: 10rem;
-    text-align: center;
   }
 
   @media (min-width: 1500px) {
-    .freefreefree-arch-wrapper {
+    .freefreefree-wrapper {
       max-width: 90rem;
     }
 
-    .freefreefree-arch {
-      max-width: 96rem;
-    }
-
-    .freefreefree-arch-inner {
+    .freefreefree-inner {
       font-size: 5.6rem;
       padding-top: 20rem;
     }
   }
 
   @media (max-width: 460px) {
-    .freefreefree-arch {
-      height: 100vh;
-      max-width: calc(100vw - 3.2rem);
-    }
 
-    .freefreefree-arch-inner {
+    .freefreefree-inner {
       font-size: 2.8rem;
       margin: 0 .4rem;
     }

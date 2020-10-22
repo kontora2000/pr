@@ -22,7 +22,7 @@ export default {
     min-width: 100vw;
     height: auto;
     overflow: hidden;
-    position: absolute;
-    top: 4rem;
+    position: -webkit-sticky;
+    top: 0rem;
   }
 </style>
