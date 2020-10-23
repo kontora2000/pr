@@ -144,6 +144,11 @@ export default {
   }
 
   @media (max-width: 460px) {
+    .realised-section {
+      overflow-x: hidden;
+      width: 100vw;
+    }
+
     .realised-section>h1 {
       margin-left: .8rem;
       margin-right: .8rem;
