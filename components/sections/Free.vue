@@ -24,8 +24,10 @@ export default {
   mixins: [sectionMixin],
   mounted () {
     gsap.fromTo('.freefreefree-star-wrapper',
-      { scale: .000001,
-        opacity: 0 },
+      {
+        scale: 0.000001,
+        opacity: 0,
+      },
       {
         scale: 1,
         opacity: 1,
