@@ -45,7 +45,7 @@ export default {
       startX = 0 - this.number * 800
     } else {
       offsetX = 0
-      startX = -w * 0.25 - this.number * 500
+      startX = -w * 0.25 - this.number * 800
       originX = '100% 0%'
     }
     gsap.fromTo(this.$refs.els,
@@ -85,7 +85,7 @@ export default {
       overflow: hidden;
     }
     .marquee-background-row:not(:last-child) {
-      margin-bottom: 4rem;
+      margin-bottom: 0;
     }
 
     .marquee-background-row-inner {

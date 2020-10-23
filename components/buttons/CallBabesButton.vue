@@ -21,9 +21,9 @@ export default {
   mounted () {
     gsap.to(this.$el, {
       opacity: 0,
-      duration: 0.1,
+      duration: 0.15,
       scrollTrigger: {
-        trigger: '.section-header-order',
+        trigger: '.order-section',
         toggleActions: 'play none reverse none',
         start: 'top bottom',
         end: 'top bottom',
@@ -49,7 +49,7 @@ export default {
 
 <style scoped>
   .button-measurer-wrapper {
-    bottom: 4rem;
+    bottom: 2rem;
     right: 2rem;
     z-index: 99;
   }

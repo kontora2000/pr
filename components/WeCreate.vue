@@ -1,6 +1,10 @@
 <template>
   <div class="we-create">
-    <i class="we-create-cursive">Создаём</i>
+    <div class="word-create">
+      <svg class="word-create-svg">
+        <use xlink:href="~/static/sprite.svg#word-create" />
+      </svg>
+    </div>
     <we-create-item folder="kitchens">Кухни</we-create-item>
     <we-create-item folder="wardrobes">Шкафы&thinsp;и&thinsp;гардеробные</we-create-item>
     <we-create-item folder="livingrooms">Мебель&thinsp;в&thinsp;гостинные</we-create-item>
@@ -55,9 +59,30 @@ export default {
 </script>
 
 <style scoped>
+  .word-create {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .word-create-svg {
+    width: 120vw;
+    height: 380px;
+    left: -60vw;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(50vw);
+  }
+
+  .word-create-svg>use {
+    stroke-width: 7px;
+  }
+
   .we-create {
     line-height: 5rem;
-    max-width: 116rem;
+    max-width: 116.8rem;
     width: 100%;
     text-align: center;
     position: absolute;
