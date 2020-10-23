@@ -57,7 +57,7 @@ export default {
         scrollTrigger: {
           trigger: '#free-section',
           scrub: true,
-          start: '17% center',
+          start: '10% center',
           end: '1000px',
           markers: false,
         },
