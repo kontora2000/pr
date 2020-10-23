@@ -19,6 +19,14 @@
           <span class="marquee-word marquee-word-sproektiruem"></span>
           <span class="marquee-word marquee-word-dostavim"></span>
           <span class="marquee-word marquee-word-soberem"></span>
+          <span class="marquee-word marquee-word-zamerim"></span>
+          <span class="marquee-word marquee-word-sproektiruem"></span>
+          <span class="marquee-word marquee-word-dostavim"></span>
+          <span class="marquee-word marquee-word-soberem"></span>
+          <span class="marquee-word marquee-word-zamerim"></span>
+          <span class="marquee-word marquee-word-sproektiruem"></span>
+          <span class="marquee-word marquee-word-dostavim"></span>
+          <span class="marquee-word marquee-word-soberem"></span>
         </nobr>
       </marque-background>
       <!--<arc />-->

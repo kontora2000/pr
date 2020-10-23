@@ -70,32 +70,32 @@ export default {
       scrollTrigger: {
         trigger: '#app',
         toggleActions: 'play none reverse none',
-        start: '2% top',
-        end: '6% top',
+        start: '1% top',
+        end: '2% top',
         scrub: true,
-        ease: 'linear',
+        ease: 'power1.inOut',
       },
     })
 
     const tl = gsap.timeline()
-    tl.to('.logo-part-wrapper-cess,.logo-part-wrapper-pr', { duration: 0.1, opacity: 0, })
-      .to('.logo-part-wrapper-cess,.logo-part-wrapper-pr', { duration: 0.1, width: 0, })
+    tl.to('.logo-part-wrapper-cess,.logo-part-wrapper-pr', { duration: 0.125, opacity: 0, ease: 'power1.inOut', })
+      .to('.logo-part-wrapper-cess,.logo-part-wrapper-pr', { duration: 0.01, width: 0, ease: 'power1.inOut', })
 
     ScrollTrigger.create({
       animation: tl,
       trigger: '#app',
       toggleActions: 'play none reverse none',
-      start: '2% top',
+      start: '1% top',
       end: '2% top',
     })
 
     gsap.to('.logo-subtitle', {
-      duration: 0.3,
+      duration: 0.125,
       opacity: 0,
       scrollTrigger: {
         trigger: '#app',
         toggleActions: 'play none reverse none',
-        start: '2% top',
+        start: '1% top',
         end: '2% top',
       },
     })

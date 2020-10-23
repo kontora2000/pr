@@ -23,7 +23,7 @@ export default {
   mounted () {
     gsap.to(this.$el, {
       opacity: 0,
-      duration: 0.1,
+      duration: 0.15,
       scrollTrigger: {
         trigger: '.contacts-section',
         toggleActions: 'play none reverse none',
@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
   .link-open-chat-wrapper {
-    bottom: 4rem;
+    bottom: 2rem;
     left: 2rem;
     z-index: 99;
   }

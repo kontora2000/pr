@@ -24,14 +24,16 @@ export default {
   mixins: [sectionMixin],
   mounted () {
     gsap.fromTo('.freefreefree-star-wrapper',
-      { opacity: 0, },
+      { scale: .000001,
+        opacity: 0 },
       {
+        scale: 1,
         opacity: 1,
         duration: 0.25,
         scrollTrigger: {
           trigger: '.freefreefree-section',
-          start: '3% top',
-          end: '3% top',
+          start: '1% top',
+          end: '1% top',
           toggleActions: 'play none reverse none',
         },
       }
@@ -100,8 +102,8 @@ export default {
         duration: 0.25,
         scrollTrigger: {
           trigger: '.freefreefree-section',
-          start: '60% top',
-          end: '60% top',
+          start: '55% top',
+          end: '55% top',
           toggleActions: 'play none reverse none',
         },
       }
@@ -143,6 +145,7 @@ export default {
     margin-top: 1.2rem;
     height: 5.6rem;
     width: 5.6rem;
+    will-change: transform, opacity;
   }
 
   .freefreefree-inner {
