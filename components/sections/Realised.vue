@@ -41,7 +41,15 @@
     </div>
     <div class="realised-section-link-instagram-wrapper">
       <div class="realised-section-link-instagram-comment">
-        Больше контента у&nbsp;нас в&nbsp;инстаграме
+        <span class="realised-section-link-instagram-comment-star star-plus-svg-wrapper">
+          <svg class="star-plus-svg">
+            <use xlink:href="~/static/sprite.svg#star-plus" />
+          </svg>
+        </span>Больше контента<span class="realised-section-link-instagram-comment-star star-x-svg-wrapper">
+          <svg class="star-x-svg">
+            <use xlink:href="~/static/sprite.svg#star-x" />
+          </svg>
+        </span><br class="only-desktop">у&nbsp;нас в&nbsp;инстаграме
       </div>
       <a class="button button-big realised-section-link-instagram" href="https://instagram.com/princess_mebel" target="_blank"><span class="realised-section-link-instagram-icon-wrapper"><svg class="icon-svg icon-instagram-svg"><use xlink:href="~/static/sprite.svg#icon-instagram-thin"></use></svg></span>@princess_mebel</a>
     </div>
@@ -97,32 +105,51 @@ export default {
   }
 
   .realised-section-link-instagram-wrapper {
+    padding-top: 8rem;
     position: relative;
     text-align: center;
     z-index: 1;
   }
 
   .realised-section-link-instagram-comment {
-    font-size: .9rem;
-    letter-spacing: .06em;
-    line-height: 1.6rem;
-    margin-bottom: 2.4rem;
+    font-family: var(--font-serif);
+    font-size: 5.6rem;
+    font-weight: 300;
+    letter-spacing: .12em;
+    line-height: 7.2rem;
+    margin-bottom: 4rem;
     text-transform: uppercase;
+  }
+
+  .realised-section-link-instagram-comment-star {
+    display: inline-block;
+    width: 5.2rem;
+    height: 5.2rem;
+    margin: 0 4rem;
+    position: relative;
+    top: .8rem;
+  }
+  .realised-section-link-instagram-comment-star:nth-child(2) {
+    width: 3.8rem;
+  }
+  .realised-section-link-instagram-comment-star>svg>use {
+    fill: var(--Gray100);
   }
 
   .realised-section-link-instagram {
     background: linear-gradient(180deg, #CAD4DE 0%, #A1B2C5 100%);
     color: var(--White100);
+    font-size: 3.2rem;
     padding: 1.4rem 1.9rem;
     will-change: transform;
   }
 
   .realised-section-link-instagram-icon-wrapper {
     display: inline-block;
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 5.6rem;
+    height: 5.6rem;
     vertical-align: middle;
-    margin-right: .8rem;
+    margin-right: 1.2rem;
   }
 
   .realised-section-link-instagram-icon-wrapper .icon-instagram-svg>use{

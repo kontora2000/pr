@@ -121,7 +121,6 @@ export default {
 
   .order-section {
     background-color: var(--BeigeLight100);
-    overflow-x: hidden;
     width: 100vw;
   }
 
@@ -223,6 +222,16 @@ export default {
   .order-section-form-button-send-subtitle {
     margin-right: 4rem;
   }
+  .order-section-form-button-send-subtitle:before {
+    content: '✹';
+    display: inline-block;
+    float: left;
+    font-size: 8.8rem;
+    height: 100%;
+    line-height: 6.4rem;
+    margin-right: .8rem;
+    vertical-align: top;
+  }
 
   @media (min-width: 1460px) {
     .order-section-grid-header-sticky-cont {
@@ -235,6 +244,10 @@ export default {
   }
 
   @media (max-width: 460px) {
+    .order-section {
+      overflow-x: hidden;
+    }
+
     .order-section>h1 {
       margin-left: .8rem;
       margin-right: .8rem;
