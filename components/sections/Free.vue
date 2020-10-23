@@ -136,7 +136,6 @@ export default {
     width: 100%;
     position: sticky;
     position: -webkit-sticky;
-    position: sticky;
     top: 16rem;
     z-index: 2;
   }

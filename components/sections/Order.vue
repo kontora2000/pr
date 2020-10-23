@@ -118,8 +118,11 @@ export default {
 </script>
 
 <style scoped>
+
   .order-section {
     background-color: var(--BeigeLight100);
+    overflow-x: hidden;
+    width: 100vw;
   }
 
   .order-section-gradient-bottom {

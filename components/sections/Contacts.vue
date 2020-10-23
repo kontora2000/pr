@@ -69,6 +69,8 @@ export default {
   .contacts-section {
     background: var(--BlueLight100);
     padding-bottom: 1rem;
+    overflow-x: hidden;
+    width: 100vw;
   }
   .contacts-section-gradient-bottom {
     background: linear-gradient(180deg, rgba(255, 152, 195, 0) 0%, #FF98C3 100%);
@@ -168,6 +170,7 @@ export default {
   }
 
   @media (max-width: 460px) {
+
     .contacts-section-inner {
       font-size: 1.1rem;
       font-family: var(--font-default);
