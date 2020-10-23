@@ -131,7 +131,7 @@ export default {
   .freefreefree-wrapper {
     display: flex;
     margin: -100vh auto 20rem;
-    padding: 0 2rem;
+    padding: 0 2rem 0 1.6rem;
     max-width: 1500px;
     width: 100%;
     position: sticky;
@@ -152,7 +152,7 @@ export default {
     font-size: 7.2rem;
     font-family: var(--font-transgender);
     line-height: 8rem;
-    margin: 0 2rem;
+    margin-left: 4rem;
   }
 
   @media (min-width: 1500px) {
