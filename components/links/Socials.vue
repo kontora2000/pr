@@ -35,7 +35,7 @@ export default {
   }
 
   .socials-item {
-    margin-bottom: .4rem;
+    margin-bottom: .6rem;
   }
 
   .socials-item-link {

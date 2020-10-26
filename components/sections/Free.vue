@@ -165,10 +165,48 @@ export default {
   }
 
   @media (max-width: 460px) {
+    .freefreefree-wrapper {
+      display: block;
+      padding: 0 .8rem;
+      top: 10rem;
+      width: 100%;
+    }
 
     .freefreefree-inner {
-      font-size: 2.8rem;
-      margin: 0 .4rem;
+      font-size: 4.1rem;
+      line-height: 6.8rem;
+      margin: 0;
+    }
+
+    .freefreefree-star-wrapper {
+      width: 100%;
+    }
+
+    .freefreefree-star-svg {
+      margin-top: 0;
+      margin-bottom: 2.4rem;
+      height: 6.4rem;
+      width: 6.4rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .freefreefree-inner {
+        font-size: 3.7rem;
+        line-height: 6rem;
+      }
+  }
+
+  @media (max-width: 340px) {
+    .freefreefree-inner {
+      font-size: 3.2rem;
+      line-height: 5.2rem;
+    }
+
+    .freefreefree-star-svg {
+      margin-bottom: 1.2rem;
+      height: 4.4rem;
+      width: 4.4rem;
     }
   }
 </style>

@@ -151,6 +151,8 @@ export default {
       display: inline-block;
       height: 2.8rem;
       vertical-align: top;
+      position: relative;
+      top: -.8rem;
     }
 
     .link-open-words-wrapper {

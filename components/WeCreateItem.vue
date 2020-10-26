@@ -135,10 +135,28 @@ export default {
   @media (max-width: 460px) {
     .we-create-link {
       display: inline-block;
-      font-size: 1.7rem;
-      line-height: 1.7rem;
+      font-size: 2rem;
+      line-height: 2rem;
       margin-left: .45rem;
       margin-right: .45rem;
+    }
+    .we-create-link:not(:last-child):not(:nth-child(3)):not(:nth-child(6))::after {
+      font-size: 2rem;
+      margin-left: .4rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .we-create-link {
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  @media (max-width: 340px) {
+    .we-create-link {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
     }
     .we-create-link:not(:last-child):not(:nth-child(3)):not(:nth-child(6))::after {
       font-size: 2rem;

@@ -282,7 +282,17 @@ export default {
 
   @media (max-width: 460px) {
     .logo-wrapper {
-      top: 37%;
+      top: 34%;
+    }
+
+    .logo-subtitle {
+      display: none;
+    }
+  }
+
+  @media (max-width: 340px) {
+    .logo-wrapper {
+      top: 39%;
       width: 24.3rem;
     }
 
@@ -302,10 +312,6 @@ export default {
     .logo-part-wrapper-cess {
       height: 2.454rem;
       width: 12.4rem;
-    }
-
-    .logo-subtitle {
-      display: none;
     }
   }
 </style>

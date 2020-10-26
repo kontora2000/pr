@@ -46,7 +46,16 @@ export default {
   @media (max-width: 460px) {
     .address-block {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+    }
+
+    .address-link {
+      position: relative;
+      top: .2rem;
+    }
+
+    .address-star {
+      margin: .3rem 1.2rem 0;
     }
   }
 </style>

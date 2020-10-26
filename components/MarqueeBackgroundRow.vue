@@ -68,70 +68,73 @@ export default {
 </script>
 
 <style>
+  .marquee-background-row {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    max-height: 20vh;
+    overflow: visible;
+    position: relative;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  .marquee-background-row:not(:last-child) {
+    margin-bottom: 0;
+  }
 
-    .marquee-background-row {
-      position: relative;
-      left: 0px;
-      top: 0px;
-      max-height: 20vh;
-      overflow: visible;
-      position: relative;
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      max-width: 100vw;
-      overflow: hidden;
-    }
-    .marquee-background-row:not(:last-child) {
-      margin-bottom: 0;
-    }
+  .marquee-background-row-inner {
+    width: 800%;
+    position: relative;
+    transform-origin: 0% 100%;
+  }
 
-    .marquee-background-row-inner {
-      width: 800%;
-      position: relative;
-      transform-origin: 0% 100%;
-    }
+  .marquee-background-row-inner-el {
+    display: block;
+  }
 
+  .marquee-background-row-inner-el > nobr {
+
+  }
+
+  .marquee-word {
+    background-size: contain !important;
+    display: inline-block;
+    height: 169px;
+  }
+  .marquee-word:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .marquee-word-zamerim {
+    background: transparent url('../static/_img/free/zamerim.png') 0 0 no-repeat;
+    width: 856px;
+  }
+  .marquee-word-sproektiruem {
+    background: transparent url('../static/_img/free/sproektiruem.png') 0 0 no-repeat;
+    width: 1370px;
+  }
+  .marquee-word-dostavim {
+    background: transparent url('../static/_img/free/dostavim.png') 0 0 no-repeat;
+    width: 930px;
+  }
+  .marquee-word-soberem {
+    background: transparent url('../static/_img/free/soberem.png') 0 0 no-repeat;
+    width: 856px;
+  }
+
+  @media (max-width: 460px) {
     .marquee-background-row-inner-el {
-      display: block;
     }
+  }
 
-    .marquee-background-row-inner-el > nobr {
-
+  @media (max-width: 340px) {
+    .marquee-background-row {
+      max-height: 26vh;
     }
-
-    .marquee-word {
-      background-size: contain !important;
-      display: inline-block;
-      height: 169px;
-    }
-    .marquee-word:not(:last-child) {
-      margin-right: 0;
-    }
-
-    .marquee-word-zamerim {
-      background: transparent url('../static/_img/free/zamerim.png') 0 0 no-repeat;
-      width: 856px;
-    }
-    .marquee-word-sproektiruem {
-      background: transparent url('../static/_img/free/sproektiruem.png') 0 0 no-repeat;
-      width: 1370px;
-    }
-    .marquee-word-dostavim {
-      background: transparent url('../static/_img/free/dostavim.png') 0 0 no-repeat;
-      width: 930px;
-    }
-    .marquee-word-soberem {
-      background: transparent url('../static/_img/free/soberem.png') 0 0 no-repeat;
-      width: 856px;
-    }
-
-    @media (max-width: 460px) {
-      .marquee-background-row-inner-el {
-        /*font-size: 6.4rem;
-        line-height: 6rem;*/
-      }
-    }
+  }
 </style>

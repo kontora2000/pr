@@ -106,7 +106,7 @@ export default {
   .main-scene-mask {
     border-radius: 1000px 1000px 0 0;
     height: calc(100vh - 3.6rem);
-    width: 53.6rem;
+    width: 64rem;
     overflow: hidden;
     position: absolute;
     bottom: 0;
@@ -245,5 +245,4 @@ export default {
       width: calc(100vw - .8rem);
     }
   }
-
 </style>

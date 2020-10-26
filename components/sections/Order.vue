@@ -248,14 +248,19 @@ export default {
       overflow-x: hidden;
     }
 
-    .order-section>h1 {
+    .order-section-header {
       margin-left: .8rem;
       margin-right: .8rem;
+      margin-bottom: 2rem;
       text-align: left;
     }
 
     .order-form {
       margin: 3.6rem .8rem 0;
+    }
+
+    .order-form-checkboxes-header {
+      margin-top: 1.4rem;
     }
 
     .order-form-checkbox + label {
@@ -269,6 +274,10 @@ export default {
     .order-section-form-button-send-subtitle {
       margin-right: 0;
       text-align: center;
+    }
+
+    .order-section-form-button-send-subtitle:before {
+      content: '';
     }
 
     .order-section-form-button-send {

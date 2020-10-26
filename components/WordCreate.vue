@@ -20,3 +20,12 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+  @media (max-width: 460px) {
+    .word-create-svg-wrapper {
+      left: -1rem;
+      height: 10rem;
+    }
+  }
+</style>
