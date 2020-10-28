@@ -3,9 +3,9 @@
 @font-face {
 	font-family: 'Transgender Grotesk';
 	src: url('../static/_fonts/Transgender Grotesk-Regular-Trial.eot');
-	src: url('../static/_fonts/Transgender Grotesk-Regular-Trial.eot#iefix') format('embedded-opentype'), 
-		url('../static/_fonts/Transgender Grotesk-Regular-Trial.woff2') format('woff2'), 
-		url('../static/_fonts/Transgender Grotesk-Regular-Trial.woff') format('woff'), 
+	src: url('../static/_fonts/Transgender Grotesk-Regular-Trial.eot#iefix') format('embedded-opentype'),
+		url('../static/_fonts/Transgender Grotesk-Regular-Trial.woff2') format('woff2'),
+		url('../static/_fonts/Transgender Grotesk-Regular-Trial.woff') format('woff'),
 		url('../static/_fonts/Transgender Grotesk-Regular-Trial.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
@@ -13,9 +13,9 @@
 @font-face {
 	font-family: 'Wremena';
 	src: url('../static/_fonts/wremena_regular-webfont.eot');
-	src: url('../static/_fonts/wremena_regular-webfont.eot#iefix') format('embedded-opentype'), 
-		url('../static/_fonts/wremena_regular-webfont.woff2') format('woff2'), 
-		url('../static/_fonts/wremena_regular-webfont.woff') format('woff'), 
+	src: url('../static/_fonts/wremena_regular-webfont.eot#iefix') format('embedded-opentype'),
+		url('../static/_fonts/wremena_regular-webfont.woff2') format('woff2'),
+		url('../static/_fonts/wremena_regular-webfont.woff') format('woff'),
 		url('../static/_fonts/wremena_regular-webfont.ttf') format('truetype');
 	font-weight: 400;
 	font-style: normal;
@@ -23,9 +23,9 @@
 @font-face {
 	font-family: 'Wremena';
 	src: url('../static/_fonts/wremena_light-webfont.eot');
-	src: url('../static/_fonts/wremena_light-webfont.eot#iefix') format('embedded-opentype'), 
-		url('../static/_fonts/wremena_light-webfont.woff2') format('woff2'), 
-		url('../static/_fonts/wremena_light-webfont.woff') format('woff'), 
+	src: url('../static/_fonts/wremena_light-webfont.eot#iefix') format('embedded-opentype'),
+		url('../static/_fonts/wremena_light-webfont.woff2') format('woff2'),
+		url('../static/_fonts/wremena_light-webfont.woff') format('woff'),
 		url('../static/_fonts/wremena_light-webfont.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
@@ -78,7 +78,7 @@
 	--Beige88: rgba(208, 193, 187, .88);
 	--Beige64: rgba(208, 193, 187, .64);
 	--Beige44: rgba(208, 193, 187, .44);
-	
+
 	--BeigeLight100: rgba(228, 216, 212, 1);
 
 	--BlueLight100: rgba(152, 206, 255, 1);
@@ -212,7 +212,7 @@ textarea {
 	margin: 0;
 	outline: none;
 	padding: 2rem 0;
-	transition: all 0.35s ease-in-out; 
+	transition: all 0.35s ease-in-out;
 	-webkit-appearance: none;
 }
 
@@ -551,6 +551,8 @@ section {
 }
 
 
+
+
 /* Footer */
 
 .license {
@@ -577,9 +579,18 @@ section {
 	height: inherit;
 }
 
+/* Animation */
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 
 
-/* Adaptiv ochka */
+/* Adaptiv */
 
 @media (min-width: 1460px) {
 	h1 {
