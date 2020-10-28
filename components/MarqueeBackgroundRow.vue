@@ -1,7 +1,7 @@
 <template>
   <div ref="row" class="marquee-background-row">
     <div ref="inner" class="marquee-background-row-inner">
-      <span v-for="k in 8" :key="k" class="marquee-background-row-inner-el" ref="els">
+      <span v-for="k in 4" :key="k" class="marquee-background-row-inner-el" ref="els">
         <slot />
       </span>
     </div>
