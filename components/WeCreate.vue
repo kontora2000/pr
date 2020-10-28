@@ -57,11 +57,12 @@ export default {
     this.menu = this.$el
     this.isShowSVG = true
     const v = new Vivus('word-create-svg', { duration: 100, type: 'sync', }, () => {
-      gsap.to('.we-create-link', {
-        opacity: 1,
-        duration: 0.2,
-        stagger: 0.2,
-      })
+    })
+    gsap.to('.we-create-link', {
+      delay: 0.5,
+      opacity: 1,
+      duration: 0.1,
+      stagger: 0.1,
     })
   },
 }
