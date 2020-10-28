@@ -82,7 +82,6 @@ export default {
       if (this.showGallery === false) { return }
       const { galleryWindow, galleryOverlay, } = this.$refs
       this.showGallery = false
-      document.querySelector('.logo-wrapper').style.display = ''
 
       this.timeline
         .to(galleryWindow, 0.3, { autoAlpha: 0, })
@@ -92,6 +91,7 @@ export default {
             galleryWindow.style.display = 'none'
             this.overflow = 'hidden'
             document.body.style.overflowY = 'scroll'
+            document.querySelector('.logo-wrapper').style.display = ''
           },
         })
     },
@@ -221,7 +221,7 @@ export default {
 }
 
 .close-project-icon-cross-line {
-    background: var(--White);
+    background: var(--White100);
     border-radius: 4px;
     height: 3px;
     margin-bottom: .7rem;
@@ -254,6 +254,23 @@ export default {
     max-height: calc(100vh - 2rem);
 }
 
+.overlay {
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    background: rgba(0,0,0,.72);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    min-width: 100vw;
+    transition: -webkit-backdrop-filter .25s,
+          backdrop-filter .25s;
+    z-index: 1002;
+    visibility: hidden;
+    opacity: 0;
+}
   @media (min-width: 1460px) {
     .realised-section-grid-header-sticky-cont {
       width: 79.6rem;
