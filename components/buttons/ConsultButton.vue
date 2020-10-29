@@ -1,6 +1,6 @@
 <template>
   <div class="link-open-chat-wrapper fixed-block" :class="colorClass">
-    <a id="consult" href="https://wa.me/send?phone=79676738990" class="link-open-chat">
+    <a id="consult" href="https://wa.me/79676738990" class="link-open-chat">
       <span class="icon-consult-wrapper">
         <svg class="icon-svg icon-consult-svg">
           <use xlink:href="#icon-consult" />
