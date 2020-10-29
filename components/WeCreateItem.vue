@@ -95,6 +95,7 @@ export default {
     margin: 0 .4rem;
     position: relative;
     text-transform: uppercase;
+    opacity: 0;
   }
   .we-create-link:not(:last-child):not(:nth-child(3)):not(:nth-child(6))::after {
     content: '✹';

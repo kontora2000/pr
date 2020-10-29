@@ -1,7 +1,7 @@
 <template>
   <div ref="row" class="marquee-background-row">
     <div ref="inner" class="marquee-background-row-inner">
-      <span v-for="k in 8" :key="k" class="marquee-background-row-inner-el" ref="els">
+      <span v-for="k in 4" :key="k" class="marquee-background-row-inner-el" ref="els">
         <slot />
       </span>
     </div>
@@ -40,7 +40,7 @@ export default {
     let originX
     const w = this.$refs.inner.offsetWidth
     if (this.number % 2 === 0) {
-      offsetX = -w
+      offsetX = 0
       originX = '0% 0%'
       startX = 0 - this.number * 800
     } else {
@@ -53,12 +53,11 @@ export default {
       {
         x: offsetX,
         trasnformOrigin: originX,
-        duration: 80,
+        duration: 30,
         scrollTrigger: {
           trigger: '#free-section',
           scrub: true,
-          start: '10% center',
-          end: '1000px',
+          start: '10% bottomg',
           markers: false,
         },
       }

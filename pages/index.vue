@@ -51,7 +51,6 @@ import adress from '~/components/links/Adress.vue'
 import socials from '~/components/links/Socials.vue'
 
 //  import sections
-import titleSection from '~/components/sections/Title.vue'
 import mainSection from '~/components/sections/Main.vue'
 import freeSection from '~/components/sections/Free.vue'
 import realisedSection from '~/components/sections/Realised.vue'
@@ -61,7 +60,6 @@ import orderSection from '~/components/sections/Order.vue'
 // import section parts
 import weCreate from '~/components/WeCreate.vue'
 import marqueBackground from '~/components/MarqueeBackground.vue'
-import arc from '~/components/Arc.vue'
 
 // import buttons
 import callBabesButton from '@/components/buttons/CallBabesButton.vue'
@@ -82,12 +80,10 @@ export default {
     realisedSection,
     freeSection,
     contactsSection,
-    titleSection,
     callBabesButton,
     consultButton,
     dialogMesurement,
     marqueBackground,
-    arc,
   },
   computed: {
     backgroundColor () {
@@ -102,13 +98,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-  body, #app {
-    /*overflow-x:hidden !important;*/
-  }
-
-  @media (max-width: 460px) {
-
-  }
-</style>

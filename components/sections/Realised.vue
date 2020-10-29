@@ -3,42 +3,18 @@
     <div class="section-grid realised-section-grid">
       <div class="section-grid-header-sticky-cont-wrapper">
         <div class="section-grid-header-sticky-cont realised-section-grid-header-sticky-cont">
-          <h1 class="section-header realised-section-header">Реализовали</h1>
+          <h1 class="section-header realised-section-header">
+            Реализовали
+          </h1>
         </div>
       </div>
       <div class="realised-gallery-grid gallery-grid">
-        <picture class="gallery-photo-wrapper">
-          <img class="gallery-photo" src="~/static/projects/1.jpg" />
-        </picture>
-        <picture class="gallery-photo-wrapper">
-          <img class="gallery-photo" src="~/static/projects/2.jpg" />
-        </picture>
-        <picture class="gallery-photo-wrapper">
-          <img class="gallery-photo" src="~/static/projects/3.jpg" />
-        </picture>
-        <picture class="gallery-photo-wrapper">
-          <img class="gallery-photo" src="~/static/projects/4.jpg" />
-        </picture>
-        <picture class="gallery-photo-wrapper">
-          <img class="gallery-photo" src="~/static/projects/5.jpg" />
-        </picture>
-        <picture class="gallery-photo-wrapper">
-          <img class="gallery-photo" src="~/static/projects/6.jpg" />
-        </picture>
-        <picture class="gallery-photo-wrapper">
-          <img class="gallery-photo" src="~/static/projects/7.jpg" />
-        </picture>
-        <picture class="gallery-photo-wrapper">
-          <img class="gallery-photo" src="~/static/projects/8.jpg" />
-        </picture>
-        <picture class="gallery-photo-wrapper">
-          <img class="gallery-photo" src="~/static/projects/9.jpg" />
-        </picture>
-        <picture class="gallery-photo-wrapper">
-          <img class="gallery-photo" src="~/static/projects/10.jpg" />
+        <picture v-for="i in 10" :key="i" class="gallery-photo-wrapper">
+          <img class="gallery-photo" :src="'/projects/' + i +'.jpg'" @click="openLightBox(i)">
         </picture>
       </div>
     </div>
+
     <div class="realised-section-link-instagram-wrapper">
       <div class="realised-section-link-instagram-comment">
         <span class="realised-section-link-instagram-comment-star star-plus-svg-wrapper">
@@ -51,18 +27,75 @@
           </svg>
         </span><br class="only-desktop">у&nbsp;нас в&nbsp;инстаграме
       </div>
-      <a class="button button-big realised-section-link-instagram" href="https://instagram.com/princess_mebel" target="_blank"><span class="realised-section-link-instagram-icon-wrapper"><svg class="icon-svg icon-instagram-svg"><use xlink:href="~/static/sprite.svg#icon-instagram-thin"></use></svg></span>@princess_mebel</a>
+      <a class="button button-big realised-section-link-instagram" href="https://instagram.com/princess_mebel" target="_blank"><span class="realised-section-link-instagram-icon-wrapper"><svg class="icon-svg icon-instagram-svg"><use xlink:href="~/static/sprite.svg#icon-instagram-thin" /></svg></span>@princess_mebel</a>
     </div>
     <div class="section-gradient-bottom realised-section-gradient-bottom" />
+
+    <div ref="galleryWindow" class="project-window" :style="{overflowY: overflow}" @click.passive="closeLightBox">
+      <div class="project-photos-block">
+        <img
+          :src="currentImageSrc"
+          class="project-photo"
+        >
+      </div>
+      <div class="close-project" @click.passive="closeLightBox">
+        <div class="close-project-icon-cross">
+          <div class="close-project-icon-cross-line first-line" />
+          <div class="close-project-icon-cross-line second-line" />
+        </div>
+      </div>
+    </div>
+    <div ref="galleryOverlay" class="overlay" @click.passive="closeProjectGallery" />
   </section>
 </template>
 
 <script>
+import gsap from 'gsap'
 import sectionMixin from '../../mixins/sectionMixin'
 
 export default {
   name: 'RealisedSection',
   mixins: [sectionMixin],
+  data () {
+    return {
+      timeline: gsap.timeline(),
+      currentImageSrc: '/projects/1.jpg',
+      overflow: '',
+      showGallery: false,
+    }
+  },
+  methods: {
+    openLightBox (index) {
+      if (this.showGallery === true) { return }
+      document.querySelector('.logo-wrapper').style.display = 'none'
+      document.body.style.overflowY = 'hidden'
+      this.currentImageSrc = `/projects/${index}.jpg`
+      const { galleryWindow, galleryOverlay, } = this.$refs
+      galleryWindow.style.display = 'block'
+      this.timeline
+        .to(galleryOverlay, 0.3, { autoAlpha: 1, })
+        .to(galleryWindow, 0.3, { autoAlpha: 1, delay: 0.1, })
+      this.overflow = 'scroll'
+      this.showGallery = true
+    },
+    closeLightBox () {
+      if (this.showGallery === false) { return }
+      const { galleryWindow, galleryOverlay, } = this.$refs
+      this.showGallery = false
+
+      this.timeline
+        .to(galleryWindow, 0.3, { autoAlpha: 0, })
+        .to(galleryOverlay, 0.3, {
+          autoAlpha: 0,
+          onComplete () {
+            galleryWindow.style.display = 'none'
+            this.overflow = 'hidden'
+            document.body.style.overflowY = 'scroll'
+            document.querySelector('.logo-wrapper').style.display = ''
+          },
+        })
+    },
+  },
 }
 </script>
 
@@ -92,6 +125,7 @@ export default {
     grid-column-gap: .8rem;
     grid-row-gap: 4.8rem;
     margin: 0 0 6.4rem;
+    z-index: 2;
   }
 
   .gallery-photo-wrapper {
@@ -160,6 +194,83 @@ export default {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #E4D8D4 100%);
   }
 
+    .project-window {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    max-width: 100vw;
+    min-width: 100vw;
+    z-index: 1003;
+}
+
+.close-project {
+    cursor: pointer;
+    left: 1.75rem;
+    position: fixed;
+    top: 2.3rem;
+}
+
+.close-project-icon-cross {
+    height: 2rem;
+    width: 2rem;
+}
+
+.close-project-icon-cross-line {
+    background: var(--White100);
+    border-radius: 4px;
+    height: 3px;
+    margin-bottom: .7rem;
+    position: relative;
+    transition: all .15s ease-in-out;
+    width: 100%;
+}
+
+.close-project-icon-cross-line.first-line {
+    transform: rotate(45deg);
+    top: 2px;
+}
+
+.close-project-icon-cross-line.second-line {
+    transform: rotate(-45deg);
+    bottom: 12px;
+}
+
+.project-photos-block {
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 900px;
+}
+
+.project-photo {
+    border-radius: 1.25rem;
+    display: block;
+    margin: 0 auto 1.5rem;
+    width: auto;
+    max-height: calc(100vh - 2rem);
+}
+
+.overlay {
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    background: rgba(0,0,0,.72);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    min-width: 100vw;
+    transition: -webkit-backdrop-filter .25s,
+          backdrop-filter .25s;
+    z-index: 1002;
+    visibility: hidden;
+    opacity: 0;
+}
   @media (min-width: 1460px) {
     .realised-section-grid-header-sticky-cont {
       width: 79.6rem;
@@ -267,4 +378,5 @@ export default {
       margin-right: .8rem;
     }
   }
+
 </style>
