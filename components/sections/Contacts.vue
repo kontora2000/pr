@@ -28,7 +28,7 @@
 
       <div class="contacts-section-inner-address">
         <a class="contacts-section-inner-address-link link-underline-solid" href="#" target="_blank">Краснодар, улица Тургенева, дом&nbsp;123</a>
-        <div class="working-hours">Работаем с 10 до 18<sup>00</sup></div>
+        <div class="working-hours">По будням — с 10 до 18<sup>00</sup></div>
       </div>
 
       <div class="contacts-section-inner-tel-email">
@@ -36,13 +36,13 @@
           <a class="contacts-section-inner-tel-email-link-tel" href="tel:+78612153000" target="_blank"><nobr>+7&thinsp;861&thinsp;215-30-00</nobr></a>
         </div>
         <div class="contacts-section-inner-tel-email-wrapper">
-          <a class="contacts-section-inner-tel-email-link-email link-underline-solid" href="mailto:mail@princess.furniture" target="_blank">mail@princess.furniture</a>
+          <a class="contacts-section-inner-tel-email-link-email link-underline-solid" href="mailto:princess_mebel@mail.ru" target="_blank">princess_mebel@mail.ru</a>
         </div>
       </div>
     </div>
     <div class="copyrights-cont">
       <div class="license">
-        ©&thinsp;2011&hairsp;–&hairsp;2020, ООО «ЛИОН»&thinsp;/&thinsp;<a class="link-underline-solid" href="/">Princess.furniture</a><span class="only-desktop"> —&nbsp;Все права защищены.</span><br><nobr>ИНН&thinsp;2312182279</nobr>&nbsp;|&nbsp;<nobr>ОГРН&thinsp;1112312004716</nobr>
+        ©&thinsp;2011&hairsp;–&hairsp;2020, ООО «ЛИОН»&thinsp;/&thinsp;Студия&nbsp;мебели&nbsp;«<a class="link-underline-solid" href="/">Princess</a>»<span class="only-desktop"> —&nbsp;Все права защищены.</span><br><nobr>ИНН&thinsp;2312182279</nobr>&nbsp;|&nbsp;<nobr>ОГРН&thinsp;1112312004716</nobr>
       </div>
       <div class="by-kontora-wrapper">
         <a class="by-kontora-link" href="https://kontora.cc">
@@ -83,7 +83,7 @@ export default {
 
   .contacts-section-inner {
     display: grid;
-    grid-template-columns: 25.6rem calc(100% - 45.6rem) 20rem;
+    grid-template-columns: 25.6rem calc(100% - 47rem) 21.4rem;
     font-family: var(--font-serif);
     font-size: 2rem;
     margin: 13.2rem auto 22rem;
@@ -118,6 +118,11 @@ export default {
 
   .contacts-section-inner-address {
     text-align: center;
+  }
+
+  .contacts-section-inner-address-link {
+    letter-spacing: .08em;
+    text-transform: uppercase;
   }
 
   .contacts-section-inner-address .working-hours {

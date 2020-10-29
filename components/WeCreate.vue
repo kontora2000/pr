@@ -108,7 +108,7 @@ export default {
 
   .we-create {
     line-height: 5rem;
-    max-width: 116.8rem;
+    max-width: 122rem;
     width: 100%;
     text-align: center;
     position: absolute;
@@ -123,6 +123,10 @@ export default {
       line-height: 7.2rem;
       width: 100%;
       max-width: 172rem;
+    }
+
+    .word-create-svg-wrapper {
+      bottom: 14rem;
     }
   }
 
