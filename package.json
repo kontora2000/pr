@@ -20,7 +20,8 @@
     "nuxt": "^2.0.0",
     "svg4everybody": "^2.1.9",
     "vivus": "^0.4.5",
-    "vue-scrollmagic": "^1.2.0"
+    "vue-scrollmagic": "^1.2.0",
+    "vue-yandex-metrika": "^1.8.3"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
