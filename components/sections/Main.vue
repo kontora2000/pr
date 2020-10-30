@@ -81,7 +81,7 @@ export default {
   }
 
   .clouds-front {
-    background-image: url('../../static/_img/main-scene/clouds-front.png');
+    background-image: url('../../static/_img/animation/clouds-front-anim.webp');
     background-position-y: -100px;
   }
 

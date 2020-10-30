@@ -44,7 +44,15 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/svg'
+    '@nuxtjs/svg',
+    ['@nuxtjs/yandex-metrika',
+      {
+        id: 68844169,
+        clickMap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      }]
   ],
   /*
   ** Axios module configuration
