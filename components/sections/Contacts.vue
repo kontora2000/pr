@@ -11,14 +11,14 @@
           </a>
         </div>
         <div class="contacts-section-inner-socials-link-wrapper">
-          <a class="contacts-section-inner-socials-link contacts-section-inner-socials-link-telegram" href="https://t.me/princess_mebel" target="_blank">
+          <a class="contacts-section-inner-socials-link contacts-section-inner-socials-link-telegram" href="https://t.me/princessfurniture" target="_blank">
             <svg class="icon-svg icon-telegram-svg">
               <use xlink:href="~/static/sprite.svg#icon-telegram"></use>
             </svg>
           </a>
         </div>
         <div class="contacts-section-inner-socials-link-wrapper">
-          <a class="contacts-section-inner-socials-link contacts-section-inner-socials-link-whatsapp" href="https://whatsapp.com/princess_mebel" target="_blank">
+          <a class="contacts-section-inner-socials-link contacts-section-inner-socials-link-whatsapp" href="https://wa.me/79676738990" target="_blank">
             <svg class="icon-svg icon-whatsapp-svg">
               <use xlink:href="~/static/sprite.svg#icon-whatsapp"></use>
             </svg>
@@ -32,11 +32,13 @@
       </div>
 
       <div class="contacts-section-inner-tel-email">
-        <div class="contacts-section-inner-tel-email-wrapper">
-          <a class="contacts-section-inner-tel-email-link-tel" href="tel:+78612153000" target="_blank"><nobr>+7&thinsp;861&thinsp;215-30-00</nobr></a>
-        </div>
-        <div class="contacts-section-inner-tel-email-wrapper">
-          <a class="contacts-section-inner-tel-email-link-email link-underline-solid" href="mailto:princess_mebel@mail.ru" target="_blank">princess_mebel@mail.ru</a>
+        <div class="contacts-section-inner-tel-email-inner">
+          <div class="contacts-section-inner-tel-email-wrapper">
+            <a class="contacts-section-inner-tel-email-link-tel" href="tel:+78612153000" target="_blank"><nobr>+7&thinsp;861&thinsp;215-30-00</nobr></a>
+          </div>
+          <div class="contacts-section-inner-tel-email-wrapper">
+            <a class="contacts-section-inner-tel-email-link-email link-underline-solid" href="mailto:princess_mebel@mail.ru" target="_blank">princess_mebel@mail.ru</a>
+          </div>
         </div>
       </div>
     </div>
@@ -83,9 +85,7 @@ export default {
 
   .contacts-section-inner {
     display: grid;
-    grid-template-columns: 25.6rem calc(100% - 47rem) 21.4rem;
-    font-family: var(--font-serif);
-    font-size: 2rem;
+    grid-template-columns: 25.6rem calc(100% - 51.2rem) 25.6rem;
     margin: 13.2rem auto 22rem;
     max-width: 1248px;
     position: relative;
@@ -121,21 +121,44 @@ export default {
   }
 
   .contacts-section-inner-address-link {
-    letter-spacing: .08em;
-    text-transform: uppercase;
+    font-family: var(--font-transgender);
+    font-size: 2rem;
+    letter-spacing: -.01em;
   }
 
   .contacts-section-inner-address .working-hours {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: .08em;
     margin-top: 1.2rem;
+    text-transform: uppercase;
   }
 
   .contacts-section-inner-address .working-hours>sup {
-    font-size: 1.2rem;
-    margin-left: 1px;
+    font-size: .8rem;
+    letter-spacing: 0;
+  }
+
+  .contacts-section-inner-tel-email {
+    display: inline-flex;
+    justify-content: flex-end;
   }
 
   .contacts-section-inner-tel-email-wrapper:not(:first-child) {
     margin-top: 1.2rem;
+  }
+
+  .contacts-section-inner-tel-email-link-tel {
+    font-family: var(--font-transgender);
+    font-size: 2rem;
+  }
+
+  .contacts-section-inner-tel-email-link-email {
+    font-family: var(--font-default);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: .04em;
+    text-transform: uppercase;
   }
 
   .copyrights-cont {
@@ -182,7 +205,6 @@ export default {
       font-weight: 500;
       grid-template-columns: auto;
       letter-spacing: .08em;
-      /*margin: 5.6rem auto 16rem;*/
       margin: 7vh auto 24vh;
       text-transform: uppercase;
     }
@@ -205,6 +227,12 @@ export default {
       margin-top: 8vh;
     }
 
+    .contacts-section-inner-address-link {
+      font-family: var(--font-default);
+      font-size: 1.1rem;
+      letter-spacing: .08em;
+    }
+
     .working-hours {
       margin-top: 2.4rem;
     }
@@ -215,11 +243,18 @@ export default {
 
     .contacts-section-inner-tel-email {
       text-align: center;
+      display: inline-flex;
+      justify-content: center;
     }
 
     .contacts-section-inner-tel-email-wrapper {
       display: inline-block;
       margin: 0 .4rem;
+    }
+
+    .contacts-section-inner-tel-email-link-tel {
+      font-family: var(--font-default);
+      font-size: 1.1rem;
     }
 
     .contacts-section-inner .link-underline-solid {

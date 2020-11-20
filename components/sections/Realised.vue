@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="realised-gallery-grid gallery-grid">
-        <picture v-for="i in 10" :key="i" class="gallery-photo-wrapper">
+        <picture v-for="i in 12" :key="i" class="gallery-photo-wrapper">
           <img class="gallery-photo" :src="'/projects/' + i +'.jpg'" @click="openLightBox(i)">
         </picture>
       </div>
@@ -210,38 +210,43 @@ export default {
 
 .close-project {
     cursor: pointer;
-    left: 1.75rem;
+    left: 1.6rem;
     position: fixed;
-    top: 2.3rem;
+    top: 1.2rem;
 }
 
 .close-project-icon-cross {
-    height: 2rem;
-    width: 2rem;
+    height: 4rem;
+    width: 4rem;
 }
 
 .close-project-icon-cross-line {
-    background: var(--White100);
+    background: var(--White64);
     border-radius: 4px;
     height: 3px;
-    margin-bottom: .7rem;
+    margin-bottom: 0;
     position: relative;
     transition: all .15s ease-in-out;
-    width: 100%;
+    width: 5.6rem;
+}
+.close-project-icon-cross:hover .close-project-icon-cross-line {
+  background: var(--White100);
 }
 
 .close-project-icon-cross-line.first-line {
     transform: rotate(45deg);
-    top: 2px;
+    top: 1.8rem;
+    left: -.8rem;
 }
 
 .close-project-icon-cross-line.second-line {
     transform: rotate(-45deg);
-    bottom: 12px;
+    top: 1.55rem;
+    left: -.8rem;
 }
 
 .project-photos-block {
-    margin: 1rem auto;
+    margin: 1.2rem auto;
     width: 100%;
     max-width: 900px;
 }

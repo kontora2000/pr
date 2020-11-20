@@ -12,7 +12,7 @@
       <a class="socials-item-link socials-item-link-telegram link-underline-solid" href="https://t.me/princessfurniture" target="_blank">Telegram</a>
     </div>
     <div class="socials-item">
-      <a class="socials-item-link socials-item-link-whatsapp only-desktop link-underline-solid" href="https://wa.com/princess_mebel" target="_blank">WhatsApp</a>
+      <a class="socials-item-link socials-item-link-whatsapp only-desktop link-underline-solid" href="https://wa.com/79676738990" target="_blank">WhatsApp</a>
     </div>
   </div>
 </template>
