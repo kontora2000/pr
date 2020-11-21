@@ -21,11 +21,11 @@ export default {
     },
     checkAdress () {
       if (this.adress === '') {
-        this.nameErrorMessage = 'Введите имя'
+        this.nameErrorMessage = 'Напишите, как вас зовут'
         return false
       }
       if (!this.name.match(/^[А-ЯЁ][а-яё]+$/)) {
-        this.nameErrorMessage = 'Имя должно содердать только киррилицу'
+        this.nameErrorMessage = 'Напишите, пожалуйста, по-русски'
         return false
       }
       return false
@@ -35,12 +35,12 @@ export default {
 
       if (!this.phone.match(/^[-+]?[0-9]+$/)) {
         this.isNotValid = true
-        this.phoneErrorMessage = 'Введите только цифры'
+        this.phoneErrorMessage = 'Только цифры'
         return false
       }
       if (this.phone.length > 10) {
         this.isNotValid = true
-        this.phoneErrorMessage = 'Не более 10 символов'
+        this.phoneErrorMessage = 'Не более 10 цифр'
         return false
       }
       if (!this.phone.match(/^.{1,10}$/)) {

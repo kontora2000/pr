@@ -60,6 +60,8 @@
 	--White16: rgba(255, 255, 255, .16);
 	--White0: rgba(255, 255, 255, 0);
 
+	--Red100: rgba(244, 7, 64, 1);
+
 	--Gray100: rgba(161, 178, 197, 1);
 	--Gray88: rgba(161, 178, 197, .88);
 	--Gray64: rgba(161, 178, 197, .64);
@@ -276,12 +278,19 @@ textarea {
 }
 
 .errors {
-	margin: .8rem 0 0;
-	position: absolute;
-	color: var(--PinkDark100);
-	text-transform: uppercase;
-	letter-spacing: .08em;
+	color: var(--White100);
 	font-weight: 500;
+	letter-spacing: .08em;
+	position: absolute;
+	right: 0;
+	top: 2.5rem;
+	text-transform: uppercase;
+}
+.errors span {
+	background: var(--Red100);
+	border-radius: 100px;
+	display: block;
+	padding: .4rem .6rem;
 }
 
 .button,
