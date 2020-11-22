@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="realised-gallery-grid gallery-grid">
-        <picture v-for="i in 12" :key="i" class="gallery-photo-wrapper">
+        <picture v-for="i in 15" :key="i" class="gallery-photo-wrapper">
           <img class="gallery-photo" :src="'/projects/' + i +'.jpg'" @click="openLightBox(i)">
         </picture>
       </div>
@@ -252,7 +252,6 @@ export default {
 }
 
 .project-photo {
-    border-radius: 1.25rem;
     display: block;
     margin: 0 auto 1.5rem;
     width: auto;
