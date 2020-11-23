@@ -56,6 +56,7 @@ export default {
 
   .button-measurer {
     background: var(--PinkLight100);
+    border: none;
     color: var(--PinkDark100);
     position: relative;
     text-shadow: 0.5px 0.5px 0.5px var(--White100),

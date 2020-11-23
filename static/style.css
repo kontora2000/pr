@@ -297,10 +297,10 @@ textarea {
 button,
 input[type=button],
 input[type=submit] {
-	background: var(--Black100);
-	border: none;
+	background: transparent;
+	border: 1px solid var(--Black100);
 	border-radius: 1000px;
-	color: var(--White100);
+	color: var(--black100);
 	cursor: pointer;
 	display: inline-block;
 	font-size: 1.1rem;
@@ -319,18 +319,33 @@ input[type=submit] {
 button:hover,
 input[type=button]:hover,
 input[type=submit]:hover {
+	background: var(--Black100);
+	color: var(--White100);
 	transform: translateY(-.8rem);
 }
 .button:disabled,
 button:disabled,
 input[type=button]:disabled,
 input[type=submit]:disabled {
-	background: var(--White16);
-	color: var(--White48) !important;
+	border-color: var(--White16);
+	color: var(--Black16) !important;
 	cursor: default;
 	transform: none !important;
 	-webkit-backdrop-filter: blur(8px);
 			backdrop-filter: blur(8px);
+}
+
+.button-black {
+	background: var(--Black100);
+	border: none;
+	color: var(--White100);
+}
+.button-black:hover {
+	background: var(--Black84);
+}
+.button-black:disabled {
+	background: var(--Black16);
+	color: var(--White48);
 }
 
 .button-big {
@@ -361,22 +376,9 @@ h1+.subtitle {
 }
 
 h2 {
-	font-size: 3rem;
-	line-height: 3rem;
+	font-size: 6.4rem;
+	line-height: 5rem;
 	margin-bottom: 1rem;
-}
-
-h2>i,
-h2>nobr>i {
-	font-size: 3.55rem;
-	position: relative;
-	top: -.05rem;
-}
-
-h2+.subtitle {
-	font-size: 1.35rem;
-	font-weight: 300;
-	line-height: 140%;
 }
 
 h3 {
@@ -563,32 +565,24 @@ section {
 
 
 
-
-/* Footer */
-
-.license {
-	font-size: .9rem;
-	font-weight: 500;
-	letter-spacing: .04em;
-	line-height: 1.6rem;
-	text-transform: uppercase;
+/* Static pages */
+.page-static {
+	display: grid;
+	min-height: 100vh;
 }
 
-.by-kontora-wrapper {
-	margin: 2rem auto 0;
-	width: 8.8rem;
-	height: 3.2rem;
+.page-static-logo-svg {
+	width: 11.4rem;
+	height: 6.4rem;
 }
 
-.by-kontora-link {
-	width: inherit;
-	height: inherit;
+.page-static p {
+	font-size: 1.6rem;
+	line-height: 2.4rem;
 }
 
-.kontora-logo-svg {
-	width: inherit;
-	height: inherit;
-}
+
+
 
 /* Animation */
 

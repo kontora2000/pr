@@ -59,11 +59,12 @@
               <span>{{ nameErrorMessage }}</span>
             </div>
           </div>
+          <div class="note-privacy-policy">Нажав на кнопку "Вызвать замерщика", вы соглашаетесь с <NuxtLink to="Privacy-policy" class="link-underline-solid">обработкой ваших персональных данных</NuxtLink></div>
           <div class="order-section-form-button-send-wrapper">
             <div class="subtitle order-section-form-button-send-subtitle">
               <span class="order-section-form-button-send-subtitle-span">Чтобы подтвердить заявку и&nbsp;договориться об&nbsp;удобном для&nbsp;замера времени, мы&nbsp;перезвоним вам в&nbsp;течении 15&nbsp;минут</span>
             </div>
-            <button class="button-big order-section-form-button-send">
+            <button class="button-big button-black order-section-form-button-send">
               Вызвать&nbsp;замерщика
             </button>
           </div>
@@ -214,9 +215,19 @@ export default {
     width: 100%;
   }
 
+  .note-privacy-policy {
+    font-weight: 500;
+    font-size: .9rem;
+    letter-spacing: .04em;
+    margin-top: 2.8rem;
+    opacity: .36;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   .order-section-form-button-send-wrapper {
     display: inline-flex;
-    margin-top: 5.2rem;
+    margin-top: 2rem;
   }
 
   .order-section-form-button-send-subtitle {

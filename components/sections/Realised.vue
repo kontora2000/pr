@@ -3,9 +3,7 @@
     <div class="section-grid realised-section-grid">
       <div class="section-grid-header-sticky-cont-wrapper">
         <div class="section-grid-header-sticky-cont realised-section-grid-header-sticky-cont">
-          <h1 class="section-header realised-section-header">
-            Реализовали
-          </h1>
+          <h1 class="section-header realised-section-header">Реализовали</h1>
         </div>
       </div>
       <div class="realised-gallery-grid gallery-grid">
@@ -172,6 +170,7 @@ export default {
 
   .realised-section-link-instagram {
     background: linear-gradient(180deg, #CAD4DE 0%, #A1B2C5 100%);
+    border: none;
     color: var(--White100);
     font-size: 3.2rem;
     padding: 1.4rem 1.9rem;
