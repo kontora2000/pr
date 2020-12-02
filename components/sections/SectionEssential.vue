@@ -12,8 +12,8 @@
       </div>
       <div class="page-essential-nav">
         <ul class="page-essential-nav-ul">
-          <li class="page-essential-nav-link-wrapper"><NuxtLink to="Essential" class="link-underline-solid">Реквизиты</NuxtLink></li>
-          <li class="page-essential-nav-link-wrapper"><NuxtLink to="Privacy-policy" class="link-underline-solid">Политика конфиденциальности</NuxtLink></li>
+          <li class="page-essential-nav-link-wrapper"><NuxtLink to="essential" class="link-underline-solid">Реквизиты</NuxtLink></li>
+          <li class="page-essential-nav-link-wrapper"><NuxtLink to="privacy-policy" class="link-underline-solid">Обработка персональных данных</NuxtLink></li>
         </ul>
       </div>
     </div>
@@ -68,7 +68,8 @@ export default {
 }
 
 .page-essential-nav {
-margin-top: 8rem;
+  height: 100%;
+  margin-top: 8rem;
 }
 
 .page-essential-nav-ul {
@@ -87,7 +88,7 @@ margin-top: 8rem;
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: .08em;
-  line-height: 1.6rem;
+  line-height: 2rem;
   text-transform: uppercase;
 }
 

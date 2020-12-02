@@ -3,8 +3,8 @@
     <div class="license">
       ©&thinsp;2011&hairsp;–&hairsp;2021, ООО «ЛИОН»&thinsp;/&thinsp;Студия&nbsp;мебели&nbsp;«<NuxtLink class="link-underline-solid" to="/">Princess</NuxtLink>»<span class="only-desktop"> —&nbsp;Все права защищены.</span>
       <div class="essentials-cont">
-        <NuxtLink to="Essential" class="link-underline-solid">Реквизиты</NuxtLink>
-        <NuxtLink to="Privacy-policy" class="link-underline-solid">Политика конфиденциальности</NuxtLink>
+        <NuxtLink to="essential" class="link-underline-solid">Реквизиты</NuxtLink>
+        <NuxtLink to="privacy-policy" class="link-underline-solid">Политика конфиденциальности</NuxtLink>
       </div>
     </div>
     <div class="by-kontora-wrapper">

@@ -59,7 +59,7 @@
               <span>{{ nameErrorMessage }}</span>
             </div>
           </div>
-          <div class="note-privacy-policy">Нажав на кнопку "Вызвать замерщика", вы соглашаетесь с <NuxtLink to="Privacy-policy" class="link-underline-solid">обработкой ваших персональных данных</NuxtLink></div>
+          <div class="note-privacy-policy">Нажав на кнопку "Вызвать замерщика", вы соглашаетесь с <NuxtLink to="privacy-policy" class="link-underline-solid">обработкой ваших персональных данных</NuxtLink></div>
           <div class="order-section-form-button-send-wrapper">
             <div class="subtitle order-section-form-button-send-subtitle">
               <span class="order-section-form-button-send-subtitle-span">Чтобы подтвердить заявку и&nbsp;договориться об&nbsp;удобном для&nbsp;замера времени, мы&nbsp;перезвоним вам в&nbsp;течении 15&nbsp;минут</span>

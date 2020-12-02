@@ -14,7 +14,7 @@ import SectionEssential from '~/components/sections/SectionEssential.vue'
 import Footer from '~/components/sections/Footer.vue'
 
 export default {
-  Name: 'Essential',
+  Name: 'essential',
   components: {
     SectionEssential,
     Footer,
