@@ -1,8 +1,8 @@
 /* eslint-disable no-param-reassign */
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     dialogMesurementOpen: false,
@@ -16,25 +16,25 @@ export default new Vuex.Store({
     textColor: '#000000',
   },
   mutations: {
-    openDialog(state) {
-      state.dialogMesurementOpen = true;
+    openDialog (state) {
+      state.dialogMesurementOpen = true
     },
-    closeDialog(state) {
-      state.dialogMesurementOpen = false;
+    closeDialog (state) {
+      state.dialogMesurementOpen = false
     },
-    changeSubsection(state, sub) {
-      state.currentSubsection = sub;
+    changeSubsection (state, sub) {
+      state.currentSubsection = sub
     },
-    changeBackground(state, color) {
-      state.backgroundColor = color;
+    changeBackground (state, color) {
+      state.backgroundColor = color
     },
-    changeTextColor(state, color) {
-      state.textColor = color;
+    changeTextColor (state, color) {
+      state.textColor = color
     },
-    putCategory(state, catname) {
-      if (state.loadedCategories.indexOf(catname) < 0) {
-        state.loadedCategories = { ...state.loadedCategories, catname, };
+    putCategory (state, catname) {
+      if (!state.loadedCategories.includes(catname)) {
+        state.loadedCategories = { ...state.loadedCategories, catname, }
       }
     },
   },
-});
+})

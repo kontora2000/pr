@@ -57,7 +57,7 @@ export default {
         scrollTrigger: {
           trigger: '#free-section',
           scrub: true,
-          start: '10% bottomg',
+          start: '10% bottom',
           markers: false,
         },
       }
@@ -94,10 +94,6 @@ export default {
 
   .marquee-background-row-inner-el {
     display: block;
-  }
-
-  .marquee-background-row-inner-el > nobr {
-
   }
 
   .marquee-word {

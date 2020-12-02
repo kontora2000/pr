@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <div class="address-socials-wrapper" :class="colorClass">
-      <adress v-hide class="address-block">Краснодар,&nbsp;Тургенева,&nbsp;123</adress>
+      <adress v-hide class="address-block">
+        Краснодар,&nbsp;Тургенева,&nbsp;123
+      </adress>
       <socials />
       <phone>+7&thinsp;861&thinsp;215-30-00</phone>
     </div>
@@ -15,18 +17,18 @@
     <free-section id="free-section" color-class="colors-section-freefreefree">
       <marque-background>
         <nobr>
-          <span class="marquee-word marquee-word-zamerim"></span>
-          <span class="marquee-word marquee-word-sproektiruem"></span>
-          <span class="marquee-word marquee-word-dostavim"></span>
-          <span class="marquee-word marquee-word-soberem"></span>
-          <span class="marquee-word marquee-word-zamerim"></span>
-          <span class="marquee-word marquee-word-sproektiruem"></span>
-          <span class="marquee-word marquee-word-dostavim"></span>
-          <span class="marquee-word marquee-word-soberem"></span>
-          <span class="marquee-word marquee-word-zamerim"></span>
-          <span class="marquee-word marquee-word-sproektiruem"></span>
-          <span class="marquee-word marquee-word-dostavim"></span>
-          <span class="marquee-word marquee-word-soberem"></span>
+          <span class="marquee-word marquee-word-zamerim" />
+          <span class="marquee-word marquee-word-sproektiruem" />
+          <span class="marquee-word marquee-word-dostavim" />
+          <span class="marquee-word marquee-word-soberem" />
+          <span class="marquee-word marquee-word-zamerim" />
+          <span class="marquee-word marquee-word-sproektiruem" />
+          <span class="marquee-word marquee-word-dostavim" />
+          <span class="marquee-word marquee-word-soberem" />
+          <span class="marquee-word marquee-word-zamerim" />
+          <span class="marquee-word marquee-word-sproektiruem" />
+          <span class="marquee-word marquee-word-dostavim" />
+          <span class="marquee-word marquee-word-soberem" />
         </nobr>
       </marque-background>
       <!--<arc />-->
@@ -95,6 +97,20 @@ export default {
     colorClass () {
       return this.$store.getters['system/colorClass']
     },
+  },
+  head () {
+    return {
+      title: 'Студия мебели Princess',
+      link: [
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png', },
+        { rel: 'icon', type: 'image/png', size: '32x32', href: '/favicon-32x32.png', },
+        { rel: 'icon', type: 'image/png', size: '16x16', href: '/favicon-16x16.png', }
+      ],
+      meta: [
+        { name: 'apple-mobile-web-app-title', content: 'Princess', },
+        { name: 'application-name', content: 'Princess', }
+      ],
+    }
   },
 }
 </script>

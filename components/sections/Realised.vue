@@ -6,13 +6,8 @@
           <h1 class="section-header realised-section-header">Реализовали</h1>
         </div>
       </div>
-      <div class="realised-gallery-grid gallery-grid">
-        <picture v-for="i in 15" :key="i" class="gallery-photo-wrapper">
-          <img class="gallery-photo" :src="'/projects/' + i +'.jpg'" @click="openLightBox(i)">
-        </picture>
-      </div>
+      <gallery @openlightbox="openLightBox" />
     </div>
-
     <div class="realised-section-link-instagram-wrapper">
       <div class="realised-section-link-instagram-comment">
         <span class="realised-section-link-instagram-comment-star star-plus-svg-wrapper">
@@ -28,13 +23,19 @@
       <a class="button button-big realised-section-link-instagram" href="https://instagram.com/princess_mebel" target="_blank"><span class="realised-section-link-instagram-icon-wrapper"><svg class="icon-svg icon-instagram-svg"><use xlink:href="~/static/sprite.svg#icon-instagram-thin" /></svg></span>@princess_mebel</a>
     </div>
     <div class="section-gradient-bottom realised-section-gradient-bottom" />
-
+    <!-- LIGHTBOX -->
     <div ref="galleryWindow" class="project-window" :style="{overflowY: overflow}" @click.passive="closeLightBox">
       <div class="project-photos-block">
         <img
           :src="currentImageSrc"
           class="project-photo"
         >
+      </div>
+      <div v-if="currentA.lenght!==0" class="authro-info">
+        <div v-for="(author, index) in currentA" :key="index">
+          <!-- тут авторы -->
+          <Author :author="author" />
+        </div>
       </div>
       <div class="close-project" @click.passive="closeLightBox">
         <div class="close-project-icon-cross">
@@ -51,23 +52,32 @@
 import gsap from 'gsap'
 import sectionMixin from '../../mixins/sectionMixin'
 
+import Gallery from '@/components/sections/Gallery.vue'
+import Author from '@/components/Author.vue'
+
 export default {
   name: 'RealisedSection',
+  components: {
+    Gallery,
+    Author,
+  },
   mixins: [sectionMixin],
   data () {
     return {
       timeline: gsap.timeline(),
       currentImageSrc: '/projects/1.jpg',
+      currentA: [],
       overflow: '',
       showGallery: false,
     }
   },
   methods: {
-    openLightBox (index) {
+    openLightBox (image) {
       if (this.showGallery === true) { return }
       document.querySelector('.logo-wrapper').style.display = 'none'
       document.body.style.overflowY = 'hidden'
-      this.currentImageSrc = `/projects/${index}.jpg`
+      this.currentImageSrc = image.src
+      this.currentA = image.a
       const { galleryWindow, galleryOverlay, } = this.$refs
       galleryWindow.style.display = 'block'
       this.timeline

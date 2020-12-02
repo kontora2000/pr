@@ -3,7 +3,9 @@
     <div class="section-grid order-section-grid">
       <div class="section-grid-header-sticky-cont-wrapper order-section-grid-header-sticky-cont-wrapper">
         <div class="section-grid-header-sticky-cont order-section-grid-header-sticky-cont">
-          <h1 class="section-header order-section-header">Заказать</h1>
+          <h1 class="section-header order-section-header">
+            Заказать
+          </h1>
         </div>
       </div>
       <div class="order-section-grid-content-wrapper">
@@ -44,7 +46,15 @@
             </div>
           </div>
           <div class="order-form-input-wrapper input-wrapper">
-            <input v-model="phone" class="order-form-input" type="tel" name="phone" minlength="10" maxlength="14" required>
+            <input
+              v-model="phone"
+              class="order-form-input"
+              type="tel"
+              name="phone"
+              minlength="10"
+              maxlength="14"
+              required
+            >
             <label class="floatting-label" data-placeholder="Контактный телефон" />
             <div class="errors" v-if="phoneErrorMessage!==''">
               <span>{{ phoneErrorMessage }}</span>
@@ -99,18 +109,18 @@ export default {
       return true
     },
     async submitForm () {
-      if (this.validate() === true) {
-        const formData = new FormData(this.$refs.form)
-        formData.set('type', ['Шкафы', 'Мафы'])
-        formData.set('key', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9')
-        const res = await this.$axios.post('https://www.api.kontora.cc/order.php', formData)
-        if (res.data.isSuccess) {
-          this.isSuccess = true
-          console.log(res.data)
-        } else { this.isError = true }
-      } else {
-        this.isNotValid = true
-      }
+      // if (this.validate() === true) {
+      const formData = new FormData(this.$refs.form)
+      formData.set('type', ['Шкафы', 'Мафы'])
+      formData.set('key', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9')
+      const res = await this.$axios.post('https://www.api.kontora.cc/order.php', formData)
+      if (res.data.isSuccess) {
+        this.isSuccess = true
+        console.log(res.data)
+      } else { this.isError = true }
+      // } else {
+      //   this.isNotValid = true
+      // }
     },
   },
 }
