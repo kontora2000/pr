@@ -7,9 +7,7 @@
         </div>
       </div>
       <div class="order-section-grid-content-wrapper">
-        <div class="section-subheader">
-          Заполните эту форму и&nbsp;к&nbsp;вам приедет замерщик, чтобы снять размеры места под&nbsp;установку. Затем мы&nbsp;изготовим и&nbsp;установим вашу мебель.
-        </div>
+        <div class="section-subheader">Заполните форму ниже и&nbsp;к&nbsp;вам приедет технолог, чтобы замерить место под&nbsp;установку мебели</div>
         <form ref="form" class="order-form" @submit.prevent="submitForm()" v-if="!isSuccess">
           <div class="order-form-checkboxes-wrapper">
             <span class="order-form-checkboxes-header">Интересует:</span>
