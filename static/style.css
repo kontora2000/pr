@@ -2,11 +2,11 @@
 
 @font-face {
 	font-family: 'Transgender Grotesk';
-	src: url('../static/_fonts/Transgender Grotesk-Regular-Trial.eot');
-	src: url('../static/_fonts/Transgender Grotesk-Regular-Trial.eot#iefix') format('embedded-opentype'),
-		url('../static/_fonts/Transgender Grotesk-Regular-Trial.woff2') format('woff2'),
-		url('../static/_fonts/Transgender Grotesk-Regular-Trial.woff') format('woff'),
-		url('../static/_fonts/Transgender Grotesk-Regular-Trial.ttf') format('truetype');
+	src: url('../static/_fonts/Transgender Grotesk-Regular-Web.eot');
+	src: url('../static/_fonts/Transgender Grotesk-Regular-Web.eot#iefix') format('embedded-opentype'),
+		url('../static/_fonts/Transgender Grotesk-Regular-Web.woff2') format('woff2'),
+		url('../static/_fonts/Transgender Grotesk-Regular-Web.woff') format('woff'),
+		url('../static/_fonts/Transgender Grotesk-Regular-Web.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
