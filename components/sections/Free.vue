@@ -122,7 +122,7 @@ export default {
   .free-free-free-word.ust {
     color: var(--White100);
     display: inline-block;
-    background: var(--Black100);
+    background: var(--VioletBlue100);
     border-radius: 100px;
     padding: 0 24px 8px;
     transform: rotate(-16deg);
