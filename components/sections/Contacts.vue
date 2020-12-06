@@ -1,26 +1,28 @@
 <template>
   <section class="contacts-section">
-    <h1 class="section-header contacts-section-header">Оставайтесь <br><span class="only-desktop">с&nbsp;нами </span>на&nbsp;связи</h1>
+    <h1 class="section-header contacts-section-header">
+      Оставайтесь <br><span class="only-desktop">с&nbsp;нами </span>на&nbsp;связи
+    </h1>
     <div class="contacts-section-inner">
       <div class="contacts-section-inner-socials">
         <div class="contacts-section-inner-socials-link-wrapper">
           <a class="contacts-section-inner-socials-link contacts-section-inner-socials-link-instagram" href="https://instagram.com/princess_mebel" target="_blank">
             <svg class="icon-svg icon-instagram-svg">
-              <use xlink:href="~/static/sprite.svg#icon-instagram"></use>
+              <use xlink:href="~/static/sprite.svg#icon-instagram" />
             </svg>
           </a>
         </div>
         <div class="contacts-section-inner-socials-link-wrapper">
           <a class="contacts-section-inner-socials-link contacts-section-inner-socials-link-telegram" href="https://t.me/princess_mebel" target="_blank">
             <svg class="icon-svg icon-telegram-svg">
-              <use xlink:href="~/static/sprite.svg#icon-telegram"></use>
+              <use xlink:href="~/static/sprite.svg#icon-telegram" />
             </svg>
           </a>
         </div>
         <div class="contacts-section-inner-socials-link-wrapper">
           <a class="contacts-section-inner-socials-link contacts-section-inner-socials-link-whatsapp" href="https://whatsapp.com/princess_mebel" target="_blank">
             <svg class="icon-svg icon-whatsapp-svg">
-              <use xlink:href="~/static/sprite.svg#icon-whatsapp"></use>
+              <use xlink:href="~/static/sprite.svg#icon-whatsapp" />
             </svg>
           </a>
         </div>
@@ -28,7 +30,9 @@
 
       <div class="contacts-section-inner-address">
         <a class="contacts-section-inner-address-link link-underline-solid" href="#" target="_blank">Краснодар, улица Тургенева, дом&nbsp;123</a>
-        <div class="working-hours">По будням — с 10 до 18<sup>00</sup></div>
+        <div class="working-hours">
+          По будням — с 10 до 18<sup>00</sup>
+        </div>
       </div>
 
       <div class="contacts-section-inner-tel-email">
@@ -47,7 +51,7 @@
       <div class="by-kontora-wrapper">
         <a class="by-kontora-link" href="https://kontora.cc">
           <svg class="kontora-logo-svg">
-            <use xlink:href="~/static/sprite.svg#kontora-logo"></use>
+            <use xlink:href="~/static/sprite.svg#kontora-logo" />
           </svg>
         </a>
       </div>
