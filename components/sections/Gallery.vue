@@ -28,17 +28,15 @@ export default {
         },
         {
           src: '/projects/3.jpg',
-          a: {
-            name: 'Автор 3',
-            position: 'Поз 3',
-            url: 'http://www.asd3.ru',
-          },
+          a: [
+            { name: 'Автор 3', pos: 'Поз 3', url: 'http://www.asd.ru', }
+          ],
         },
         {
           src: '/projects/4.jpg',
           a: {
             name: 'Автор 4',
-            position: 'Поз 4',
+            pos: 'Поз 4',
             url: 'http://www.asd4.ru',
           },
         },
@@ -46,7 +44,7 @@ export default {
           src: '/projects/13.jpg',
           a: {
             name: 'Автор 4',
-            position: 'Поз 4',
+            pos: 'Поз 4',
             url: 'http://www.asd4.ru',
           },
         },
@@ -54,7 +52,7 @@ export default {
           src: '/projects/5.jpg',
           a: {
             name: 'Автор 4',
-            position: 'Поз 4',
+            pos: 'Поз 4',
             url: 'http://www.asd4.ru',
           },
         },
@@ -62,7 +60,7 @@ export default {
           src: '/projects/7.jpg',
           a: {
             name: 'Автор 4',
-            position: 'Поз 4',
+            pos: 'Поз 4',
             url: 'http://www.asd4.ru',
           },
         },
@@ -70,7 +68,7 @@ export default {
           src: '/projects/9.jpg',
           a: {
             name: 'Автор 4',
-            position: 'Поз 4',
+            pos: 'Поз 4',
             url: 'http://www.asd4.ru',
           },
         },
@@ -78,7 +76,7 @@ export default {
           src: '/projects/8.jpg',
           a: {
             name: 'Автор 4',
-            position: 'Поз 4',
+            pos: 'Поз 4',
             url: 'http://www.asd4.ru',
           },
         },
@@ -86,7 +84,7 @@ export default {
           src: '/projects/15.jpg',
           a: {
             name: 'Автор 4',
-            position: 'Поз 4',
+            pos: 'Поз 4',
             url: 'http://www.asd4.ru',
           },
         },
@@ -94,7 +92,7 @@ export default {
           src: '/projects/11.jpg',
           a: {
             name: 'Автор 4',
-            position: 'Поз 4',
+            pos: 'Поз 4',
             url: 'http://www.asd4.ru',
           },
         },
@@ -102,7 +100,7 @@ export default {
           src: '/projects/12.jpg',
           a: {
             name: 'Автор 4',
-            position: 'Поз 4',
+            pos: 'Поз 4',
             url: 'http://www.asd4.ru',
           },
         },
@@ -110,7 +108,7 @@ export default {
           src: '/projects/6.jpg',
           a: {
             name: 'Автор 4',
-            position: 'Поз 4',
+            pos: 'Поз 4',
             url: 'http://www.asd4.ru',
           },
         },
@@ -118,7 +116,7 @@ export default {
           src: '/projects/14.jpg',
           a: {
             name: 'Автор 4',
-            position: 'Поз 4',
+            pos: 'Поз 4',
             url: 'http://www.asd4.ru',
           },
         },
@@ -126,7 +124,7 @@ export default {
           src: '/projects/10.jpg',
           a: {
             name: 'Автор 4',
-            position: 'Поз 4',
+            pos: 'Поз 4',
             url: 'http://www.asd4.ru',
           },
         }
