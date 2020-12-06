@@ -55,11 +55,12 @@ export default {
         },
         {
           src: '/projects/5.jpg',
-          a: [{
-            name: 'Автор 4',
-            pos: 'Поз 4',
-            url: 'http://www.asd4.ru',
-          }],
+          a: [
+            {
+              name: 'Автор 4',
+              pos: 'Поз 4',
+              url: 'http://www.asd4.ru',
+            }],
         },
         {
           src: '/projects/7.jpg',
@@ -111,11 +112,13 @@ export default {
         },
         {
           src: '/projects/6.jpg',
-          a: {
-            name: 'Автор 4',
-            pos: 'Поз 4',
-            url: 'http://www.asd4.ru',
-          },
+          a: [
+            {
+              name: 'Автор 4',
+              pos: 'Поз 4',
+              url: 'http://www.asd4.ru',
+            }
+          ],
         },
         {
           src: '/projects/14.jpg',

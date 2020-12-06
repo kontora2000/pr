@@ -33,7 +33,6 @@
       </div>
       <div v-if="currentA.length > 0" class="author-info">
         <div v-for="(author, index) in currentA" :key="index">
-          <!-- тут авторы -->
           <Author :author="author" />
         </div>
       </div>
@@ -47,7 +46,7 @@
         </div>
       </div>
     </div>
-    <div ref="galleryOverlay" class="overlay" @click.passive="closeProjectGallery" />
+    <div ref="galleryOverlay" class="overlay" @click.passive="closeLightBox" />
   </section>
 </template>
 
