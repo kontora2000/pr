@@ -28,4 +28,5 @@ export default {
       height: 10rem;
     }
   }
+  
 </style>

@@ -119,6 +119,17 @@ export default {
     opacity: 0;
   }
 
+  .free-free-free-word.ust {
+    color: var(--White100);
+    display: inline-block;
+    background: var(--VioletBlue100);
+    border-radius: 100px;
+    padding: 0 24px 8px;
+    transform: rotate(-16deg);
+    position: relative;
+    
+  }
+
   .freefreefree-section {
     background: var(--Pink100);
     height: 400vh;

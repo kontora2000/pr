@@ -2,11 +2,11 @@
 
 @font-face {
 	font-family: 'Transgender Grotesk';
-	src: url('../static/_fonts/Transgender Grotesk-Regular-Trial.eot');
-	src: url('../static/_fonts/Transgender Grotesk-Regular-Trial.eot#iefix') format('embedded-opentype'),
-		url('../static/_fonts/Transgender Grotesk-Regular-Trial.woff2') format('woff2'),
-		url('../static/_fonts/Transgender Grotesk-Regular-Trial.woff') format('woff'),
-		url('../static/_fonts/Transgender Grotesk-Regular-Trial.ttf') format('truetype');
+	src: url('../static/_fonts/Transgender Grotesk-Regular-Web.eot');
+	src: url('../static/_fonts/Transgender Grotesk-Regular-Web.eot#iefix') format('embedded-opentype'),
+		url('../static/_fonts/Transgender Grotesk-Regular-Web.woff2') format('woff2'),
+		url('../static/_fonts/Transgender Grotesk-Regular-Web.woff') format('woff'),
+		url('../static/_fonts/Transgender Grotesk-Regular-Web.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -60,6 +60,8 @@
 	--White16: rgba(255, 255, 255, .16);
 	--White0: rgba(255, 255, 255, 0);
 
+	--Red100: rgba(244, 7, 64, 1);
+
 	--Gray100: rgba(161, 178, 197, 1);
 	--Gray88: rgba(161, 178, 197, .88);
 	--Gray64: rgba(161, 178, 197, .64);
@@ -74,12 +76,16 @@
 	--Violet64: rgba(125, 96, 216, .64);
 	--Violet32: rgba(125, 96, 216, .32);
 
+	--VioletBlue100: rgba(102, 31, 255, 1);
+
 	--Beige100: rgba(208, 193, 187, 1);
 	--Beige88: rgba(208, 193, 187, .88);
 	--Beige64: rgba(208, 193, 187, .64);
 	--Beige44: rgba(208, 193, 187, .44);
 
 	--BeigeLight100: rgba(228, 216, 212, 1);
+
+	--Blue100: rgba(39, 74, 255, 1);
 
 	--BlueLight100: rgba(152, 206, 255, 1);
 	--BlueLightShadow100: rgba(112, 170, 223, 1);
@@ -278,22 +284,29 @@ textarea {
 }
 
 .errors {
-	margin: .8rem 0 0;
-	position: absolute;
-	color: var(--PinkDark100);
-	text-transform: uppercase;
-	letter-spacing: .08em;
+	color: var(--White100);
 	font-weight: 500;
+	letter-spacing: .08em;
+	position: absolute;
+	right: 0;
+	top: 2.5rem;
+	text-transform: uppercase;
+}
+.errors span {
+	background: var(--Red100);
+	border-radius: 100px;
+	display: block;
+	padding: .4rem .6rem;
 }
 
 .button,
 button,
 input[type=button],
 input[type=submit] {
-	background: var(--Black100);
-	border: none;
+	background: transparent;
+	border: 1px solid var(--Black100);
 	border-radius: 1000px;
-	color: var(--White100);
+	color: var(--black100);
 	cursor: pointer;
 	display: inline-block;
 	font-size: 1.1rem;
@@ -312,18 +325,33 @@ input[type=submit] {
 button:hover,
 input[type=button]:hover,
 input[type=submit]:hover {
+	background: var(--Black100);
+	color: var(--White100);
 	transform: translateY(-.8rem);
 }
 .button:disabled,
 button:disabled,
 input[type=button]:disabled,
 input[type=submit]:disabled {
-	background: var(--White16);
-	color: var(--White48) !important;
+	border-color: var(--White16);
+	color: var(--Black16) !important;
 	cursor: default;
 	transform: none !important;
 	-webkit-backdrop-filter: blur(8px);
 			backdrop-filter: blur(8px);
+}
+
+.button-black {
+	background: var(--Black100);
+	border: none;
+	color: var(--White100);
+}
+.button-black:hover {
+	background: var(--Black84);
+}
+.button-black:disabled {
+	background: var(--Black16);
+	color: var(--White48);
 }
 
 .button-big {
@@ -354,22 +382,9 @@ h1+.subtitle {
 }
 
 h2 {
-	font-size: 3rem;
-	line-height: 3rem;
+	font-size: 6.4rem;
+	line-height: 5rem;
 	margin-bottom: 1rem;
-}
-
-h2>i,
-h2>nobr>i {
-	font-size: 3.55rem;
-	position: relative;
-	top: -.05rem;
-}
-
-h2+.subtitle {
-	font-size: 1.35rem;
-	font-weight: 300;
-	line-height: 140%;
 }
 
 h3 {
@@ -556,32 +571,24 @@ section {
 
 
 
-
-/* Footer */
-
-.license {
-	font-size: .9rem;
-	font-weight: 500;
-	letter-spacing: .04em;
-	line-height: 1.6rem;
-	text-transform: uppercase;
+/* Static pages */
+.page-static {
+	display: grid;
+	min-height: 100vh;
 }
 
-.by-kontora-wrapper {
-	margin: 2rem auto 0;
-	width: 8.8rem;
-	height: 3.2rem;
+.page-static-logo-svg {
+	width: 11.4rem;
+	height: 6.4rem;
 }
 
-.by-kontora-link {
-	width: inherit;
-	height: inherit;
+.page-static p {
+	font-size: 1.6rem;
+	line-height: 2.4rem;
 }
 
-.kontora-logo-svg {
-	width: inherit;
-	height: inherit;
-}
+
+
 
 /* Animation */
 

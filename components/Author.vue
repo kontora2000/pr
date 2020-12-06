@@ -1,7 +1,10 @@
 <template>
-  <a :href="author.url">
-    Имя {{ author.name }} {{ author.pos }}
-  </a>
+  <div class="author-wrapper">
+    <div class="author-pos-wrapper">{{ author.pos }}</div>
+    <div class="author-link-wrapper">
+      <a :href="author.url">{{ author.name }}</a>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -14,3 +17,7 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+
+</style>

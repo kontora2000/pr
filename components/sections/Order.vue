@@ -9,12 +9,10 @@
         </div>
       </div>
       <div class="order-section-grid-content-wrapper">
-        <div class="section-subheader">
-          Заполните эту форму и&nbsp;к&nbsp;вам приедет замерщик, чтобы снять размеры места под&nbsp;установку. Затем мы&nbsp;изготовим и&nbsp;установим вашу мебель.
-        </div>
-        <form v-if="!isSuccess" ref="form" class="order-form" @submit.prevent="submitForm">
+        <div class="section-subheader">Заполните форму ниже и&nbsp;к&nbsp;вам приедет технолог, чтобы замерить место под&nbsp;установку мебели</div>
+        <form ref="form" class="order-form" @submit.prevent="submitForm()" v-if="!isSuccess">
           <div class="order-form-checkboxes-wrapper">
-            <span class="order-form-checkboxes-header">Вас интересуют:</span>
+            <span class="order-form-checkboxes-header">Интересует:</span>
 
             <input id="checkbox-kitchen" class="order-form-checkbox" name="kitchens" value="Кухня" type="checkbox">
             <label for="checkbox-kitchen">Кухня</label>
@@ -43,8 +41,8 @@
           <div class="order-form-input-wrapper input-wrapper">
             <input v-model="adress" class="order-form-input" type="text" name="adress" required>
             <label class="floatting-label" data-placeholder="Адрес установки" />
-            <div class="errors">
-              <span v-if="adressErrorMessage!==''">{{ adressErrorMessage }}</span>
+            <div class="errors" v-if="adressErrorMessage!==''">
+              <span>{{ adressErrorMessage }}</span>
             </div>
           </div>
           <div class="order-form-input-wrapper input-wrapper">
@@ -58,31 +56,32 @@
               required
             >
             <label class="floatting-label" data-placeholder="Контактный телефон" />
-            <div class="errors">
-              <span v-if="phoneErrorMessage!==''">{{ phoneErrorMessage }}</span>
+            <div class="errors" v-if="phoneErrorMessage!==''">
+              <span>{{ phoneErrorMessage }}</span>
             </div>
           </div>
           <div class="order-form-input-wrapper input-wrapper">
             <input v-model="name" class="order-form-input" type="text" name="name" required>
             <label class="floatting-label" data-placeholder="Ваше имя" />
-            <div class="errors">
-              <span v-if="nameErrorMessage!==''">{{ nameErrorMessage }}</span>
+            <div class="errors" v-if="nameErrorMessage!==''">
+              <span>{{ nameErrorMessage }}</span>
             </div>
           </div>
+          <div class="note-privacy-policy">Нажав на кнопку "Вызвать замерщика", вы соглашаетесь с <NuxtLink to="privacy-policy" class="link-underline-solid">обработкой ваших персональных данных</NuxtLink></div>
           <div class="order-section-form-button-send-wrapper">
             <div class="subtitle order-section-form-button-send-subtitle">
-              Чтобы подтвердить заявку и&nbsp;договориться об&nbsp;удобном для&nbsp;замера времени, мы&nbsp;перезвоним по&nbsp;указанному номеру телефона в&nbsp;течении 15&nbsp;минут
+              <span class="order-section-form-button-send-subtitle-span">Чтобы подтвердить заявку и&nbsp;договориться об&nbsp;удобном для&nbsp;замера времени, мы&nbsp;перезвоним вам в&nbsp;течении 15&nbsp;минут</span>
             </div>
-            <button class="button-big order-section-form-button-send">
+            <button class="button-big button-black order-section-form-button-send">
               Вызвать&nbsp;замерщика
             </button>
           </div>
         </form>
         <div v-if="isSuccess">
-          Вашая заявка отправлена! Ждите звонка!
+          Заявка отправлена. Скоро мы позвоним :)
         </div>
         <div v-if="isError">
-          Ошибка отправления заявки. попробуйте позже!
+          Ошибка. Пожалуйста, перезагрузите страницу и нажмите кнопку ещё раз
         </div>
       </div>
     </div>
@@ -224,9 +223,19 @@ export default {
     width: 100%;
   }
 
+  .note-privacy-policy {
+    font-weight: 500;
+    font-size: .9rem;
+    letter-spacing: .04em;
+    margin-top: 2.8rem;
+    opacity: .36;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   .order-section-form-button-send-wrapper {
     display: inline-flex;
-    margin-top: 5.2rem;
+    margin-top: 2rem;
   }
 
   .order-section-form-button-send-subtitle {
@@ -241,6 +250,10 @@ export default {
     line-height: 6.4rem;
     margin-right: .8rem;
     vertical-align: top;
+  }
+  .order-section-form-button-send-subtitle-span {
+    position: relative;
+    top: .8rem;
   }
 
   @media (min-width: 1460px) {

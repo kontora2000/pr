@@ -7,8 +7,22 @@
 </template>
 
 <script>
+import gsap from 'gsap'
+
 export default {
   name: 'Phone',
+  mounted () {
+    gsap.to(this.$el, {
+      opacity: 0,
+      duration: 0.15,
+      scrollTrigger: {
+        trigger: '.contacts-section',
+        toggleActions: 'play none reverse none',
+        start: 'top bottom',
+        end: 'top bottom',
+      },
+    })
+  },
 }
 </script>
 

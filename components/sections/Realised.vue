@@ -3,9 +3,7 @@
     <div class="section-grid realised-section-grid">
       <div class="section-grid-header-sticky-cont-wrapper">
         <div class="section-grid-header-sticky-cont realised-section-grid-header-sticky-cont">
-          <h1 class="section-header realised-section-header">
-            Реализовали
-          </h1>
+          <h1 class="section-header realised-section-header">Реализовали</h1>
         </div>
       </div>
       <gallery @openlightbox="openLightBox" />
@@ -33,11 +31,14 @@
           class="project-photo"
         >
       </div>
-      <div v-if="currentA.lenght!==0" class="authro-info">
+      <div v-if="currentA.length > 0" class="author-info">
         <div v-for="(author, index) in currentA" :key="index">
           <!-- тут авторы -->
           <Author :author="author" />
         </div>
+      </div>
+      <div v-else class="author-info">
+        <Author :author="currentA" />
       </div>
       <div class="close-project" @click.passive="closeLightBox">
         <div class="close-project-icon-cross">
@@ -110,158 +111,145 @@ export default {
 </script>
 
 <style scoped>
-  .realised-section {
-    background: var(--White100);
-    padding-top: 0;
-  }
+.realised-section {
+  background: var(--White100);
+  padding-top: 0;
+}
 
-  .realised-section-header,
-  .realised-section-link-instagram-comment {
-    color: var(--Gray100);
-  }
+.realised-section-header,
+.realised-section-link-instagram-comment {
+  color: var(--Gray100);
+}
 
-  .realised-section-grid-header-sticky-cont {
-    height: 62.1rem;
-    margin-top: -2.2rem;
-  }
+.realised-section-grid-header-sticky-cont {
+  height: 62.1rem;
+  margin-top: -2.2rem;
+}
 
-  .realised-section-header {
-    width: 62.1rem;
-  }
+.realised-section-header {
+  width: 62.1rem;
+}
 
-  .realised-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, calc((100% - 32.4rem) / 39));
-    grid-column-gap: .8rem;
-    grid-row-gap: 4.8rem;
-    margin: 0 0 6.4rem;
-    z-index: 2;
-  }
+.realised-section-link-instagram-wrapper {
+  padding-top: 8rem;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
 
-  .gallery-photo-wrapper {
-    grid-column: span 13;
-    width: 100%;
-  }
+.realised-section-link-instagram-comment {
+  font-family: var(--font-serif);
+  font-size: 5.6rem;
+  font-weight: 300;
+  letter-spacing: .12em;
+  line-height: 7.2rem;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+}
 
-  .gallery-photo {
-    height: auto;
-    width: inherit;
-  }
+.realised-section-link-instagram-comment-star {
+  display: inline-block;
+  width: 5.2rem;
+  height: 5.2rem;
+  margin: 0 4rem;
+  position: relative;
+  top: .8rem;
+}
+.realised-section-link-instagram-comment-star:nth-child(2) {
+  width: 3.8rem;
+}
+.realised-section-link-instagram-comment-star>svg>use {
+  fill: var(--Gray100);
+}
 
-  .realised-section-link-instagram-wrapper {
-    padding-top: 8rem;
-    position: relative;
-    text-align: center;
-    z-index: 1;
-  }
+.realised-section-link-instagram {
+  background: linear-gradient(180deg, #CAD4DE 0%, #A1B2C5 100%);
+  border: none;
+  color: var(--White100);
+  font-size: 3.2rem;
+  padding: 1.4rem 1.9rem;
+  will-change: transform;
+}
 
-  .realised-section-link-instagram-comment {
-    font-family: var(--font-serif);
-    font-size: 5.6rem;
-    font-weight: 300;
-    letter-spacing: .12em;
-    line-height: 7.2rem;
-    margin-bottom: 4rem;
-    text-transform: uppercase;
-  }
+.realised-section-link-instagram-icon-wrapper {
+  display: inline-block;
+  width: 5.6rem;
+  height: 5.6rem;
+  vertical-align: middle;
+  margin-right: 1.2rem;
+}
 
-  .realised-section-link-instagram-comment-star {
-    display: inline-block;
-    width: 5.2rem;
-    height: 5.2rem;
-    margin: 0 4rem;
-    position: relative;
-    top: .8rem;
-  }
-  .realised-section-link-instagram-comment-star:nth-child(2) {
-    width: 3.8rem;
-  }
-  .realised-section-link-instagram-comment-star>svg>use {
-    fill: var(--Gray100);
-  }
+.realised-section-link-instagram-icon-wrapper .icon-instagram-svg>use{
+  fill: var(--White100);
+}
 
-  .realised-section-link-instagram {
-    background: linear-gradient(180deg, #CAD4DE 0%, #A1B2C5 100%);
-    color: var(--White100);
-    font-size: 3.2rem;
-    padding: 1.4rem 1.9rem;
-    will-change: transform;
-  }
+.realised-section-gradient-bottom {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #E4D8D4 100%);
+}
 
-  .realised-section-link-instagram-icon-wrapper {
-    display: inline-block;
-    width: 5.6rem;
-    height: 5.6rem;
-    vertical-align: middle;
-    margin-right: 1.2rem;
-  }
-
-  .realised-section-link-instagram-icon-wrapper .icon-instagram-svg>use{
-    fill: var(--White100);
-  }
-
-  .realised-section-gradient-bottom {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #E4D8D4 100%);
-  }
-
-    .project-window {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    height: 100%;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    max-width: 100vw;
-    min-width: 100vw;
-    z-index: 1003;
+.project-window {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  max-width: 100vw;
+  min-width: 100vw;
+  z-index: 1003;
 }
 
 .close-project {
     cursor: pointer;
-    left: 1.75rem;
+    left: 1.6rem;
     position: fixed;
-    top: 2.3rem;
+    top: 1.2rem;
 }
 
 .close-project-icon-cross {
-    height: 2rem;
-    width: 2rem;
+    height: 4rem;
+    width: 4rem;
 }
 
 .close-project-icon-cross-line {
-    background: var(--White100);
+    background: var(--White64);
     border-radius: 4px;
     height: 3px;
-    margin-bottom: .7rem;
+    margin-bottom: 0;
     position: relative;
     transition: all .15s ease-in-out;
-    width: 100%;
+    width: 5.6rem;
+}
+.close-project-icon-cross:hover .close-project-icon-cross-line {
+  background: var(--White100);
 }
 
 .close-project-icon-cross-line.first-line {
     transform: rotate(45deg);
-    top: 2px;
+    top: 1.8rem;
+    left: -.8rem;
 }
 
 .close-project-icon-cross-line.second-line {
     transform: rotate(-45deg);
-    bottom: 12px;
+    top: 1.55rem;
+    left: -.8rem;
 }
 
 .project-photos-block {
-    margin: 1rem auto;
+    margin: 1.2rem auto;
     width: 100%;
     max-width: 900px;
 }
 
 .project-photo {
-    border-radius: 1.25rem;
     display: block;
     margin: 0 auto 1.5rem;
     width: auto;
-    max-height: calc(100vh - 2rem);
+    height: calc(100vh - 2rem);
+    max-height: 88vh;
 }
 
 .overlay {
@@ -281,112 +269,117 @@ export default {
     visibility: hidden;
     opacity: 0;
 }
-  @media (min-width: 1460px) {
-    .realised-section-grid-header-sticky-cont {
-      width: 79.6rem;
-    }
 
-    .realised-section-header {
-      width: 79.6rem;
-    }
+@media (min-width: 1460px) {
+  .realised-section-grid-header-sticky-cont {
+    width: 79.6rem;
   }
 
-  @media (max-width: 460px) {
-    .realised-section {
-      overflow-x: hidden;
-      width: 100vw;
-    }
+  .realised-section-header {
+    width: 79.6rem;
+  }
+}
 
-    .realised-section h1 {
-      margin-left: .8rem;
-      margin-right: .8rem;
-      text-align: left;
-      width: 100%;
-    }
-
-    .realised-gallery-grid {
-      grid-template-columns: 1fr 1fr;
-      margin: 4rem .4rem 6.4rem;
-    }
-
-    .gallery-photo-wrapper {
-      grid-column: span 1;
-    }
-
-    .realised-section-link-instagram-wrapper {
-      margin: 0 .8rem;
-    }
-
-    .realised-section-link-instagram-comment {
-      font-size: 2.8rem;
-      letter-spacing: .08em;
-      line-height: 4rem;
-      margin-bottom: 3.2rem;
-      text-transform: uppercase;
-      }
-
-    .realised-section-link-instagram-comment-star {
-      width: 2rem;
-      height: 2rem;
-      margin: 0 .8rem;
-      top: 0rem;
-    }
-
-    .realised-section-link-instagram-comment-star:nth-child(2) {
-      width: 1.8rem;
-    }
-
-    .realised-section-link-instagram {
-      font-size: 2.4rem;
-    }
-
-    .realised-section-link-instagram-icon-wrapper {
-      width: 4.4rem;
-      height: 4.4rem;
-    }
+@media (max-width: 460px) {
+  .realised-section {
+    overflow-x: hidden;
+    width: 100vw;
   }
 
-  @media (max-width: 380px) {
-    .realised-section-link-instagram-comment {
-      font-size: 2.4rem;
-      line-height: 3.6rem;
-    }
-
-    .realised-section-link-instagram-comment-star {
-      width: 1.8rem;
-      height: 1.8rem;
-    }
-    .realised-section-link-instagram-comment-star:nth-child(2) {
-      width: 1.6rem;
-    }
-
-    .realised-section-link-instagram {
-      font-size: 2.2rem;
-    }
+  .realised-section h1 {
+    margin-left: .8rem;
+    margin-right: .8rem;
+    text-align: left;
+    width: 100%;
   }
 
-  @media (max-width: 340px) {
-    .realised-section-link-instagram-comment {
-      font-size: 2.2rem;
-    }
-
-    .realised-section-link-instagram-comment-star {
-      width: 1.6rem;
-      height: 1.6rem;
-      margin: 0 .6rem;
-    }
-    .realised-section-link-instagram-comment-star:nth-child(2) {
-      width: 1.4rem;
-    }
-
-    .realised-section-link-instagram {
-      font-size: 1.8rem;
-    }
-    .realised-section-link-instagram-icon-wrapper {
-      width: 4rem;
-      height: 4rem;
-      margin-right: .8rem;
-    }
+  .realised-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    margin: 4rem .4rem 6.4rem;
   }
+
+  .gallery-photo-wrapper {
+    grid-column: span 1;
+  }
+
+  .realised-section-link-instagram-wrapper {
+    margin: 0 .8rem;
+  }
+
+  .realised-section-link-instagram-comment {
+    font-size: 2.8rem;
+    letter-spacing: .08em;
+    line-height: 4rem;
+    margin-bottom: 3.2rem;
+    text-transform: uppercase;
+    }
+
+  .realised-section-link-instagram-comment-star {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 .8rem;
+    top: 0rem;
+  }
+
+  .realised-section-link-instagram-comment-star:nth-child(2) {
+    width: 1.8rem;
+  }
+
+  .realised-section-link-instagram {
+    font-size: 2.4rem;
+  }
+
+  .realised-section-link-instagram-icon-wrapper {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+}
+
+
+
+@media (max-width: 380px) {
+  .realised-section-link-instagram-comment {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+
+  .realised-section-link-instagram-comment-star {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .realised-section-link-instagram-comment-star:nth-child(2) {
+    width: 1.6rem;
+  }
+
+  .realised-section-link-instagram {
+    font-size: 2.2rem;
+  }
+}
+
+
+
+@media (max-width: 340px) {
+  .realised-section-link-instagram-comment {
+    font-size: 2.2rem;
+  }
+
+  .realised-section-link-instagram-comment-star {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0 .6rem;
+  }
+  .realised-section-link-instagram-comment-star:nth-child(2) {
+    width: 1.4rem;
+  }
+
+  .realised-section-link-instagram {
+    font-size: 1.8rem;
+  }
+  .realised-section-link-instagram-icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    margin-right: .8rem;
+  }
+}
 
 </style>
