@@ -2,7 +2,7 @@
   <div class="author-wrapper">
     <div class="author-pos-wrapper">{{ author.pos }}</div>
     <div class="author-link-wrapper">
-      <a :href="author.url">{{ author.name }}</a>
+      <a class="author-link link-underline-solid" :href="author.url">{{ author.name }}</a>
     </div>
   </div>
 </template>
@@ -19,5 +19,10 @@ export default {
 </script>
 
 <style scoped>
-
+.author-pos-wrapper {
+  margin-bottom: .4rem;
+}
+.author-link {
+  color: var(--White100);
+}
 </style>

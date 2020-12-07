@@ -269,6 +269,17 @@ export default {
     opacity: 0;
 }
 
+.author-info {
+  color: var(--White48);
+  display: flex;
+  font-size: 1.2rem;
+  margin: 0 1.6rem;
+}
+
+.author-info>div:not(:last-child) {
+  margin-right: 4rem;
+}
+
 @media (min-width: 1460px) {
   .realised-section-grid-header-sticky-cont {
     width: 79.6rem;
@@ -331,6 +342,19 @@ export default {
   .realised-section-link-instagram-icon-wrapper {
     width: 4.4rem;
     height: 4.4rem;
+  }
+
+  .project-photos-block {
+    max-width: 100vw;
+    max-height: 80vh;
+    margin-top: 7.2rem;
+  }
+
+  .project-photo[data-v-19e51d94] {
+    width: 100vw;
+    height: 100%;
+    max-height: inherit;
+    max-width: inherit;
   }
 }
 

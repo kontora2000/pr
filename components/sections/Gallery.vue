@@ -15,23 +15,22 @@ export default {
         {
           src: '/projects/1.jpg',
           a: [
-            { name: 'Автор 1', pos: 'Поз 2', url: 'http://www.asd.ru', }
+            { name: 'Ольга Корчагина', pos: 'Визуализатор', url: 'https://instagram.com/olga.kor.7796', }
           ],
         },
         {
           src: '/projects/2.jpg',
           a: [
-            { name: 'Автор 2', pos: 'Поз 2', url: 'http://www.asd.ru', },
-            { name: 'Автор 22', pos: 'Поз 22', url: 'http://www.asd22.ru', }
+            { name: 'Ольга Корчагина', pos: 'Визуализатор', url: 'https://instagram.com/olga.kor.7796', }
           ],
         },
         {
           src: '/projects/3.jpg',
           a: [
             {
-              name: 'Автор 3',
-              pos: 'Поз 3',
-              url: 'http://www.asd3.ru',
+              name: 'Ольга Корчагина',
+              pos: 'Визуализатор',
+              url: 'https://instagram.com/olga.kor.7796',
             }
           ],
         },
@@ -39,101 +38,101 @@ export default {
           src: '/projects/4.jpg',
           a: [
             {
-              name: 'Автор 4',
-              pos: 'Поз 4',
-              url: 'http://www.asd4.ru',
+              name: 'Ольга Корчагина',
+              pos: 'Визуализатор',
+              url: 'https://instagram.com/olga.kor.7796',
             }
           ],
         },
         {
           src: '/projects/13.jpg',
           a: [{
-            name: 'Автор 4',
-            pos: 'Поз 4',
-            url: 'http://www.asd4.ru',
+            name: 'CHEDES Interior',
+            pos: 'Дизайн',
+            url: 'https://instagram.com/chedes.interior',
           }],
         },
         {
           src: '/projects/5.jpg',
           a: [
             {
-              name: 'Автор 4',
-              pos: 'Поз 4',
-              url: 'http://www.asd4.ru',
+              name: 'Ольга Корчагина',
+              pos: 'Визуализатор',
+              url: 'https://instagram.com/olga.kor.7796',
             }],
         },
         {
           src: '/projects/7.jpg',
           a: [{
-            name: 'Автор 4',
-            pos: 'Поз 4',
-            url: 'http://www.asd4.ru',
+            name: 'Ольга Корчагина',
+            pos: 'Визуализатор',
+            url: 'https://instagram.com/olga.kor.7796',
           }],
         },
         {
           src: '/projects/9.jpg',
           a: [{
-            name: 'Автор 4',
-            pos: 'Поз 4',
-            url: 'http://www.asd4.ru',
+            name: 'Ольга Корчагина',
+            pos: 'Визуализатор',
+            url: 'https://instagram.com/olga.kor.7796',
           }],
         },
         {
           src: '/projects/8.jpg',
           a: [{
-            name: 'Автор 4',
-            pos: 'Поз 4',
-            url: 'http://www.asd4.ru',
+            name: 'Ольга Корчагина',
+            pos: 'Визуализатор',
+            url: 'https://instagram.com/olga.kor.7796',
           }],
         },
         {
           src: '/projects/15.jpg',
           a: [{
-            name: 'Автор 4',
-            pos: 'Поз 4',
-            url: 'http://www.asd4.ru',
+            name: 'CHEDES Interior',
+            pos: 'Дизайн',
+            url: 'https://instagram.com/chedes.interior',
           }],
         },
         {
           src: '/projects/11.jpg',
           a: [{
-            name: 'Автор 4',
-            pos: 'Поз 4',
-            url: 'http://www.asd4.ru',
+            name: 'Ольга Корчагина',
+            pos: 'Визуализатор',
+            url: 'https://instagram.com/olga.kor.7796',
           }],
         },
         {
           src: '/projects/12.jpg',
           a: [{
-            name: 'Автор 4',
-            pos: 'Поз 4',
-            url: 'http://www.asd4.ru',
+            name: 'Ольга Корчагина',
+            pos: 'Визуализатор',
+            url: 'https://instagram.com/olga.kor.7796',
           }],
         },
         {
           src: '/projects/6.jpg',
           a: [
             {
-              name: 'Автор 4',
-              pos: 'Поз 4',
-              url: 'http://www.asd4.ru',
+              name: 'Ольга Корчагина',
+              pos: 'Визуализатор',
+              url: 'https://instagram.com/olga.kor.7796',
             }
           ],
         },
         {
           src: '/projects/14.jpg',
           a: {
-            name: 'Автор 4',
-            pos: 'Поз 4',
-            url: 'http://www.asd4.ru',
+            name: 'CHEDES Interior',
+            pos: 'Дизайн',
+            url: 'https://instagram.com/chedes.interior',
           },
         },
         {
           src: '/projects/10.jpg',
           a: {
-            name: 'Автор 4',
-            pos: 'Поз 4',
-            url: 'http://www.asd4.ru',
+            name: 'Ольга Корчагина',
+            pos: 'Визуализатор',
+            url: 'https://instagram.com/olga.kor.7796',
           },
         }
       ], // end gallery
@@ -143,6 +142,7 @@ export default {
 </script>
 
 <style scoped>
+
 .realised-gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, calc((100% - 32.4rem) / 39));
