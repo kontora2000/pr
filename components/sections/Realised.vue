@@ -350,7 +350,7 @@ export default {
     margin-top: 7.2rem;
   }
 
-  .project-photo[data-v-19e51d94] {
+  .project-photo {
     width: 100vw;
     height: 100%;
     max-height: inherit;
