@@ -11,7 +11,6 @@ export default {
   name: 'Gallery',
   data () {
     return {
-
       gallery: [
         {
           src: '/projects/1.jpg',
@@ -29,88 +28,97 @@ export default {
         {
           src: '/projects/3.jpg',
           a: [
-            { name: 'Автор 3', pos: 'Поз 3', url: 'http://www.asd.ru', }
+            {
+              name: 'Автор 3',
+              pos: 'Поз 3',
+              url: 'http://www.asd3.ru',
+            }
           ],
         },
         {
           src: '/projects/4.jpg',
-          a: {
-            name: 'Автор 4',
-            pos: 'Поз 4',
-            url: 'http://www.asd4.ru',
-          },
+          a: [
+            {
+              name: 'Автор 4',
+              pos: 'Поз 4',
+              url: 'http://www.asd4.ru',
+            }
+          ],
         },
         {
           src: '/projects/13.jpg',
-          a: {
+          a: [{
             name: 'Автор 4',
             pos: 'Поз 4',
             url: 'http://www.asd4.ru',
-          },
+          }],
         },
         {
           src: '/projects/5.jpg',
-          a: {
-            name: 'Автор 4',
-            pos: 'Поз 4',
-            url: 'http://www.asd4.ru',
-          },
+          a: [
+            {
+              name: 'Автор 4',
+              pos: 'Поз 4',
+              url: 'http://www.asd4.ru',
+            }],
         },
         {
           src: '/projects/7.jpg',
-          a: {
+          a: [{
             name: 'Автор 4',
             pos: 'Поз 4',
             url: 'http://www.asd4.ru',
-          },
+          }],
         },
         {
           src: '/projects/9.jpg',
-          a: {
+          a: [{
             name: 'Автор 4',
             pos: 'Поз 4',
             url: 'http://www.asd4.ru',
-          },
+          }],
         },
         {
           src: '/projects/8.jpg',
-          a: {
+          a: [{
             name: 'Автор 4',
             pos: 'Поз 4',
             url: 'http://www.asd4.ru',
-          },
+          }],
         },
         {
           src: '/projects/15.jpg',
-          a: {
+          a: [{
             name: 'Автор 4',
             pos: 'Поз 4',
             url: 'http://www.asd4.ru',
-          },
+          }],
         },
         {
           src: '/projects/11.jpg',
-          a: {
+          a: [{
             name: 'Автор 4',
             pos: 'Поз 4',
             url: 'http://www.asd4.ru',
-          },
+          }],
         },
         {
           src: '/projects/12.jpg',
-          a: {
+          a: [{
             name: 'Автор 4',
             pos: 'Поз 4',
             url: 'http://www.asd4.ru',
-          },
+          }],
         },
         {
           src: '/projects/6.jpg',
-          a: {
-            name: 'Автор 4',
-            pos: 'Поз 4',
-            url: 'http://www.asd4.ru',
-          },
+          a: [
+            {
+              name: 'Автор 4',
+              pos: 'Поз 4',
+              url: 'http://www.asd4.ru',
+            }
+          ],
         },
         {
           src: '/projects/14.jpg',

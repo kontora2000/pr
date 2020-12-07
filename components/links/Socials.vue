@@ -4,9 +4,9 @@
       <a class="socials-item-link socials-item-link-instagram link-underline-solid" href="https://instagram.com/princess_mebel" target="_blank">Instagram</a>
     </div>
     <span class="socials-star only-phone">
-        <svg class="socials-star-svg star-plus-svg" v-hide>
-          <use xlink:href="~/static/sprite.svg#star-plus"></use>
-        </svg>
+      <svg v-hide class="socials-star-svg star-plus-svg">
+        <use xlink:href="~/static/sprite.svg#star-plus" />
+      </svg>
     </span>
     <div class="socials-item">
       <a class="socials-item-link socials-item-link-telegram link-underline-solid" href="https://t.me/princessfurniture" target="_blank">Telegram</a>

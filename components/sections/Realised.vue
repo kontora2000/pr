@@ -31,11 +31,13 @@
           class="project-photo"
         >
       </div>
-      <div v-if="currentA.lenght!==0" class="author-info">
+      <div v-if="currentA.length > 0" class="author-info">
         <div v-for="(author, index) in currentA" :key="index">
-          <!-- тут авторы -->
           <Author :author="author" />
         </div>
+      </div>
+      <div v-else class="author-info">
+        <Author :author="currentA" />
       </div>
       <div class="close-project" @click.passive="closeLightBox">
         <div class="close-project-icon-cross">
@@ -44,7 +46,7 @@
         </div>
       </div>
     </div>
-    <div ref="galleryOverlay" class="overlay" @click.passive="closeProjectGallery" />
+    <div ref="galleryOverlay" class="overlay" @click.passive="closeLightBox" />
   </section>
 </template>
 
@@ -267,8 +269,6 @@ export default {
     opacity: 0;
 }
 
-
-
 @media (min-width: 1460px) {
   .realised-section-grid-header-sticky-cont {
     width: 79.6rem;
@@ -278,8 +278,6 @@ export default {
     width: 79.6rem;
   }
 }
-
-
 
 @media (max-width: 460px) {
   .realised-section {
