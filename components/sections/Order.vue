@@ -195,7 +195,6 @@ export default {
       return true
     },
     async submitForm () {
-<<<<<<< HEAD
       if (this.validate() === true) {
         try {
           const formData = new FormData(this.$refs.form)
@@ -216,20 +215,6 @@ export default {
       } else {
         this.isNotValid = true
       }
-=======
-      // if (this.validate() === true) {
-      const formData = new FormData(this.$refs.form)
-      formData.set('type', ['Шкафы', 'Мафы'])
-      formData.set('key', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9')
-      const res = await this.$axios.post('https://www.api.kontora.cc/order.php', formData)
-      if (res.data.isSuccess) {
-        this.isSuccess = true
-        console.log(res.data)
-      } else { this.isError = true }
-      // } else {
-      //   this.isNotValid = true
-      // }
->>>>>>> 06dba505e8882b38e0a4deb96d2a0ae05b9c462a
     },
   },
 }
@@ -395,12 +380,8 @@ export default {
   }
 
   .order-section-form-button-send-wrapper {
-<<<<<<< HEAD
-    display: block;
-=======
     display: inline-flex;
     margin-top: 2rem;
->>>>>>> 06dba505e8882b38e0a4deb96d2a0ae05b9c462a
   }
 
   .order-section-form-button-send-subtitle {

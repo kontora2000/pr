@@ -1,8 +1,12 @@
 <template>
   <div class="author-wrapper">
-    <div class="author-pos-wrapper">{{ author.pos }}</div>
+    <div class="author-pos-wrapper">
+      {{ author.pos }}
+    </div>
     <div class="author-link-wrapper">
-      <a class="author-link link-underline-solid" :href="author.url">{{ author.name }}</a>
+      <a class="author-link link-underline-solid" :href="author.url">{{
+        author.name
+      }}</a>
     </div>
   </div>
 </template>
@@ -11,7 +15,7 @@
 export default {
   props: {
     author: {
-      type: Object,
+      type: [Array, Object],
       required: true,
     },
   },
@@ -20,7 +24,7 @@ export default {
 
 <style scoped>
 .author-pos-wrapper {
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 .author-link {
   color: var(--White100);
