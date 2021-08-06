@@ -4,31 +4,38 @@ export default {
       phoneErrorMessage: '',
       nameErrorMessage: '',
       adressErrorMessage: '',
+      typesErrorMessage: '',
       isNotValid: false,
     }
   },
   methods: {
     validate () {
-      if (this.checkPhone() === false) { return false }
-      if (this.checkAdress() === false) { return false }
-      if (this.checkName() === false) { return false }
-      return true
+      this.nameErrorMessage = ''
+      this.phoneErrorMessage = ''
+      this.adressErrorMessage = ''
+      return this.checkTypes() && this.checkAdress() && this.checkPhone() && this.checkName()
     },
     checkName () {
-      if (this.name === '') { return false }
-      if (!this.name.match(/^[А-ЯЁ][а-яё]\s+$/)) { return false }
-      return false
+      if (this.name === '') { 
+        this.nameErrorMessage = 'Имя не должно быть пустым'
+        return false 
+      }
+      // if (!this.name.match(/^[А-ЯЁ][а-яё]\s+$/)) {
+      //   this.nameErrorMessage = 'Адрес должен содержать только киррилицу'
+      //   return false 
+      // }
+      return true
     },
     checkAdress () {
       if (this.adress === '') {
         this.nameErrorMessage = 'Введите имя'
         return false
       }
-      if (!this.name.match(/^[А-ЯЁ][а-яё]+$/)) {
-        this.nameErrorMessage = 'Имя должно содердать только киррилицу'
-        return false
-      }
-      return false
+      // if (!this.adress.match(/^[А-ЯЁ][а-яё]+$/)) {
+      //   this.adressErrorMessage = 'Адрес должен содержать только киррилицу'
+      //   return false
+      // }
+      return true
     },
     checkPhone () {
       if (this.phone === '') { return }
@@ -40,7 +47,7 @@ export default {
       }
       if (this.phone.length > 10) {
         this.isNotValid = true
-        this.phoneErrorMessage = 'Не более 10 символов'
+        this.phoneErrorMessage = 'Не более 10 цифр'
         return false
       }
       if (!this.phone.match(/^.{1,10}$/)) {
@@ -49,7 +56,14 @@ export default {
         return false
       }
       this.isNotValid = false
-      this.phoneErrorMessage = null
+      this.phoneErrorMessage = ''
+      return true
+    },
+    checkTypes () {
+      if (this.checkedTypes.filter(el => el === '').length > 0 && this.checkTypes.length === 0) {
+        this.typesErrorMessage = 'Выберите хотя бы один пункт'
+        return false
+      }
       return true
     },
   },
