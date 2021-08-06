@@ -1,24 +1,18 @@
 <template>
   <section class="order-section">
     <div class="section-grid order-section-grid">
-<<<<<<< HEAD
       <div
         class="section-grid-header-sticky-cont-wrapper order-section-grid-header-sticky-cont-wrapper"
       >
         <div
           class="section-grid-header-sticky-cont order-section-grid-header-sticky-cont"
         >
-=======
-      <div class="section-grid-header-sticky-cont-wrapper order-section-grid-header-sticky-cont-wrapper">
-        <div class="section-grid-header-sticky-cont order-section-grid-header-sticky-cont">
->>>>>>> 06dba505e8882b38e0a4deb96d2a0ae05b9c462a
           <h1 class="section-header order-section-header">
             Заказать
           </h1>
         </div>
       </div>
       <div class="order-section-grid-content-wrapper">
-<<<<<<< HEAD
         <div class="section-subheader">
           Заполните эту форму и&nbsp;к&nbsp;вам приедет замерщик, чтобы снять
           размеры места под&nbsp;установку. Затем мы&nbsp;изготовим
@@ -40,14 +34,6 @@
               value="Кухня"
               type="checkbox"
             >
-=======
-        <div class="section-subheader">Заполните форму ниже и&nbsp;к&nbsp;вам приедет технолог, чтобы замерить место под&nbsp;установку мебели</div>
-        <form ref="form" class="order-form" @submit.prevent="submitForm()" v-if="!isSuccess">
-          <div class="order-form-checkboxes-wrapper">
-            <span class="order-form-checkboxes-header">Интересует:</span>
-
-            <input id="checkbox-kitchen" class="order-form-checkbox" name="kitchens" value="Кухня" type="checkbox">
->>>>>>> 06dba505e8882b38e0a4deb96d2a0ae05b9c462a
             <label for="checkbox-kitchen">Кухня</label>
             <input
               id="checkbox-closet"
@@ -127,15 +113,10 @@
               required
             >
             <label class="floatting-label" data-placeholder="Адрес установки" />
-<<<<<<< HEAD
             <div class="errors">
               <span v-if="adressErrorMessage">{{
                 adressErrorMessage
               }}</span>
-=======
-            <div class="errors" v-if="adressErrorMessage!==''">
-              <span>{{ adressErrorMessage }}</span>
->>>>>>> 06dba505e8882b38e0a4deb96d2a0ae05b9c462a
             </div>
           </div>
           <div class="order-form-input-wrapper input-wrapper">
@@ -144,7 +125,6 @@
               class="order-form-input"
               type="tel"
               name="phone"
-<<<<<<< HEAD
               required
             >
             <label
@@ -155,15 +135,6 @@
               <span v-if="phoneErrorMessage !== ''">{{
                 phoneErrorMessage
               }}</span>
-=======
-              minlength="10"
-              maxlength="14"
-              required
-            >
-            <label class="floatting-label" data-placeholder="Контактный телефон" />
-            <div class="errors" v-if="phoneErrorMessage!==''">
-              <span>{{ phoneErrorMessage }}</span>
->>>>>>> 06dba505e8882b38e0a4deb96d2a0ae05b9c462a
             </div>
           </div>
           <div class="order-form-input-wrapper input-wrapper">
@@ -175,25 +146,16 @@
               required
             >
             <label class="floatting-label" data-placeholder="Ваше имя" />
-<<<<<<< HEAD
             <div class="errors">
               <span v-if="nameErrorMessage">{{ nameErrorMessage }}</span>
-=======
-            <div class="errors" v-if="nameErrorMessage!==''">
-              <span>{{ nameErrorMessage }}</span>
->>>>>>> 06dba505e8882b38e0a4deb96d2a0ae05b9c462a
             </div>
           </div>
           <div class="note-privacy-policy">Нажав на кнопку "Вызвать замерщика", вы соглашаетесь с <NuxtLink to="privacy-policy" class="link-underline-solid">обработкой ваших персональных данных</NuxtLink></div>
           <div class="order-section-form-button-send-wrapper">
             <div class="subtitle order-section-form-button-send-subtitle">
-<<<<<<< HEAD
               Чтобы подтвердить заявку и&nbsp;договориться об&nbsp;удобном
               для&nbsp;замера времени, мы&nbsp;перезвоним по&nbsp;указанному
               номеру телефона в&nbsp;течении 15&nbsp;минут
-=======
-              <span class="order-section-form-button-send-subtitle-span">Чтобы подтвердить заявку и&nbsp;договориться об&nbsp;удобном для&nbsp;замера времени, мы&nbsp;перезвоним вам в&nbsp;течении 15&nbsp;минут</span>
->>>>>>> 06dba505e8882b38e0a4deb96d2a0ae05b9c462a
             </div>
             <button class="button-big button-black order-section-form-button-send">
               Вызвать&nbsp;замерщика
@@ -204,11 +166,7 @@
           Заявка отправлена. Скоро мы позвоним :)
         </div>
         <div v-if="isError">
-<<<<<<< HEAD
-          Ошибка отправления заявки. Попробуйте позже!
-=======
           Ошибка. Пожалуйста, перезагрузите страницу и нажмите кнопку ещё раз
->>>>>>> 06dba505e8882b38e0a4deb96d2a0ae05b9c462a
         </div>
       </div>
     </div>

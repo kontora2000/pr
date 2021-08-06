@@ -31,19 +31,11 @@ export default {
         this.nameErrorMessage = 'Напишите, как вас зовут'
         return false
       }
-<<<<<<< HEAD
       // if (!this.adress.match(/^[А-ЯЁ][а-яё]+$/)) {
       //   this.adressErrorMessage = 'Адрес должен содержать только киррилицу'
       //   return false
       // }
       return true
-=======
-      if (!this.name.match(/^[А-ЯЁ][а-яё]+$/)) {
-        this.nameErrorMessage = 'Напишите, пожалуйста, по-русски'
-        return false
-      }
-      return false
->>>>>>> 06dba505e8882b38e0a4deb96d2a0ae05b9c462a
     },
     checkPhone () {
       if (this.phone === '') { return }
