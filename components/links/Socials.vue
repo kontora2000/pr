@@ -4,15 +4,15 @@
       <a class="socials-item-link socials-item-link-instagram link-underline-solid" href="https://instagram.com/princess_mebel" target="_blank">Instagram</a>
     </div>
     <span class="socials-star only-phone">
-        <svg class="socials-star-svg star-plus-svg" v-hide>
-          <use xlink:href="~/static/sprite.svg#star-plus"></use>
-        </svg>
+      <svg v-hide class="socials-star-svg star-plus-svg">
+        <use xlink:href="~/static/sprite.svg#star-plus" />
+      </svg>
     </span>
     <div class="socials-item">
       <a class="socials-item-link socials-item-link-telegram link-underline-solid" href="https://t.me/princessfurniture" target="_blank">Telegram</a>
     </div>
     <div class="socials-item">
-      <a class="socials-item-link socials-item-link-whatsapp only-desktop link-underline-solid" href="https://wa.com/princess_mebel" target="_blank">WhatsApp</a>
+      <a class="socials-item-link socials-item-link-whatsapp only-desktop link-underline-solid" href="https://wa.me/79676738990" target="_blank">WhatsApp</a>
     </div>
   </div>
 </template>

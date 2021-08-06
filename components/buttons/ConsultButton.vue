@@ -15,6 +15,8 @@
 import gsap from 'gsap'
 import colorClassMixin from '~/mixins/colorClassMixin.js'
 
+import Sprite from '~/components/Sprite'
+
 export default {
   name: 'ConsultButton',
   mixins: [colorClassMixin],

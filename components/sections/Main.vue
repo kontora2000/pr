@@ -1,8 +1,8 @@
 <template>
   <section class="main-scene">
     <div class="main-scene-mask">
-      <div class="main-scene-bg"></div>
-      <div class="main-scene-stars main-scene-layer-2"></div>
+      <div class="main-scene-bg" />
+      <div class="main-scene-stars main-scene-layer-2" />
       <div class="clouds-front main-scene-layer-4 main-scene-layer" />
       <div class="scene-kitchen-chairs main-scene-layer-3 main-scene-layer" />
       <div class="scene-kitchen-lights main-scene-layer-3 main-scene-layer" />
@@ -10,7 +10,7 @@
       <div class="clouds-back main-scene-layer-1 main-scene-layer" />
     </div>
     <slot />
-    <div class="section-gradient-bottom main-section-gradient-bottom"></div>
+    <div class="section-gradient-bottom main-section-gradient-bottom" />
   </section>
 </template>
 
@@ -81,7 +81,7 @@ export default {
   }
 
   .clouds-front {
-    background-image: url('../../static/_img/main-scene/clouds-front.png');
+    background-image: url('../../static/_img/animation/clouds-front-anim.webp');
     background-position-y: -100px;
   }
 
@@ -126,7 +126,6 @@ export default {
   .main-section-gradient-bottom {
     background: linear-gradient(180deg, rgba(255, 244, 247, 0) 0%, var(--Pink100) 80%);
   }
-
 
   .k1 {
     background-image: url('../../static/_img/animation/kitchen/k1.png') !important;
@@ -192,7 +191,6 @@ export default {
     min-width: 100vw;
     z-index: 10;
   }
-
 
   @media (min-width: 1460px) {
     .main-scene-mask {

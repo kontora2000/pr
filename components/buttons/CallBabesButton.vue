@@ -1,6 +1,6 @@
 <template>
   <div class="button-measurer-wrapper fixed-block" :class="colorClass">
-    <a href="#order-section" id="call-babes" class="button-measurer button">
+    <a id="call-babes" href="#order-section" class="button-measurer button">
       Вызвать <br class="only-phone">замерщика
     </a>
   </div>
@@ -56,6 +56,7 @@ export default {
 
   .button-measurer {
     background: var(--PinkLight100);
+    border: none;
     color: var(--PinkDark100);
     position: relative;
     text-shadow: 0.5px 0.5px 0.5px var(--White100),
