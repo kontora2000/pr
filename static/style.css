@@ -298,7 +298,9 @@ textarea {
 	display: block;
 	padding: .4rem .6rem;
 }
-
+.errors-type {
+  top:12rem;
+}
 .button,
 button,
 input[type=button],
@@ -620,6 +622,10 @@ section {
 	.only-desktop {
 		display: none;
 	}
+
+  .errors-type {
+    top:19.5rem;
+  }
 
 	html,
 	body {

@@ -13,11 +13,15 @@ export default {
       this.nameErrorMessage = ''
       this.phoneErrorMessage = ''
       this.adressErrorMessage = ''
+      this.checkTypes()
+      this.checkAdress() 
+      this.checkPhone()
+      this.checkName()
       return this.checkTypes() && this.checkAdress() && this.checkPhone() && this.checkName()
     },
     checkName () {
-      if (this.name === '') { 
-        this.nameErrorMessage = 'Имя не должно быть пустым'
+      if (this.name.trim() === '') { 
+        this.nameErrorMessage = 'Напишите, как Вас зовут'
         return false 
       }
       // if (!this.name.match(/^[А-ЯЁ][а-яё]\s+$/)) {
@@ -27,8 +31,8 @@ export default {
       return true
     },
     checkAdress () {
-      if (this.adress === '') {
-        this.nameErrorMessage = 'Напишите, как вас зовут'
+      if (this.adress.trim() === '') {
+        this.adressErrorMessage = 'Напишите свой адрес'
         return false
       }
       // if (!this.adress.match(/^[А-ЯЁ][а-яё]+$/)) {
@@ -38,8 +42,10 @@ export default {
       return true
     },
     checkPhone () {
-      if (this.phone === '') { return }
-
+      if (this.phone.trim() === '') { 
+        this.phoneErrorMessage = 'Напишите свой телефон'
+        return false
+      }
       if (!this.phone.match(/^[-+]?[0-9]+$/)) {
         this.isNotValid = true
         this.phoneErrorMessage = 'Только цифры'
@@ -60,7 +66,7 @@ export default {
       return true
     },
     checkTypes () {
-      if (this.checkedTypes.filter(el => el === '').length > 0 && this.checkTypes.length === 0) {
+      if (this.checkedTypes.length === 0) {
         this.typesErrorMessage = 'Выберите хотя бы один пункт'
         return false
       }

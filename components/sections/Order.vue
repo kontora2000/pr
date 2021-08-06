@@ -98,7 +98,7 @@
               type="checkbox"
             >
             <label for="checkbox-hallway">в&nbsp;прихожую</label>
-            <div class="errors">
+            <div class="errors errors-type">
               <span v-if="typesErrorMessage">{{
                 typesErrorMessage
               }}</span>
@@ -110,7 +110,6 @@
               class="order-form-input"
               type="text"
               name="adress"
-              required
             >
             <label class="floatting-label" data-placeholder="Адрес установки" />
             <div class="errors">
@@ -125,7 +124,6 @@
               class="order-form-input"
               type="tel"
               name="phone"
-              required
             >
             <label
               class="floatting-label"
@@ -143,7 +141,6 @@
               class="order-form-input"
               type="text"
               name="name"
-              required
             >
             <label class="floatting-label" data-placeholder="Ваше имя" />
             <div class="errors">

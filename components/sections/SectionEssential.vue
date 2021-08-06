@@ -26,15 +26,11 @@
   </div>
 </template>
 
-
-
 <script>
 export default {
   name: 'SectionEssential',
 }
 </script>
-
-
 
 <style scoped>
 .page-essential {
