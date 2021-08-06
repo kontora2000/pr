@@ -67,7 +67,7 @@ export default {
     },
     checkTypes () {
       if (this.checkedTypes.length === 0) {
-        this.typesErrorMessage = 'Выберите хотя бы один пункт'
+        this.typesErrorMessage = 'Выберите, что Вас интересует'
         return false
       }
       return true

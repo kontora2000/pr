@@ -153,6 +153,9 @@
               обработкой ваших персональных данных
             </NuxtLink>
           </div>
+          <div v-if="isError" class="order-form-send-error">
+            УУПС! Произошла ошибка. Пожалуйста, перезагрузите страницу и нажмите кнопку ещё раз
+          </div>
           <div class="order-section-form-button-send-wrapper">
             <div class="subtitle order-section-form-button-send-subtitle">
               Чтобы подтвердить заявку и&nbsp;договориться об&nbsp;удобном
@@ -164,9 +167,6 @@
             </button>
           </div>
         </form>
-        <div v-if="isError">
-          Ошибка. Пожалуйста, перезагрузите страницу и нажмите кнопку ещё раз
-        </div>
       </div>
     </div>
     <div v-if="isSuccess">
@@ -199,8 +199,7 @@ export default {
       return true
     },
     async submitForm () {
-      this.isSuccess = true
-      return
+      this.isNotValid = false
       if (this.validate() === true) {
         try {
           const formData = new FormData(this.$refs.form)
@@ -212,6 +211,7 @@ export default {
           )
           if (res.data && res.data.isSuccess) {
             this.isSuccess = true
+
           } else {
             this.isError = true
           }
@@ -339,6 +339,13 @@ export default {
   line-height: 6.4rem;
   margin-right: 0.8rem;
   vertical-align: top;
+}
+
+.order-form-send-error {
+ margin-top: 2.4rem;
+ color:var(--Red100);
+ font-weight: 800;
+ font-size: 1.2rem;
 }
 
 @media (min-width: 1460px) {
