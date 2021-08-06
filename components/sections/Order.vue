@@ -1,7 +1,8 @@
 <template>
   <section class="order-section">
     <div class="section-grid order-section-grid">
-      <div
+      <div 
+        v-if="!isSuccess"
         class="section-grid-header-sticky-cont-wrapper order-section-grid-header-sticky-cont-wrapper"
       >
         <div
@@ -12,7 +13,7 @@
           </h1>
         </div>
       </div>
-      <div class="order-section-grid-content-wrapper">
+      <div class="order-section-grid-content-wrapper" v-if="!isSuccess">
         <div class="section-subheader">
           Заполните эту форму и&nbsp;к&nbsp;вам приедет замерщик, чтобы снять
           размеры места под&nbsp;установку. Затем мы&nbsp;изготовим
@@ -147,7 +148,11 @@
               <span v-if="nameErrorMessage">{{ nameErrorMessage }}</span>
             </div>
           </div>
-          <div class="note-privacy-policy">Нажав на кнопку "Вызвать замерщика", вы соглашаетесь с <NuxtLink to="privacy-policy" class="link-underline-solid">обработкой ваших персональных данных</NuxtLink></div>
+          <div class="note-privacy-policy">
+            Нажав на кнопку "Вызвать замерщика", вы соглашаетесь с <NuxtLink to="privacy-policy" class="link-underline-solid">
+              обработкой ваших персональных данных
+            </NuxtLink>
+          </div>
           <div class="order-section-form-button-send-wrapper">
             <div class="subtitle order-section-form-button-send-subtitle">
               Чтобы подтвердить заявку и&nbsp;договориться об&nbsp;удобном
@@ -159,23 +164,25 @@
             </button>
           </div>
         </form>
-        <div v-if="isSuccess">
-          Заявка отправлена. Скоро мы позвоним :)
-        </div>
         <div v-if="isError">
           Ошибка. Пожалуйста, перезагрузите страницу и нажмите кнопку ещё раз
         </div>
       </div>
+    </div>
+    <div v-if="isSuccess">
+      <OrderSuccess :number="phone" />
     </div>
     <div class="section-gradient-bottom order-section-gradient-bottom" />
   </section>
 </template>
 
 <script>
+import OrderSuccess from './OrderSuccess.vue'
 import validationMixin from '~/mixins/validationMixin'
 
 export default {
   name: 'OrderSection',
+  components: { OrderSuccess, },
   mixins: [validationMixin],
   data () {
     return {
@@ -192,6 +199,8 @@ export default {
       return true
     },
     async submitForm () {
+      this.isSuccess = true
+      return
       if (this.validate() === true) {
         try {
           const formData = new FormData(this.$refs.form)
