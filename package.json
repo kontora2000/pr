@@ -16,7 +16,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "gsap": "^3.5.1",
     "jquery": "^3.5.1",
-    "nuxt": "^2.0.0",
+    "nuxt": "^3.4.3",
     "vue-scrollmagic": "^1.2.0"
   },
   "devDependencies": {
